@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Web</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 0;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: white;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 30px;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(31, 38, 135, 0.5);
+        }
+
+        .card h2 {
+            color: white;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .card p {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .social-links {
+            margin: 20px 0;
+        }
+
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #ffd700;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .container {
+                padding: 10px;
+            }
+            
+            .card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>¡Hola, soy [Tu Nombre]!</h1>
+            <p class="subtitle">Bienvenido a mi página web personal</p>
+            <div class="social-links">
+                <a href="#" target="_blank">GitHub</a>
+                <a href="#" target="_blank">LinkedIn</a>
+                <a href="#" target="_blank">Twitter</a>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <div class="card">
+                <h2>Sobre Mí</h2>
+                <p>Soy un desarrollador apasionado por la tecnología y el aprendizaje continuo. Me encanta crear soluciones innovadoras y trabajar en proyectos que marquen la diferencia.</p>
+                <a href="#" class="btn">Ver más</a>
+            </div>
+
+            <div class="card">
+                <h2>Proyectos</h2>
+                <p>Aquí puedes encontrar algunos de mis proyectos más recientes. Desde aplicaciones web hasta herramientas útiles, cada proyecto refleja mi pasión por el código limpio y la funcionalidad.</p>
+                <a href="#" class="btn">Ver proyectos</a>
+            </div>
+
+            <div class="card">
+                <h2>Habilidades</h2>
+                <p>Especializado en desarrollo web con HTML, CSS, JavaScript, y frameworks modernos. Siempre en búsqueda de nuevas tecnologías para mejorar mis habilidades.</p>
+                <a href="#" class="btn">Ver habilidades</a>
+            </div>
+
+            <div class="card">
+                <h2>Contacto</h2>
+                <p>¿Tienes una idea interesante o quieres colaborar en un proyecto? No dudes en contactarme. Siempre estoy abierto a nuevas oportunidades.</p>
+                <a href="mailto:tu-email@ejemplo.com" class="btn">Enviar email</a>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 [Tu Nombre]. Hecho con ❤️ y hospedado en GitHub Pages</p>
+        </footer>
+    </div>
+
+    <script>
+        // Efecto de parallax suave
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallax = document.querySelector('body');
+            const speed = scrolled * 0.5;
+            parallax.style.transform = `translateY(${speed}px)`;
+        });
+
+        // Animación de entrada para las tarjetas
+        const cards = document.querySelectorAll('.card');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        });
+
+        cards.forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
