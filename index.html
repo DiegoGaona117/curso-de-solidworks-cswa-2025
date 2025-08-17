@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Página Web</title>
+    
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
         * {
             margin: 0;
             padding: 0;
@@ -12,206 +15,455 @@
         }
 
         body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
         }
 
-        .container {
+        /* Fondo completo */
+        .full-background {
+            background-color: #0f172a;
+            color: white;
+            width: 100%;
+            padding-bottom: 40px;
+        }
+
+        /* Navegación */
+        .breadcrumb {
+            background-color: #1e293b;
+            padding: 12px 0;
+            font-size: 14px;
+            color: #94a3b8;
+        }
+
+        .breadcrumb .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 0 20px;
         }
 
-        header {
-            text-align: center;
-            padding: 40px 0;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            margin-bottom: 40px;
-            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
-            border: 1px solid rgba(255, 255, 255, 0.18);
+        .breadcrumb a {
+            color: #94a3b8;
+            text-decoration: none;
         }
 
-        h1 {
-            font-size: 3rem;
+        .breadcrumb a:hover {
             color: white;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
 
-        .subtitle {
-            font-size: 1.2rem;
-            color: rgba(255, 255, 255, 0.9);
+        /* Contenedor principal */
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            display: block;
+        }
+
+        /* Contenido izquierdo */
+        .content-left {
+            max-width: 100%;
+        }
+
+        .course-category {
+            background-color: #3b82f6;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .course-title {
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .course-subtitle {
+            font-size: 20px;
+            color: #e2e8f0;
             margin-bottom: 30px;
+            line-height: 1.5;
         }
 
-        .main-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-bottom: 40px;
+        /* Información del curso */
+        .course-info {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 20px;
         }
 
-        .card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
-            border: 1px solid rgba(255, 255, 255, 0.18);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        .bestseller-badge {
+            background-color: #f59e0b;
+            color: #000;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
         }
 
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 40px rgba(31, 38, 135, 0.5);
+        .rating {
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
-        .card h2 {
+        .rating-number {
+            color: #f59e0b;
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .stars {
+            display: flex;
+            gap: 2px;
+        }
+
+        .star {
+            width: 16px;
+            height: 16px;
+            background-color: #f59e0b;
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        }
+
+        .star.half {
+            background: linear-gradient(90deg, #f59e0b 50%, #374151 50%);
+        }
+
+        .students-count {
+            color: #94a3b8;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        /* Información del instructor */
+        .instructor-info {
+            margin: 20px 0;
+            font-size: 14px;
+            color: #94a3b8;
+        }
+
+        .instructor-name {
+            color: #3b82f6;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .course-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 14px;
+            color: #94a3b8;
+            margin-top: 10px;
+        }
+
+        /* Panel derecho */
+        .sidebar {
+            background-color: #1e293b;
+            border-radius: 12px;
+            overflow: hidden;
+            position: sticky;
+            top: 20px;
+        }
+
+        .video-preview {
+            position: relative;
+            background: linear-gradient(135deg, #6366f1, #8b5cf6, #ec4899);
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .play-button {
+            width: 60px;
+            height: 60px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .play-button:hover {
+            transform: scale(1.1);
+        }
+
+        .play-button::after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 20px solid #333;
+            border-top: 12px solid transparent;
+            border-bottom: 12px solid transparent;
+            margin-left: 4px;
+        }
+
+        .preview-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background-color: rgba(0,0,0,0.7);
             color: white;
-            margin-bottom: 15px;
-            font-size: 1.5rem;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 12px;
         }
 
-        .card p {
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 15px;
+        .solidworks-logo {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            background-color: white;
+            padding: 8px;
+            border-radius: 6px;
+            font-weight: bold;
+            color: #dc2626;
+            font-size: 14px;
+        }
+
+        /* Pricing */
+        .pricing {
+            padding: 30px;
+        }
+
+        .price {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .currency {
+            color: #94a3b8;
+            font-size: 18px;
+        }
+
+        /* Botones de acción */
+        .action-buttons {
+            margin-top: 30px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .btn-whatsapp {
+            background-color: #25D366;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #128C7E;
+            transform: translateY(-1px);
+        }
+
+        .whatsapp-icon {
+            font-size: 18px;
+        }
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
         }
 
         .btn {
-            display: inline-block;
-            padding: 12px 25px;
-            background: rgba(255, 255, 255, 0.2);
-            color: white;
+            padding: 16px 24px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
             text-decoration: none;
-            border-radius: 25px;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            transition: all 0.3s ease;
-            font-weight: bold;
-        }
-
-        .btn:hover {
-            background: rgba(255, 255, 255, 0.3);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        }
-
-        footer {
             text-align: center;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.2);
-            border-radius: 15px;
-            margin-top: 40px;
+            display: block;
         }
 
-        footer p {
-            color: rgba(255, 255, 255, 0.8);
-        }
-
-        .social-links {
-            margin: 20px 0;
-        }
-
-        .social-links a {
+        .btn-primary {
+            background-color: #8b5cf6;
             color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 1.1rem;
-            transition: color 0.3s ease;
         }
 
-        .social-links a:hover {
-            color: #ffd700;
+        .btn-primary:hover {
+            background-color: #7c3aed;
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: #8b5cf6;
+            border: 2px solid #8b5cf6;
+        }
+
+        .btn-secondary:hover {
+            background-color: #8b5cf6;
+            color: white;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .main-container {
+                padding: 20px;
+            }
         }
 
         @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
+            .course-title {
+                font-size: 32px;
             }
-            
-            .container {
-                padding: 10px;
+
+            .course-subtitle {
+                font-size: 18px;
             }
-            
-            .card {
+
+            .main-container {
+                padding: 15px;
+            }
+
+            .course-info {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+
+            .video-preview {
+                height: 180px;
+            }
+
+            .pricing {
                 padding: 20px;
             }
+        }
+
+        @media (max-width: 480px) {
+            .course-title {
+                font-size: 24px;
+            }
+
+            .course-subtitle {
+                font-size: 16px;
+            }
+
+            .price {
+                font-size: 28px;
+            }
+
+            .breadcrumb {
+                font-size: 12px;
+            }
+
+            .video-preview {
+                height: 160px;
+            }
+
+            .play-button {
+                width: 50px;
+                height: 50px;
+            }
+
+            .play-button::after {
+                border-left: 16px solid #333;
+                border-top: 10px solid transparent;
+                border-bottom: 10px solid transparent;
+            }
+        }
+
+        /* Animaciones */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .content-left {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .sidebar {
+            animation: fadeInUp 0.6s ease-out 0.2s both;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>¡Hola, soy [Tu Nombre]!</h1>
-            <p class="subtitle">Bienvenido a mi página web personal</p>
-            <div class="social-links">
-                <a href="#" target="_blank">GitHub</a>
-                <a href="#" target="_blank">LinkedIn</a>
-                <a href="#" target="_blank">Twitter</a>
-            </div>
-        </header>
+    <div class="full-background">
+               <!-- Contenedor principal -->
+        <div class="main-container">
+            <!-- Contenido izquierdo -->
+            <div class="content-left">
+                <h1 class="course-title">
+                    Curso de SolidWorks: de cero a certificación internacional
+                </h1>
+                
+                <p class="course-subtitle">
+                    Aprende SolidWorks desde cero, domina proyectos reales y obtén tu certificación CSWA con apoyo personalizado
+                </p>
 
-        <div class="main-content">
-            <div class="card">
-                <h2>Sobre Mí</h2>
-                <p>Soy un desarrollador apasionado por la tecnología y el aprendizaje continuo. Me encanta crear soluciones innovadoras y trabajar en proyectos que marquen la diferencia.</p>
-                <a href="#" class="btn">Ver más</a>
-            </div>
+                <div class="course-info">
+                    <span class="bestseller-badge">Lo más vendido</span>
+                    
+                    <div class="rating">
+                        <span class="rating-number">4.8</span>
+                        <div class="stars">
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star half"></div>
+                        </div>
+                        <a href="#comentarios" class="students-count">(1,220 calificaciones)</a>
+                        <span>3937 estudiantes</span>
+                    </div>
+                </div>
 
-            <div class="card">
-                <h2>Proyectos</h2>
-                <p>Aquí puedes encontrar algunos de mis proyectos más recientes. Desde aplicaciones web hasta herramientas útiles, cada proyecto refleja mi pasión por el código limpio y la funcionalidad.</p>
-                <a href="#" class="btn">Ver proyectos</a>
-            </div>
+                <div class="instructor-info">
+                    Creado por <a href="#Diego_Gaona" class="instructor-name">Diego Gaona</a>
+                </div>
 
-            <div class="card">
-                <h2>Habilidades</h2>
-                <p>Especializado en desarrollo web con HTML, CSS, JavaScript, y frameworks modernos. Siempre en búsqueda de nuevas tecnologías para mejorar mis habilidades.</p>
-                <a href="#" class="btn">Ver habilidades</a>
-            </div>
+                <div class="course-meta">
+                    <span>🕐 Última actualización: 8/2025</span>
+                    <span>🌍 Español</span>
+                    <span>📱 Español [automático]</span>
+                </div>
 
-            <div class="card">
-                <h2>Contacto</h2>
-                <p>¿Tienes una idea interesante o quieres colaborar en un proyecto? No dudes en contactarme. Siempre estoy abierto a nuevas oportunidades.</p>
-                <a href="mailto:tu-email@ejemplo.com" class="btn">Enviar email</a>
+                <!-- Botones de acción -->
+                <div class="action-buttons">
+                    <a href="https://pay.hotmart.com/U80396963E?off=2hagwnfj&bid=1755332593033" class="btn btn-primary boton-comprar">
+                        <span class="comprar">INSCRÍBETE POR $549 MXN</span>
+                    </a>
+                    <a href="https://wa.me/+5214621579719" target="_blank" class="btn btn-whatsapp whatsapp-link">
+                        <span class="whatsapp-icon">📱</span>
+                        Contactar por WhatsApp
+                    </a>
+                    
+                </div>
+                <div>
+               <p style="line-height: 1.6;">
+✓ Apoyo personalizado<br>
+✓ Acceso de por vida<br>
+✓ +Incluye Solidworks 2022<br>
+✓ Garantía de reembolso por 30 días
+</p>
+<div style="margin-top:20px">⚡ +47 estudiantes ya decidieron mejorar su futuro profesional esta semana</div>
             </div>
         </div>
-
-        <footer>
-            <p>&copy; 2025 [Tu Nombre]. Hecho con ❤️ y hospedado en GitHub Pages</p>
-        </footer>
     </div>
-
-    <script>
-        // Efecto de parallax suave
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const parallax = document.querySelector('body');
-            const speed = scrolled * 0.5;
-            parallax.style.transform = `translateY(${speed}px)`;
-        });
-
-        // Animación de entrada para las tarjetas
-        const cards = document.querySelectorAll('.card');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        });
-
-        cards.forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(20px)';
-            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(card);
-        });
-    </script>
+</html>
 </body>
 </html>
