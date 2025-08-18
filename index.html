@@ -189,7 +189,73 @@
             color: #94a3b8;
             margin-top: 10px;
         }
+        
+        /* Panel derecho */
+        .sidebar {
+            background-color: #1e293b;
+            border-radius: 12px;
+            overflow: hidden;
+            position: sticky;
+            top: 20px;
+        }
 
+        .video-preview {
+            position: relative;
+            background: linear-gradient(135deg, #6366f1, #8b5cf6, #ec4899);
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .play-button {
+            width: 60px;
+            height: 60px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .play-button:hover {
+            transform: scale(1.1);
+        }
+
+        .play-button::after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 20px solid #333;
+            border-top: 12px solid transparent;
+            border-bottom: 12px solid transparent;
+            margin-left: 4px;
+        }
+
+        .preview-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background-color: rgba(0,0,0,0.7);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+        }
+
+        .solidworks-logo {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            background-color: white;
+            padding: 8px;
+            border-radius: 6px;
+            font-weight: bold;
+            color: #dc2626;
+            font-size: 14px;
+        }
 
         /* Pricing */
         .pricing {
