@@ -1031,293 +1031,428 @@
     </div>
     <a name="curso-contenido"></a>
 
-    <style>
-    @import url('https://fonts.googleapis.com/css2?family=Basic&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Basic&family=Rubik:wght@700&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Basic&family=Roboto:wght@500&family=Rubik:wght@700&display=swap');
+   <style>
+        /* Variables CSS para mejor mantenimiento */
+        :root {
+            --font-basic: 'Basic', sans-serif;
+            --font-roboto: 'Roboto', sans-serif;
+            --font-rubik: 'Rubik', sans-serif;
+            --color-yellow: rgba(251, 255, 0, 0.823);
+            --color-border: rgba(0, 0, 0, 0.256);
+            --shadow-light: 0px 0px 10px 4px rgba(0, 0, 0, 0.151);
+            --max-width: 1200px;
+            --border-radius: 3px;
+            --transition: all 0.3s ease;
+        }
 
+        /* Reset optimizado */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        text-decoration: none;
-        font-family: 'Basic', sans-serif;
-        font-size: 16px;
-    }
-    .requisitos-con-proyectos {
-            background-color: rgba(255, 0, 0, 0);
-            text-align: center;
-            font-family: 'Basic', sans-serif;
+        body {
+            font-family: var(--font-basic);
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* Contenedor principal */
+        .contenedor-contenido-principal {
+            padding: 20px;
+            text-align: justify;
+        }
+
+        .contenedor-contenido-principal > div {
+            margin: 0 auto;
+            max-width: var(--max-width);
+        }
+
+        /* Títulos y texto */
+        .titulo-certificado {
             font-size: 24px;
-            border: solid 0px;
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+
+        .lista-beneficios {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .lista-beneficios li {
+            margin: 8px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .lista-beneficios li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--color-yellow);
+            font-weight: bold;
+        }
+
+        /* Contenedor de imágenes certificados */
+        .cswa-container {
+            display: flex;
+            justify-content: center;
+            margin: 45px 0;
+        }
+
+        .img-cswa {
+            max-width: 600px;
+            width: 100%;
+            height: auto;
+            box-shadow: var(--shadow-light);
+            border-radius: var(--border-radius);
+        }
+
+        /* Texto destacado */
+        .texto-destacado {
+            font-weight: bold;
+            margin: 16px 0;
+        }
+
+        /* Sección expandible */
+        .seccion-expandible {
+            margin: 20px 0;
+        }
+
+        .contenido-oculto {
+            display: none;
+            animation: fadeIn 0.3s ease-in;
+        }
+
+        .contenido-oculto.mostrar {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Botón ver más */
+        .boton-container {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+        }
+
+        .btn-ver-mas {
+            padding: 12px 30px;
+            background-color: var(--color-yellow);
+            color: #000;
+            border: 1px solid var(--color-border);
+            font-weight: 600;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: var(--transition);
+            font-family: inherit;
+        }
+
+        .btn-ver-mas:hover {
+            background-color: #f0f500;
+            transform: translateY(-2px);
+        }
+
+        .btn-ver-mas:active {
+            transform: translateY(0);
+        }
+
+        /* Sección proyectos */
+        .seccion-proyectos {
+            text-align: center;
             margin-top: 40px;
         }
-        
-    .requisitos-con3-proyectos {
-            margin: 5px;
+
+        .titulo-proyectos {
+            font-size: 24px;
+            margin: 20px auto;
+            max-width: fit-content;
+        }
+
+        .grid-proyectos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .proyecto-item {
+            text-align: center;
+        }
+
+        .proyecto-imagen {
+            max-width: 100%;
+            width: auto;
+            height: auto;
+            margin: 0 auto 10px;
+            display: block;
+            transition: var(--transition);
+        }
+
+        .proyecto-imagen:hover {
+            transform: scale(1.05);
+        }
+
+        .proyecto-descripcion {
             font-size: 16px;
-        }
-    .img-requisitos2-proyectos {
-            background-color: rgba(238, 238, 32, 0);
-            max-width: 1200px;
-            margin: 30px auto;
-            border: solid 0px;
-            display: flex;
-            justify-content: center;
-            width: 100%;
-        }
-        
-    .contenedor-requisitos-con3-proyectos{
-            display: flex;
-            justify-content: center;
-            
+            margin: 10px 0;
         }
 
-
-        @media (max-width: 600px) {
-            .contenedor-requisitos-con3-proyectos{
-                display: block;
-                
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .contenedor-contenido-principal {
+                padding: 15px;
             }
-            .img-requisitos2-proyectos {
-            margin: 0px;
+
+            .titulo-certificado {
+                font-size: 20px;
             }
-            .requisitos-con3-proyectos{
-                display: flex;
+
+            .cswa-container {
+                margin: 30px 0;
             }
-            .requisitos-con4-proyectos{
-                margin: auto;   
-                }
-            
+
+            .grid-proyectos {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
         }
 
-     .contenedor-contenido-principal{
-        display: flex; 
-        background-color: rgba(255, 0, 0, 0); 
-        line-height: 30px; 
-        padding: 20px;
-     }
-    
-    li {
-        margin-left: 40px;
-    }
+        @media (max-width: 480px) {
+            .titulo-certificado {
+                font-size: 18px;
+            }
 
-   
-    .cswa {
-        width: auto;
-        margin-top: 45px;
-        margin-bottom: 45px;
-        display: flex;
+            .btn-ver-mas {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+        }
 
-    }
+        /* Optimizaciones críticas de performance */
+        img {
+            loading: lazy;
+            decoding: async;
+            /* Evita layout shift */
+            aspect-ratio: attr(width) / attr(height);
+        }
 
-    .img-cswa {
-        box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.151);
-        justify-content: center;
-        max-width: 600px;
-        width: 100%;
-        margin: auto;
-    }
+        /* Solo las imágenes visibles inicialmente sin lazy loading */
+        .img-cswa:first-of-type {
+            loading: eager;
+        }
 
-    .negritas {
-        font-weight: bold;
-    }
+        /* Reduce repaints durante hover */
+        .proyecto-imagen {
+            transform: translateZ(0);
+            backface-visibility: hidden;
+        }
 
-    .txcentrado {
-        font-size: 20px;
-        text-align: center;
-    }
-    .boton-vermas{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        margin: 30px 0px;
-    }
+        .proyecto-imagen:hover {
+            transform: translateZ(0) scale(1.05);
+        }
 
-    .txt-vermas{
-        display: none;
-    }
-    
+        /* Optimización para animaciones */
+        .contenido-oculto {
+            contain: layout style paint;
+        }
 
-    #ver-mas-btn{
-        padding: 8px 30px;
-        background-color: rgba(251, 255, 0, 0.823);
-        color: rgb(0, 0, 0);
-        border: solid 1px rgba(0, 0, 0, 0.256);
-        font-weight: 600;
-        border-radius: 3px;
-        cursor: pointer;
-    }
-</style>
-
-<div style="text-align: justify;" class="contenedor-contenido-principal">
-    <div style="margin: auto; max-width: 1200px;">
-<a name="udemy"></a>
-        <p style="font-size: 24px;"><strong>Obtienes certificado por parte de Udemy</strong></p>
-                <li>GRATIS</li>
-
-        <li>Incluye número de certificado y URL</li>
-                <li>Para tu CV y perfil profesional</li>
-
-        <div class="cswa">
-            <img class="img-cswa" src="https://static.wixstatic.com/media/32c95b_48b3976a73c047eab6f1070e91947221~mv2.png"
-                alt="">
-        </div>    
+        /* Reduce el trabajo del navegador durante scroll */
+        .grid-proyectos {
+            contain: layout style paint;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor-contenido-principal">
         <div>
-            <p>
-                <span class="negritas">Obtendrás la preparación necesaria para el examen de Certificado de Solidworks
-                    Asociado.</span>
-    
-            </p>
-    
-        </div>
-        <a name="cswa"></a>
-        <div class="cswa">
-            <img class="img-cswa" src="https://static.wixstatic.com/media/32c95b_0f501beae2f84e66a1a1e5202c9926c5~mv2.png"
-                alt="">
-        </div>
-        <p>Te preparamos para el examen oficial CSWA (valor del examen: $99 USD)</p>
-        <div class="txt-vermas">
-            <p >Se adquiere directamente en el centro de
-              certificación de Solidworks, se presenta completamente en línea, obtienes tu registro y certificado al
-              aprobar tu examen. <br>
-              <br>
-              Dentro del curso obtendrás toda la información y preparación que necesitas para aprobar tu examen sin ningun problema. <span style="font-weight: 600;"><br><br>Recuerda que también cuentas con asesorias para cualquier duda o problema que tengas.</span><br>
-          </p>
-          <br>
-          <p style="font-weight: 600;">Encuentras desde:<br></p>
-          <li>Ejemplos de examen<br></li>
-          <li>Simulación de examen<br></li>
-          <li>Cómo comprarlo<br></li>
-          <li>Hasta como presentarlo<br><br></li>
+            <a name="udemy" id="udemy"></a>
+            <h2 class="titulo-certificado">Obtienes certificado por parte de Udemy</h2>
             
-          </div>
-          <div class="boton-vermas">
-            <button id="ver-mas-btn">Ver Más CSWA</button>
-          </div>
-        <div class="requisitos-con-proyectos">
+            <ul class="lista-beneficios">
+                <li>GRATIS</li>
+                <li>Incluye número de certificado y URL</li>
+                <li>Para tu CV y perfil profesional</li>
+            </ul>
 
-                <div style="display: flex;">
-                    <p style="margin: auto;">¿Cúales son los proyectos del curso?</p>
-                </div>
-
-                <div class="contenedor-requisitos-con3-proyectos">
-
-                    <div class="requisitos-con3-proyectos">
-
-                        <div class="requisitos-con4-proyectos">
-
-                            <img class="img-requisitos2-proyectos"
-                                src="https://static.wixstatic.com/media/32c95b_34ae8d1d023141e0ab1807a7fda48697~mv2.png"
-                                alt="">
-                            <p>Dibujarás <b>desde cero</b> tus propias piezas</p>
-
-                        </div>
-
-                    </div>
-
-                    <div class="requisitos-con3-proyectos">
-
-                        <div class="requisitos-con4-proyectos">
-
-                            <img class="img-requisitos2-proyectos"
-                                src="https://static.wixstatic.com/media/32c95b_082984f9eaa740b6ac44f7fda9de8e9d~mv2.png"
-                                alt="">
-                            <p>Obtendrás los <b>Planos 2D</b> tus propias piezas</p>
-
-                        </div>
-
-                    </div>
-
-                    <div class="requisitos-con3-proyectos">
-
-                        <div class="requisitos-con4-proyectos">
-
-                            <img class="img-requisitos2-proyectos"
-                                src="https://static.wixstatic.com/media/32c95b_309d1fc5bd7d4686be95458be768102a~mv2.png"
-                                alt="">
-                            <p>Proyecto <b>desde cero</b> ensamble motor estrella</p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-                <div class="contenedor-requisitos-con3-proyectos">
-
-                    <div class="requisitos-con3-proyectos">
-
-                        <div class="requisitos-con4-proyectos">
-
-                            <img class="img-requisitos2-proyectos"
-                                src="https://static.wixstatic.com/media/32c95b_3bb8175ac9704752972d139ae31f91df~mv2.png"
-                                alt="">
-                            <p>Proyecto 1</p>
-
-                        </div>
-
-                    </div>
-
-                    <div class="requisitos-con3-proyectos">
-
-                        <div class="requisitos-con4-proyectos">
-
-                            <img class="img-requisitos2-proyectos"
-                                src="https://static.wixstatic.com/media/32c95b_51521df1290c48daba512949144027bf~mv2.png"
-                                alt="">
-                            <p>Proyecto 2</p>
-
-                        </div>
-
-                    </div>
-
-                    <div class="requisitos-con3-proyectos">
-
-                        <div class="requisitos-con4-proyectos">
-
-                            <img class="img-requisitos2-proyectos"
-                                src="https://static.wixstatic.com/media/32c95b_a584704abe2d4c2cb5dec03fc7923ea3~mv2.png"
-                                alt="">
-                            <p>Proyecto 3</p>
-
-                        </div>
-
-                    </div>
-                    
-                </div>
-                <div class="requisitos-con3-proyectos">
-
-                        <div class="requisitos-con4-proyectos">
-
-                            <img class="img-requisitos2-proyectos"
-                                src="https://static.wixstatic.com/media/32c95b_4a78ba5265084cd1968c6485033f80e9~mv2.png"
-                                alt="">
-                            <p>Proyecto 4</p>
-
-                        </div>
-
-                    </div>
+            <div class="cswa-container">
+                <img class="img-cswa" 
+                     src="https://static.wixstatic.com/media/32c95b_48b3976a73c047eab6f1070e91947221~mv2.png"
+                     alt="Certificado de Udemy" 
+                     loading="eager"
+                     decoding="async"
+                     width="600" 
+                     height="400"
+                     style="background-color: #f0f0f0;">
             </div>
-    </div>
-</div>
-<script>
-    // JavaScript para mostrar/ocultar la información
-    const txtVermas = document.querySelector('.txt-vermas');
-    const verMasBtn = document.getElementById('ver-mas-btn');
-    let visible = false; // Variable para rastrear el estado de visibilidad
 
-    verMasBtn.addEventListener('click', () => {
-        if (!visible) {
-            txtVermas.style.display = 'block'; // Mostrar el contenido
-            verMasBtn.textContent = 'Ocultar'; // Cambiar el texto del botón
-        } else {
-            txtVermas.style.display = 'none'; // Ocultar el contenido
-            verMasBtn.textContent = 'Ver Más'; // Restaurar el texto del botón
-        }
-        visible = !visible; // Cambiar el estado de visibilidad
-    });
-</script>
+            <p class="texto-destacado">
+                Obtendrás la preparación necesaria para el examen de Certificado de Solidworks Asociado.
+            </p>
+
+            <a name="cswa" id="cswa"></a>
+            <div class="cswa-container">
+                <img class="img-cswa" 
+                     src="https://static.wixstatic.com/media/32c95b_0f501beae2f84e66a1a1e5202c9926c5~mv2.png"
+                     alt="Certificación CSWA" 
+                     loading="eager"
+                     decoding="async"
+                     width="600" 
+                     height="400"
+                     style="background-color: #f0f0f0;">
+            </div>
+
+            <p>Te preparamos para el examen oficial CSWA (valor del examen: $99 USD)</p>
+
+            <div class="seccion-expandible">
+                <div class="contenido-oculto" id="contenido-expandible">
+                    <p>Se adquiere directamente en el centro de certificación de Solidworks, se presenta completamente en línea, obtienes tu registro y certificado al aprobar tu examen.</p>
+                    
+                    <p>Dentro del curso obtendrás toda la información y preparación que necesitas para aprobar tu examen sin ningún problema.</p>
+                    
+                    <p><strong>Recuerda que también cuentas con asesorías para cualquier duda o problema que tengas.</strong></p>
+                    
+                    <p><strong>Encuentras desde:</strong></p>
+                    <ul class="lista-beneficios">
+                        <li>Ejemplos de examen</li>
+                        <li>Simulación de examen</li>
+                        <li>Cómo comprarlo</li>
+                        <li>Hasta como presentarlo</li>
+                    </ul>
+                </div>
+
+                <div class="boton-container">
+                    <button class="btn-ver-mas" id="btn-expandir" aria-expanded="false">
+                        Ver Más CSWA
+                    </button>
+                </div>
+            </div>
+
+            <section class="seccion-proyectos">
+                <h2 class="titulo-proyectos">¿Cuáles son los proyectos del curso?</h2>
+
+                <div class="grid-proyectos">
+                    <article class="proyecto-item">
+                        <img class="proyecto-imagen"
+                             src="https://static.wixstatic.com/media/32c95b_34ae8d1d023141e0ab1807a7fda48697~mv2.png"
+                             alt="Proyecto de dibujo desde cero"
+                             loading="lazy"
+                             decoding="async"
+                             width="300" 
+                             height="200"
+                             style="background-color: #f0f0f0;">
+                        <p class="proyecto-descripcion">Dibujarás <strong>desde cero</strong> tus propias piezas</p>
+                    </article>
+
+                    <article class="proyecto-item">
+                        <img class="proyecto-imagen"
+                             src="https://static.wixstatic.com/media/32c95b_082984f9eaa740b6ac44f7fda9de8e9d~mv2.png"
+                             alt="Planos 2D"
+                             loading="lazy"
+                             decoding="async"
+                             width="300" 
+                             height="200"
+                             style="background-color: #f0f0f0;">
+                        <p class="proyecto-descripcion">Obtendrás los <strong>Planos 2D</strong> tus propias piezas</p>
+                    </article>
+
+                    <article class="proyecto-item">
+                        <img class="proyecto-imagen"
+                             src="https://static.wixstatic.com/media/32c95b_309d1fc5bd7d4686be95458be768102a~mv2.png"
+                             alt="Ensamble motor estrella"
+                             loading="lazy"
+                             decoding="async"
+                             width="300" 
+                             height="200"
+                             style="background-color: #f0f0f0;">
+                        <p class="proyecto-descripcion">Proyecto <strong>desde cero</strong> ensamble motor estrella</p>
+                    </article>
+
+                    <article class="proyecto-item">
+                        <img class="proyecto-imagen"
+                             src="https://static.wixstatic.com/media/32c95b_3bb8175ac9704752972d139ae31f91df~mv2.png"
+                             alt="Proyecto 1"
+                             loading="lazy"
+                             decoding="async"
+                             width="300" 
+                             height="200"
+                             style="background-color: #f0f0f0;">
+                        <p class="proyecto-descripcion">Proyecto 1</p>
+                    </article>
+
+                    <article class="proyecto-item">
+                        <img class="proyecto-imagen"
+                             src="https://static.wixstatic.com/media/32c95b_51521df1290c48daba512949144027bf~mv2.png"
+                             alt="Proyecto 2"
+                             loading="lazy"
+                             decoding="async"
+                             width="300" 
+                             height="200"
+                             style="background-color: #f0f0f0;">
+                        <p class="proyecto-descripción">Proyecto 2</p>
+                    </article>
+
+                    <article class="proyecto-item">
+                        <img class="proyecto-imagen"
+                             src="https://static.wixstatic.com/media/32c95b_a584704abe2d4c2cb5dec03fc7923ea3~mv2.png"
+                             alt="Proyecto 3"
+                             loading="lazy"
+                             decoding="async"
+                             width="300" 
+                             height="200"
+                             style="background-color: #f0f0f0;">
+                        <p class="proyecto-descripcion">Proyecto 3</p>
+                    </article>
+
+                    <article class="proyecto-item">
+                        <img class="proyecto-imagen"
+                             src="https://static.wixstatic.com/media/32c95b_4a78ba5265084cd1968c6485033f80e9~mv2.png"
+                             alt="Proyecto 4"
+                             loading="lazy"
+                             decoding="async"
+                             width="300" 
+                             height="200"
+                             style="background-color: #f0f0f0;">
+                        <p class="proyecto-descripcion">Proyecto 4</p>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript optimizado para mejor performance
+        document.addEventListener('DOMContentLoaded', function() {
+            const contenidoOculto = document.getElementById('contenido-expandible');
+            const btnExpandir = document.getElementById('btn-expandir');
+            
+            if (!contenidoOculto || !btnExpandir) return;
+            
+            let isExpanded = false;
+
+            btnExpandir.addEventListener('click', function() {
+                isExpanded = !isExpanded;
+                
+                if (isExpanded) {
+                    contenidoOculto.classList.add('mostrar');
+                    btnExpandir.textContent = 'Ocultar';
+                    btnExpandir.setAttribute('aria-expanded', 'true');
+                } else {
+                    contenidoOculto.classList.remove('mostrar');
+                    btnExpandir.textContent = 'Ver Más CSWA';
+                    btnExpandir.setAttribute('aria-expanded', 'false');
+                }
+            });
+        });
+    </script>
+
+    
 
 
     <script>
