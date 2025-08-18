@@ -444,6 +444,209 @@
         .loaded {
             opacity: 1;
         }
+         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .body1 {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .welcome-container {
+        margin:auto;
+        margin-top:20px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            padding: 40px;
+            max-width: 1200px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .welcome-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899);
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .welcome-emoji {
+            font-size: 30px;
+            animation: wave 2s ease-in-out infinite;
+        }
+
+        @keyframes wave {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(-10deg); }
+            75% { transform: rotate(10deg); }
+        }
+
+        .welcome-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1f2937;
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        .course-icon {
+            width: 80px;
+            height: 80px;
+            margin: 20px auto 30px;
+            background: linear-gradient(135deg, #10b981, #059669);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 25px -10px rgba(16, 185, 129, 0.5);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .course-icon svg {
+            width: 40px;
+            height: 40px;
+            color: white;
+        }
+
+        .description {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .highlight {
+            color: #dc2626;
+            font-weight: 600;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+            line-height:30px;
+        }
+
+        .feature {
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 20px 15px;
+            transition: all 0.3s ease;
+            border: 1px solid #e2e8f0;
+        }
+
+        .feature:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -10px rgba(0, 0, 0, 0.1);
+            border-color: #3b82f6;
+        }
+
+        .feature-icon {
+            font-size: 24px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .feature-text {
+            font-size: 14px;
+            font-weight: 600;
+            color: #374151;
+        }
+
+        .progress-bar {
+            background: #e5e7eb;
+            border-radius: 10px;
+            height: 8px;
+            margin: 25px 0;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            height: 100%;
+            width: 0%;
+            border-radius: 10px;
+            animation: progressLoad 2s ease-out 0.5s both;
+        }
+
+        @keyframes progressLoad {
+            to { width: 10%; }
+        }
+
+        .progress-text {
+            font-size: 12px;
+            color: #6b7280;
+            margin-top: 8px;
+        }
+
+        /* Responsive */
+        @media (max-width: 480px) {
+            .welcome-container {
+                padding: 30px 20px;
+            }
+
+            .welcome-title {
+                font-size: 24px;
+            }
+
+            .welcome-emoji {
+                font-size: 40px;
+            }
+
+            .course-icon {
+                width: 70px;
+                height: 70px;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animaciones de entrada */
+        .welcome-container {
+            animation: slideUp 0.6s ease-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     </style>
 </head>
 <body>
@@ -503,6 +706,37 @@
                     <div style="margin-top:20px">⚡ +47 estudiantes se inscribieron esta semana</div>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div class="welcome-container">
+        <div class="header">
+            <!--<span class="welcome-emoji">👋</span>-->
+            <h1 class="welcome-title">¡Bienvenido al curso de SolidWorks!</h1>
+        </div>
+
+        <div class="description">
+            <p style="color: #3B82F6; font-size: 24px"><strong>Diseñado para personas sin experiencia previa</strong></p>
+            <p style="margin: 15px 0;">Iniciando <span class="highlight">desde cero</span></p>
+            <p>Hasta que domines los 3 módulos principales</p>
+        </div>
+
+        <div class="features">
+            <div class="feature">
+                <span class="feature-icon">🔧</span>
+                <div class="feature-text">Pieza 3D:<br> Modelado de componentes</div>
+            </div>
+            <div class="feature">
+                <span class="feature-icon">📐</span>
+                <div class="feature-text">Dibujo 2D:<br> Planos técnicos</div>
+            </div>
+            <div class="feature">
+                <span class="feature-icon">⚙️</span>
+                <div class="feature-text">Ensamble:<br> Proyectos completos</div>
+            </div>
+        </div>
+        <div>
+          <p style="margin:auto; padding: 20px;">Metodología probada con +3,937 estudiantes</p>
         </div>
     </div>
 
