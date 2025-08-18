@@ -21,6 +21,19 @@
             background-color: #EFEFF5;
             font-family: 'Inter', sans-serif;
         }
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body{
+            background-color: #EFEFF5;
+            font-family: 'Inter', sans-serif;
+        }
 
         /* Banner de cuenta regresiva */
         .countdown-banner {
@@ -510,6 +523,8 @@
             display: none;
         }
     </style>
+</head>
+<body>
     <!-- Banner de cuenta regresiva -->
     <div id="countdownBanner" class="countdown-banner">
         <div class="countdown-content">
@@ -581,6 +596,17 @@
                         ✓ Garantía de reembolso por 30 días
                     </p>
                     <div style="margin-top:20px">⚡ +47 estudiantes se inscribieron esta semana</div>
+                    
+                    <!-- Botón de reset para testing - REMOVER EN PRODUCCIÓN -->
+                    <div style="margin-top: 30px; padding: 15px; background-color: #374151; border-radius: 8px;">
+                        <p style="color: #94a3b8; font-size: 12px; margin-bottom: 10px;">🔧 Panel de Testing (remover en producción):</p>
+                        <button onclick="resetCountdown()" style="background-color: #dc2626; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 12px; margin-right: 10px;">
+                            🗑️ Reset Contador
+                        </button>
+                        <button onclick="showCurrentState()" style="background-color: #059669; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 12px;">
+                            📊 Ver Estado Actual
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -604,10 +630,10 @@
                 const now = new Date().getTime();
                 
                 if (!stored) {
-                    // Primera visita - iniciar contador de 24h
+                    // Primera visita - iniciar contador de 2 minutos (para testing)
                     const newState = {
                         phase: 'countdown', // countdown | inactive
-                        countdownEnd: now + (00 * 01 * 60 * 1000), // 24 horas
+                        countdownEnd: now + (2 * 60 * 1000), // 2 minutos
                         inactiveEnd: null
                     };
                     localStorage.setItem(this.storageKey, JSON.stringify(newState));
@@ -620,12 +646,12 @@
                 if (state.phase === 'countdown' && now >= state.countdownEnd) {
                     // Contador terminó - pasar a fase inactiva
                     state.phase = 'inactive';
-                    state.inactiveEnd = now + (24 * 60 * 60 * 1000); // 24 horas inactivo
+                    state.inactiveEnd = now + (2 * 60 * 1000); // 2 minutos inactivo
                     localStorage.setItem(this.storageKey, JSON.stringify(state));
                 } else if (state.phase === 'inactive' && now >= state.inactiveEnd) {
                     // Periodo inactivo terminó - reiniciar contador
                     state.phase = 'countdown';
-                    state.countdownEnd = now + (24 * 60 * 60 * 1000); // Nuevo contador 24h
+                    state.countdownEnd = now + (2 * 60 * 1000); // Nuevo contador 2 minutos
                     state.inactiveEnd = null;
                     localStorage.setItem(this.storageKey, JSON.stringify(state));
                 }
@@ -690,6 +716,38 @@
         document.addEventListener('DOMContentLoaded', function() {
             new CountdownManager();
         });
+
+        // Funciones de testing - REMOVER EN PRODUCCIÓN
+        function resetCountdown() {
+            localStorage.removeItem('solidworks_offer_state');
+            alert('✅ Contador reseteado! La página se recargará para iniciar con 2 minutos.');
+            location.reload();
+        }
+
+        function showCurrentState() {
+            const state = localStorage.getItem('solidworks_offer_state');
+            if (state) {
+                const parsed = JSON.parse(state);
+                const now = new Date().getTime();
+                let info = `Estado actual: ${parsed.phase}\n`;
+                
+                if (parsed.phase === 'countdown') {
+                    const timeLeft = parsed.countdownEnd - now;
+                    const hours = Math.floor(timeLeft / (1000 * 60 * 60));
+                    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                    info += `Tiempo restante: ${hours}h ${minutes}m`;
+                } else {
+                    const timeLeft = parsed.inactiveEnd - now;
+                    const hours = Math.floor(timeLeft / (1000 * 60 * 60));
+                    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                    info += `Tiempo hasta reactivación: ${hours}h ${minutes}m`;
+                }
+                
+                alert(info);
+            } else {
+                alert('No hay datos guardados (primera visita)');
+            }
+        }
     </script>
     <!-- URGENCY BAR -->
     <div class="urgency-bar">
