@@ -607,7 +607,7 @@
                     // Primera visita - iniciar contador de 24h
                     const newState = {
                         phase: 'countdown', // countdown | inactive
-                        countdownEnd: now + (24 * 60 * 60 * 1000), // 24 horas
+                        countdownEnd: now + (00 * 01 * 60 * 1000), // 24 horas
                         inactiveEnd: null
                     };
                     localStorage.setItem(this.storageKey, JSON.stringify(newState));
