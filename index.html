@@ -4,10 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curso SolidWorks: De Cero a Certificación CSWA | Diego Gaona</title>
-    <link rel="stylesheet" href="styles.css">
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PM3XT5Z');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PM3XT5Z"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RN68VLQLTW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RN68VLQLTW');
+</script>
 </head>
 <body>
-
+    
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
         
@@ -18,81 +39,7 @@
         }
         
         body{
-            background-color: #EFEFF5;
-            font-family: 'Inter', sans-serif;
-        }
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body{
-            background-color: #EFEFF5;
-            font-family: 'Inter', sans-serif;
-        }
-
-        /* Banner de cuenta regresiva */
-        .countdown-banner {
-            background: linear-gradient(135deg, #dc2626, #ef4444, #f97316);
-            color: white;
-            text-align: center;
-            padding: 15px 10px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-        }
-
-        .countdown-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .countdown-text {
-            font-size: 18px;
-            font-weight: 700;
-        }
-
-        .countdown-timer {
-            display: flex;
-            gap: 15px;
-            align-items: center;
-        }
-
-        .time-unit {
-            background-color: rgba(255,255,255,0.2);
-            border-radius: 8px;
-            padding: 8px 12px;
-            min-width: 60px;
-            text-align: center;
-        }
-
-        .time-number {
-            display: block;
-            font-size: 24px;
-            font-weight: 700;
-            line-height: 1;
-        }
-
-        .time-label {
-            display: block;
-            font-size: 12px;
-            margin-top: 2px;
-            opacity: 0.9;
-        }
-
-        .separator {
-            font-size: 24px;
-            font-weight: bold;
+        background-color: #EFEFF5;
         }
 
         /* Fondo completo */
@@ -357,7 +304,7 @@
             padding: 16px 24px;
             border: none;
             border-radius: 8px;
-            font-size: 16px;
+            font-size: 20px;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.2s;
@@ -395,24 +342,6 @@
         }
 
         @media (max-width: 768px) {
-            .countdown-content {
-                flex-direction: column;
-                gap: 10px;
-            }
-            
-            .countdown-text {
-                font-size: 16px;
-            }
-            
-            .time-number {
-                font-size: 20px;
-            }
-            
-            .time-unit {
-                min-width: 50px;
-                padding: 6px 8px;
-            }
-
             .course-title {
                 font-size: 32px;
             }
@@ -441,18 +370,6 @@
         }
 
         @media (max-width: 480px) {
-            .countdown-timer {
-                gap: 8px;
-            }
-            
-            .time-number {
-                font-size: 18px;
-            }
-            
-            .time-label {
-                font-size: 10px;
-            }
-
             .course-title {
                 font-size: 24px;
             }
@@ -497,15 +414,6 @@
             }
         }
 
-        @keyframes pulse {
-            0%, 100% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.05);
-            }
-        }
-
         .content-left {
             animation: fadeInUp 0.6s ease-out;
         }
@@ -513,43 +421,9 @@
         .sidebar {
             animation: fadeInUp 0.6s ease-out 0.2s both;
         }
-
-        .countdown-banner {
-            animation: pulse 2s infinite;
-        }
-
-        /* Ocultar banner */
-        .countdown-banner.hidden {
-            display: none;
-        }
     </style>
-</head>
-<body>
-    <!-- Banner de cuenta regresiva -->
-    <div id="countdownBanner" class="countdown-banner">
-        <div class="countdown-content">
-            <div class="countdown-text">🔥 ¡OFERTA ESPECIAL! Solo por tiempo limitado</div>
-            <div class="countdown-timer">
-                <div class="time-unit">
-                    <span id="hours" class="time-number">00</span>
-                    <span class="time-label">HORAS</span>
-                </div>
-                <div class="separator">:</div>
-                <div class="time-unit">
-                    <span id="minutes" class="time-number">00</span>
-                    <span class="time-label">MIN</span>
-                </div>
-                <div class="separator">:</div>
-                <div class="time-unit">
-                    <span id="seconds" class="time-number">00</span>
-                    <span class="time-label">SEG</span>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <div class="full-background">
-        <!-- Contenedor principal -->
+               <!-- Contenedor principal -->
         <div class="main-container">
             <!-- Contenido izquierdo -->
             <div class="content-left">
@@ -582,492 +456,34 @@
                     Creado por <a href="#Diego_Gaona" class="instructor-name">Diego Gaona</a>
                 </div>
 
+                <!--<div class="course-meta">
+                    <span>🕐 Última actualización: 8/2025</span>
+                    <span>🌍 Español</span>
+                    <span>📱 Español [automático]</span>
+                </div>-->
+
                 <!-- Botones de acción -->
                 <div class="action-buttons">
-                    <a id="buyButton" href="https://pay.hotmart.com/U80396963E?off=2hagwnfj&bid=1755332593033" class="btn btn-primary boton-comprar">
-                        <span id="buttonText" class="comprar">¡INSCRÍBETE AHORA POR $549!</span>
+                    <a href="https://pay.hotmart.com/U80396963E?off=2hagwnfj&bid=1755332593033" class="btn btn-primary boton-comprar">
+                        <span class="comprar">¡INSCRÍBETE AHORA POR $549 MXN!</span>
                     </a>
+                   <!-- <a href="https://wa.me/+5214621579719" target="_blank" class="btn btn-whatsapp whatsapp-link">
+                        <span class="whatsapp-icon">📱</span>
+                        Contactar por WhatsApp
+                    </a>-->
+                    
                 </div>
                 <div>
-                    <p style="line-height: 1.6;">
-                        ✓ Apoyo personalizado<br>
-                        ✓ Acceso de por vida<br>
-                        ✓ +Incluye instalador Solidworks<br>
-                        ✓ Garantía de reembolso por 30 días
-                    </p>
-                    <div style="margin-top:20px">⚡ +47 estudiantes se inscribieron esta semana</div>
-                    
-                    <!-- Botón de reset para testing - REMOVER EN PRODUCCIÓN -->
-                    <div style="margin-top: 30px; padding: 15px; background-color: #374151; border-radius: 8px;">
-                        <p style="color: #94a3b8; font-size: 12px; margin-bottom: 10px;">🔧 Panel de Testing (remover en producción):</p>
-                        <button onclick="resetCountdown()" style="background-color: #dc2626; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 12px; margin-right: 10px;">
-                            🗑️ Reset Contador
-                        </button>
-                        <button onclick="showCurrentState()" style="background-color: #059669; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 12px;">
-                            📊 Ver Estado Actual
-                        </button>
-                    </div>
-                </div>
+               <p style="line-height: 1.6;">
+✓ Apoyo personalizado<br>
+✓ Acceso de por vida<br>
+✓ +Incluye instalador Solidworks<br>
+✓ Garantía de reembolso por 30 días
+</p>
+<div style="margin-top:20px">⚡ +47 estudiantes se inscribieron esta semana</div>
             </div>
         </div>
     </div>
-
-    <script>
-        class CountdownManager {
-            constructor() {
-                this.storageKey = 'solidworks_offer_state';
-                this.init();
-            }
-
-            init() {
-                const state = this.getOfferState();
-                this.handleCurrentState(state);
-                this.startTimer();
-            }
-
-            getOfferState() {
-                const stored = localStorage.getItem(this.storageKey);
-                const now = new Date().getTime();
-                
-                if (!stored) {
-                    // Primera visita - iniciar contador de 2 minutos (para testing)
-                    const newState = {
-                        phase: 'countdown', // countdown | inactive
-                        countdownEnd: now + (2 * 60 * 1000), // 2 minutos
-                        inactiveEnd: null
-                    };
-                    localStorage.setItem(this.storageKey, JSON.stringify(newState));
-                    return newState;
-                }
-
-                const state = JSON.parse(stored);
-
-                // Verificar si hay que cambiar de fase
-                if (state.phase === 'countdown' && now >= state.countdownEnd) {
-                    // Contador terminó - pasar a fase inactiva
-                    state.phase = 'inactive';
-                    state.inactiveEnd = now + (2 * 60 * 1000); // 2 minutos inactivo
-                    localStorage.setItem(this.storageKey, JSON.stringify(state));
-                } else if (state.phase === 'inactive' && now >= state.inactiveEnd) {
-                    // Periodo inactivo terminó - reiniciar contador
-                    state.phase = 'countdown';
-                    state.countdownEnd = now + (2 * 60 * 1000); // Nuevo contador 2 minutos
-                    state.inactiveEnd = null;
-                    localStorage.setItem(this.storageKey, JSON.stringify(state));
-                }
-
-                return state;
-            }
-
-            handleCurrentState(state) {
-                if (state.phase === 'countdown') {
-                    // Mostrar banner y precio especial
-                    document.getElementById('countdownBanner').classList.remove('hidden');
-                    this.setPricing(549, 'https://pay.hotmart.com/U80396963E?off=2hagwnfj&bid=1755332593033');
-                } else if (state.phase === 'inactive') {
-                    // Ocultar banner y precio normal
-                    document.getElementById('countdownBanner').classList.add('hidden');
-                    this.setPricing(999, 'https://pay.hotmart.com/U80396963E?off=nuevo-enlace&bid=precio-normal');
-                }
-            }
-
-            updateCountdown() {
-                const state = this.getOfferState();
-                
-                if (state.phase === 'countdown') {
-                    const now = new Date().getTime();
-                    const timeLeft = state.countdownEnd - now;
-
-                    if (timeLeft <= 0) {
-                        // El contador acaba de expirar, cambiar estado
-                        this.handleCurrentState(this.getOfferState());
-                        return;
-                    }
-
-                    const hours = Math.floor(timeLeft / (1000 * 60 * 60));
-                    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-                    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
-                    document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
-                    document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
-                    document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
-                } else {
-                    // Si no estamos en countdown, verificar si debemos reactivar
-                    this.handleCurrentState(this.getOfferState());
-                }
-            }
-
-            setPricing(price, link) {
-                const buttonText = document.getElementById('buttonText');
-                const buyButton = document.getElementById('buyButton');
-                
-                buttonText.textContent = `¡INSCRÍBETE AHORA POR ${price}!`;
-                buyButton.href = link;
-            }
-
-            startTimer() {
-                setInterval(() => {
-                    this.updateCountdown();
-                }, 1000);
-            }
-        }
-
-        // Inicializar cuando el DOM esté listo
-        document.addEventListener('DOMContentLoaded', function() {
-            new CountdownManager();
-        });
-
-        // Funciones de testing - REMOVER EN PRODUCCIÓN
-        function resetCountdown() {
-            localStorage.removeItem('solidworks_offer_state');
-            alert('✅ Contador reseteado! La página se recargará para iniciar con 2 minutos.');
-            location.reload();
-        }
-
-        function showCurrentState() {
-            const state = localStorage.getItem('solidworks_offer_state');
-            if (state) {
-                const parsed = JSON.parse(state);
-                const now = new Date().getTime();
-                let info = `Estado actual: ${parsed.phase}\n`;
-                
-                if (parsed.phase === 'countdown') {
-                    const timeLeft = parsed.countdownEnd - now;
-                    const hours = Math.floor(timeLeft / (1000 * 60 * 60));
-                    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-                    info += `Tiempo restante: ${hours}h ${minutes}m`;
-                } else {
-                    const timeLeft = parsed.inactiveEnd - now;
-                    const hours = Math.floor(timeLeft / (1000 * 60 * 60));
-                    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-                    info += `Tiempo hasta reactivación: ${hours}h ${minutes}m`;
-                }
-                
-                alert(info);
-            } else {
-                alert('No hay datos guardados (primera visita)');
-            }
-        }
-    </script>
-    <!-- URGENCY BAR -->
-    <div class="urgency-bar">
-        🔥 OFERTA LIMITADA: Solo quedan 3 días para aprovechar el precio especial
-        <div class="timer" id="countdown">02:23:45:12</div>
-    </div>
-
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <div class="container">
-            <h1>Curso de SolidWorks: de cero a certificación internacional</h1>
-            <p class="subtitle">Domina SolidWorks desde cero y obtén tu certificación CSWA con apoyo personalizado</p>
-            
-            <div class="social-proof">
-                <div class="badge">Lo más vendido</div>
-                <div class="rating">
-                    <span class="stars">★★★★★</span>
-                    <span>4.8 (1,220 calificaciones)</span>
-                </div>
-                <div>3937 estudiantes</div>
-            </div>
-
-            <a href="#pricing" class="cta-primary">INSCRÍBETE POR $549 MXN</a>
-            <p style="margin-top: 1rem; opacity: 0.8;">⚡ +47 estudiantes se inscribieron esta semana</p>
-        </div>
-    </section>
-
-    <!-- BENEFITS SECTION -->
-    <section class="benefits">
-        <div class="container">
-            <h2 class="section-title">¿Por qué elegir este curso?</h2>
-            <div class="benefits-grid">
-                <div class="benefit-card">
-                    <div class="benefit-icon">🎯</div>
-                    <h3>70% Práctico</h3>
-                    <p>Desde el primer módulo estarás creando piezas reales. Aprende haciendo, no solo viendo.</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">📱</div>
-                    <h3>Incluye SolidWorks</h3>
-                    <p>Te damos el instalador oficial para que empieces inmediatamente sin complicaciones.</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">🏆</div>
-                    <h3>Certificación CSWA</h3>
-                    <p>Prepárate para obtener tu certificación internacional reconocida mundialmente.</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">🎓</div>
-                    <h3>Apoyo Personalizado</h3>
-                    <p>Asesoría directa conmigo para resolver cualquier duda que tengas.</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">♾️</div>
-                    <h3>Acceso de por Vida</h3>
-                    <p>Un solo pago, acceso ilimitado. Aprende a tu ritmo sin presiones.</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">💯</div>
-                    <h3>Garantía 30 Días</h3>
-                    <p>Si no estás satisfecho, te devolvemos tu dinero sin preguntas.</p>
-                </div>
-            </div>
-            <div style="text-align: center;">
-                <a href="#pricing" class="cta-primary">COMENZAR AHORA</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- WHAT YOU'LL LEARN -->
-    <section class="curriculum">
-        <div class="container">
-            <h2 class="section-title">Lo que aprenderás</h2>
-            <ul class="curriculum-list">
-                <li>Dominarás los fundamentos de SolidWorks desde la primera clase</li>
-                <li>Navegarás con soltura por la interfaz profesional</li>
-                <li>Usarás las herramientas esenciales para modelar piezas desde cero</li>
-                <li>Dominarás el croquizado con precisión total</li>
-                <li>Aprenderás a definir completamente tus croquis</li>
-                <li>Optimizarás tu flujo de diseño usando herramientas clave</li>
-                <li>Aplicarás relaciones inteligentes como simetría y tangencias</li>
-                <li>Realizarás operaciones avanzadas como extrusiones y revoluciones</li>
-                <li>Mejorarás tus modelos con detalles profesionales</li>
-                <li>Asignarás materiales reales y verificarás propiedades físicas</li>
-                <li>Generarás planos técnicos 2D automáticos</li>
-                <li>Crearás hojas de dibujo con vistas múltiples</li>
-                <li>Dominarás las anotaciones y cotas profesionales</li>
-                <li>Exportarás tus planos en PDF profesional</li>
-                <li>Armarás ensamblajes complejos como un profesional</li>
-                <li>Dominarás renderizados fotorrealistas</li>
-                <li>Te prepararás completamente para el examen CSWA</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- INSTRUCTOR SECTION -->
-    <section class="instructor">
-        <div class="container">
-            <h2 class="section-title">Tu Instructor</h2>
-            <div class="instructor-content">
-                <div class="instructor-avatar">DG</div>
-                <div class="instructor-info">
-                    <h3>Diego Gaona</h3>
-                    <p><strong>Profesor especialista en SolidWorks con más de 15 años de experiencia</strong></p>
-                    <p>Soy profesor con más de 15 años de experiencia en la enseñanza y llevo más de 10 años utilizando SolidWorks. Mi mayor fortaleza es la capacidad de transmitir el conocimiento de forma clara y sencilla.</p>
-                    
-                    <div class="instructor-stats">
-                        <div class="stat">
-                            <div class="stat-number">4.7</div>
-                            <div>Calificación</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-number">2,297</div>
-                            <div>Reseñas</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-number">19,648</div>
-                            <div>Estudiantes</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-number">15+</div>
-                            <div>Años enseñando</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- TESTIMONIALS -->
-    <section class="testimonials">
-        <div class="container">
-            <h2 class="section-title">Lo que dicen nuestros estudiantes</h2>
-            <div class="testimonials-grid">
-                <div class="testimonial">
-                    <p>Excelente curso, muy bien explicado. Diego tiene una manera muy clara de enseñar que hace que todo sea fácil de entender. Logré dominar SolidWorks en pocas semanas.</p>
-                    <div class="testimonial-author">- María González, Ingeniera Industrial</div>
-                </div>
-                <div class="testimonial">
-                    <p>Gracias a este curso conseguí mi certificación CSWA y un mejor trabajo. El apoyo personalizado de Diego fue clave para mi éxito. 100% recomendado.</p>
-                    <div class="testimonial-author">- Carlos Ramírez, Diseñador CAD</div>
-                </div>
-                <div class="testimonial">
-                    <p>Sin experiencia previa pude aprender SolidWorks desde cero. Las clases prácticas son geniales y el contenido está muy bien estructurado.</p>
-                    <div class="testimonial-author">- Ana López, Estudiante de Ingeniería</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PRICING SECTION -->
-    <section id="pricing" class="pricing">
-        <div class="container">
-            <h2 class="section-title" style="color: white;">¡Aprovecha esta oferta limitada!</h2>
-            <div class="price-box">
-                <div class="original-price">Precio regular: $999 MXN</div>
-                <div class="current-price">$549 MXN</div>
-                <p style="color: #e67e22; font-weight: 600; font-size: 1.2rem;">¡Ahorra $450 MXN!</p>
-                
-                <ul class="price-features">
-                    <li>Apoyo personalizado</li>
-                    <li>Acceso de por vida</li>
-                    <li>Incluye instalador SolidWorks 2022</li>
-                    <li>Garantía de reembolso por 30 días</li>
-                    <li>Certificado oficial de Udemy incluido</li>
-                    <li>Archivos de práctica y ejemplos</li>
-                    <li>Preparación completa para examen CSWA</li>
-                    <li>Acceso a comunidad privada</li>
-                </ul>
-
-                <div class="guarantee">
-                    🛡️ Garantía de reembolso de 30 días sin preguntas
-                </div>
-
-                <a href="https://wa.me/5214621579719?text=Hola%2C%20quiero%20inscribirme%20al%20curso%20de%20SolidWorks%20por%20%24549%20MXN" class="cta-primary" style="width: 100%; display: block; margin-top: 1rem;">
-                    INSCRIBIRME AHORA POR $549 MXN
-                </a>
-                
-                <p style="margin-top: 1rem; font-size: 0.9rem; color: #7f8c8d;">Solo quedan 3 días con este precio especial</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ SECTION -->
-    <section class="faq">
-        <div class="container">
-            <h2 class="section-title">Preguntas Frecuentes</h2>
-            
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">
-                    ¿Necesito experiencia previa en SolidWorks?
-                    <span>+</span>
-                </div>
-                <div class="faq-answer">
-                    No, el curso está diseñado completamente desde cero. No necesitas experiencia previa en SolidWorks ni en ningún software CAD.
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">
-                    ¿Qué incluye exactamente el curso?
-                    <span>+</span>
-                </div>
-                <div class="faq-answer">
-                    Incluye: instalador oficial de SolidWorks, todos los archivos de práctica, planos del curso, ejemplos reales, apoyo personalizado, acceso de por vida y certificado de Udemy.
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">
-                    ¿Cuáles son los requisitos técnicos?
-                    <span>+</span>
-                </div>
-                <div class="faq-answer">
-                    Necesitas: Windows 10 o superior, mínimo 8 GB de RAM, 32 GB de espacio libre en disco y conexión a internet estable.
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">
-                    ¿Qué es la certificación CSWA?
-                    <span>+</span>
-                </div>
-                <div class="faq-answer">
-                    La CSWA es una certificación internacional oficial de SolidWorks que valida tus habilidades y es reconocida mundialmente por empresas del sector.
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">
-                    ¿Cómo funciona la garantía?
-                    <span>+</span>
-                </div>
-                <div class="faq-answer">
-                    Tienes 30 días completos para probar el curso. Si no estás satisfecho por cualquier motivo, te devolvemos tu dinero sin hacer preguntas.
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">
-                    ¿Por cuánto tiempo tendré acceso?
-                    <span>+</span>
-                </div>
-                <div class="faq-answer">
-                    El acceso es de por vida. Una vez que te inscribes, puedes acceder al contenido cuando quieras, las veces que quieras, sin restricciones de tiempo.
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER CTA -->
-    <section class="footer-cta">
-        <div class="container">
-            <h2>¡Comienza tu carrera en diseño 3D hoy mismo!</h2>
-            <p>No dejes pasar esta oportunidad única de aprender SolidWorks con un experto</p>
-            <a href="https://wa.me/5214621579719?text=Hola%2C%20quiero%20inscribirme%20al%20curso%20de%20SolidWorks%20por%20%24549%20MXN" class="cta-primary">
-                INSCRIBIRME AHORA - SOLO $549 MXN
-            </a>
-            <p style="margin-top: 1rem; opacity: 0.9;">⏰ Oferta válida solo por 3 días más</p>
-        </div>
-    </section>
-
-    <!-- WHATSAPP BUTTON -->
-    <a href="https://wa.me/5214621579719?text=Hola%2C%20me%20interesa%20el%20curso%20de%20SolidWorks" 
-       class="whatsapp-float" 
-       target="_blank"
-       rel="noopener noreferrer">
-        <img src="https://static.wixstatic.com/media/32c95b_ba51d58815674787bd12dc6321e576cd~mv2.png" alt="WhatsApp">
-    </a>
-
-    <script>
-        // FAQ Toggle
-        function toggleFaq(element) {
-            const faqItem = element.parentNode;
-            const isActive = faqItem.classList.contains('active');
-            
-            // Close all FAQ items
-            document.querySelectorAll('.faq-item').forEach(item => {
-                item.classList.remove('active');
-                item.querySelector('.faq-question span').textContent = '+';
-            });
-            
-            // Toggle current item
-            if (!isActive) {
-                faqItem.classList.add('active');
-                element.querySelector('span').textContent = '−';
-            }
-        }
-
-        // Countdown Timer
-        function updateCountdown() {
-            const timer = document.getElementById('countdown');
-            const now = new Date().getTime();
-            const deadline = now + (3 * 24 * 60 * 60 * 1000); // 3 days from now
-            
-            setInterval(() => {
-                const currentTime = new Date().getTime();
-                const timeLeft = deadline - currentTime;
-                
-                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-                
-                timer.textContent = `${days.toString().padStart(2, '0')}:${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-            }, 1000);
-        }
-
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Initialize
-        updateCountdown();
-    </script>
+</html>
 </body>
 </html>
