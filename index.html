@@ -1864,6 +1864,113 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
                 </div>
 
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Estilos del botón flotante de WhatsApp */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 55px;
+            height: 55px;
+            background: #25D366;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
+            cursor: pointer;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            overflow: hidden;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 35px rgba(37, 211, 102, 0.5);
+        }
+
+        .whatsapp-float img {
+            width: 42px;
+            height: 42x;
+            object-fit: contain;
+        }
+
+        /* Animación de pulso */
+        .whatsapp-float::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #25D366;
+            border-radius: 12px;
+            animation: pulse 2s infinite;
+            z-index: -1;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.2);
+                opacity: 0.7;
+            }
+            100% {
+                transform: scale(1.4);
+                opacity: 0;
+            }
+        }
+
+        /* Tooltip opcional */
+        .whatsapp-float .tooltip {
+            display: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+                right: 20px;
+            }
+
+            .whatsapp-float img {
+                width: 28px;
+                height: 28px;
+            }
+        }
+    </style>
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/5214621579719?text=Hola%2C%20me%20interesa%20el%20curso%20de%20SolidWorks" 
+       class="whatsapp-float" 
+       target="_blank"
+       rel="noopener noreferrer">
+        <img src="https://static.wixstatic.com/media/32c95b_ba51d58815674787bd12dc6321e576cd~mv2.png" alt="WhatsApp">
+    </a>
+
+    <script>
+        // Opcional: Agregar funcionalidad adicional
+        document.addEventListener('DOMContentLoaded', function() {
+            const whatsappButton = document.querySelector('.whatsapp-float');
+            
+            // Agregar evento de click para analytics (opcional)
+            whatsappButton.addEventListener('click', function() {
+                console.log('WhatsApp button clicked');
+                // Aquí puedes agregar código para tracking de analytics
+            });
+        });
+    </script>
+
    
 
 </body>
