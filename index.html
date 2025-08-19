@@ -21,6 +21,151 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700&display=swap"></noscript>
+
+    <script>
+// Función para cargar GTM de forma diferida
+function loadGTM() {
+  // Google Tag Manager
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PM3XT5Z');
+
+  // Google Analytics
+  var script = document.createElement('script');
+  script.async = true;
+  script.src = 'https://www.googletagmanager.com/gtag/js?id=G-RN68VLQLTW';
+  document.head.appendChild(script);
+  
+  script.onload = function() {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-RN68VLQLTW');
+  };
+}
+
+// Cargar después de que la página esté completamente cargada
+if (document.readyState === 'complete') {
+  loadGTM();
+} else {
+  window.addEventListener('load', loadGTM);
+}
+
+// O cargar después de interacción del usuario (más agresivo para performance)
+// let userInteracted = false;
+// ['mousedown', 'mousemove', 'keypress', 'scroll', 'touchstart', 'click'].forEach(function(event) {
+//   document.addEventListener(event, function() {
+//     if (!userInteracted) {
+//       userInteracted = true;
+//       loadGTM();
+//     }
+//   }, { once: true, passive: true });
+// });
+</script>
+
+<!-- Coloca esto inmediatamente después del <body> -->
+<noscript>
+  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PM3XT5Z"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+
+<!-- ================================== -->
+
+<!-- OPCIÓN 2: SOLO GTM (MÁS SIMPLE) -->
+<!-- Si GTM ya maneja GA, puedes eliminar el código GA separado -->
+<script>
+function loadGTM() {
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PM3XT5Z');
+}
+
+// Carga diferida hasta que la página esté lista
+window.addEventListener('load', loadGTM);
+</script>
+
+<!-- ================================== -->
+
+<!-- OPCIÓN 3: CARGA BAJO DEMANDA (MÁS AGRESIVA) -->
+<script>
+let analyticsLoaded = false;
+
+function loadAnalytics() {
+  if (analyticsLoaded) return;
+  analyticsLoaded = true;
+  
+  // GTM
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PM3XT5Z');
+
+  // GA
+  const script = document.createElement('script');
+  script.async = true;
+  script.src = 'https://www.googletagmanager.com/gtag/js?id=G-RN68VLQLTW';
+  document.head.appendChild(script);
+  
+  script.onload = function() {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-RN68VLQLTW');
+  };
+}
+
+// Cargar solo después de interacción del usuario
+const events = ['mousedown', 'mousemove', 'keypress', 'scroll', 'touchstart', 'click'];
+events.forEach(event => {
+  document.addEventListener(event, loadAnalytics, { once: true, passive: true });
+});
+
+// Fallback: cargar después de 3 segundos si no hay interacción
+setTimeout(loadAnalytics, 3000);
+</script>
+
+<!-- ================================== -->
+
+<!-- OPCIÓN 4: PRELOAD RESOURCES (PARA EL HEAD) -->
+<!-- Agrega estas líneas en el <head> para precargar recursos -->
+<link rel="dns-prefetch" href="//www.googletagmanager.com">
+<link rel="dns-prefetch" href="//www.google-analytics.com">
+<link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+
+<!-- ================================== -->
+
+<!-- OPCIÓN 5: IMPLEMENTACIÓN MÍNIMA CON MENOS IMPACTO -->
+<script>
+// DataLayer inicial
+window.dataLayer = window.dataLayer || [];
+
+// Función para cargar scripts de forma diferida
+function deferLoad(src, callback) {
+  const script = document.createElement('script');
+  script.async = true;
+  script.src = src;
+  if (callback) script.onload = callback;
+  document.head.appendChild(script);
+}
+
+// Cargar después del load completo
+window.addEventListener('load', function() {
+  // GTM
+  deferLoad('https://www.googletagmanager.com/gtm.js?id=GTM-PM3XT5Z');
+  
+  // GA
+  deferLoad('https://www.googletagmanager.com/gtag/js?id=G-RN68VLQLTW', function() {
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-RN68VLQLTW');
+  });
+});
+</script>
     
     
     <style>
