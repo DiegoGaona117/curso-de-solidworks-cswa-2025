@@ -1,5 +1,4 @@
 <!-- JavaScript -->
-    <script>
         // DOM Content Loaded
         document.addEventListener('DOMContentLoaded', function() {
             // Remove loading state
@@ -52,4 +51,3 @@
             link.href = href;
             document.head.appendChild(link);
         });
-    </script>
