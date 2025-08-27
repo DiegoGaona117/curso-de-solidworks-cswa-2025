@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalizar Compra - Diego Gaona</title>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --success: #10b981;
+            --gray-50: #f8fafc;
+            --gray-100: #f1f5f9;
+            --gray-200: #e2e8f0;
+            --gray-300: #cbd5e1;
+            --gray-600: #475569;
+            --gray-700: #334155;
+            --gray-800: #1e293b;
+            --gray-900: #0f172a;
+            --white: #ffffff;
+            --border-radius: 12px;
+            --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--gray-50);
+            color: var(--gray-800);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1rem;
+        }
+
+        .checkout-container {
+            max-width: 600px;
+            width: 100%;
+            background: var(--white);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-lg);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: var(--white);
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .header p {
+            opacity: 0.9;
+            font-size: 1rem;
+        }
+
+        .content {
+            padding: 2rem;
+        }
+
+        .order-summary {
+            background: var(--gray-50);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border: 1px solid var(--gray-200);
+        }
+
+        .order-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .order-item:last-child {
+            margin-bottom: 0;
+            padding-top: 1rem;
+            border-top: 2px solid var(--gray-200);
+            font-weight: 600;
+            font-size: 1.125rem;
+        }
+
+        .item-name {
+            font-weight: 500;
+            color: var(--gray-700);
+        }
+
+        .item-price {
+            font-weight: 600;
+            color: var(--gray-900);
+        }
+
+        .payment-section {
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--gray-900);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .bank-info {
+            background: var(--white);
+            border: 2px solid var(--primary);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .bank-detail {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.75rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        .bank-detail:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .bank-label {
+            font-weight: 500;
+            color: var(--gray-600);
+        }
+
+        .bank-value {
+            font-weight: 600;
+            color: var(--gray-900);
+            font-family: monospace;
+            font-size: 1rem;
+        }
+
+        .copy-btn {
+            background: var(--gray-100);
+            border: 1px solid var(--gray-300);
+            border-radius: 6px;
+            padding: 0.25rem 0.5rem;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            margin-left: 0.5rem;
+        }
+
+        .copy-btn:hover {
+            background: var(--gray-200);
+        }
+
+        .copy-btn.copied {
+            background: var(--success);
+            color: var(--white);
+        }
+
+        .instructions {
+            background: var(--gray-50);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-left: 4px solid var(--primary);
+        }
+
+        .instructions h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--gray-900);
+            margin-bottom: 1rem;
+        }
+
+        .instructions ol {
+            padding-left: 1.5rem;
+            color: var(--gray-700);
+            line-height: 1.6;
+        }
+
+        .instructions li {
+            margin-bottom: 0.5rem;
+        }
+
+        .whatsapp-section {
+            text-align: center;
+        }
+
+        .whatsapp-btn {
+            background: #25d366;
+            color: var(--white);
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: var(--border-radius);
+            font-size: 1.125rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            box-shadow: var(--shadow);
+        }
+
+        .whatsapp-btn:hover {
+            background: #22c55e;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .whatsapp-icon {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+        }
+
+        .support-text {
+            margin-top: 1.5rem;
+            color: var(--gray-600);
+            font-size: 0.875rem;
+            text-align: center;
+        }
+
+        .back-link {
+            position: absolute;
+            top: 2rem;
+            left: 2rem;
+            color: var(--gray-600);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: var(--primary);
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 1rem 0.5rem;
+            }
+            
+            .checkout-container {
+                margin: 0;
+            }
+            
+            .header, .content {
+                padding: 1.5rem;
+            }
+            
+            .bank-detail {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+            
+            .bank-value {
+                font-size: 0.875rem;
+            }
+            
+            .back-link {
+                position: static;
+                margin-bottom: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="#" class="back-link" onclick="window.history.back()">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.42-1.41L7.83 13H20v-2z"/>
+        </svg>
+        Volver
+    </a>
+
+    <div class="checkout-container">
+        <div class="header">
+            <h1>Finalizar Compra</h1>
+            <p>Paquete SolidWorks + 200 Planos + Curso</p>
+        </div>
+        
+        <div class="content">
+            <div class="order-summary">
+                <div class="order-item">
+                    <span class="item-name">SolidWorks 2022 Completo</span>
+                    <span class="item-price">Incluido</span>
+                </div>
+                <div class="order-item">
+                    <span class="item-name">+200 Planos PDF Profesionales</span>
+                    <span class="item-price">Incluido</span>
+                </div>
+                <div class="order-item">
+                    <span class="item-name">+125 Archivos 3D Editables</span>
+                    <span class="item-price">Incluido</span>
+                </div>
+                <div class="order-item">
+                    <span class="item-name">Curso Introducción SolidWorks</span>
+                    <span class="item-price">Incluido</span>
+                </div>
+                <div class="order-item">
+                    <span class="item-name">Total a Pagar</span>
+                    <span class="item-price">$99 MXN</span>
+                </div>
+            </div>
+
+            <div class="payment-section">
+                <h2 class="section-title">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                    Datos para Transferencia
+                </h2>
+                
+                <div class="bank-info">
+                    <div class="bank-detail">
+                        <span class="bank-label">Banco:</span>
+                        <span class="bank-value">
+                            BBVA México
+                            <button class="copy-btn" onclick="copyText('BBVA México')">Copiar</button>
+                        </span>
+                    </div>
+                    <div class="bank-detail">
+                        <span class="bank-label">Titular:</span>
+                        <span class="bank-value">
+                            Diego Gaona
+                            <button class="copy-btn" onclick="copyText('Diego Gaona')">Copiar</button>
+                        </span>
+                    </div>
+                    <div class="bank-detail">
+                        <span class="bank-label">CLABE:</span>
+                        <span class="bank-value">
+                            012180001234567890
+                            <button class="copy-btn" onclick="copyText('012180001234567890')">Copiar</button>
+                        </span>
+                    </div>
+                    <div class="bank-detail">
+                        <span class="bank-label">Concepto:</span>
+                        <span class="bank-value">
+                            Paquete SolidWorks
+                            <button class="copy-btn" onclick="copyText('Paquete SolidWorks')">Copiar</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="instructions">
+                <h3>Instrucciones de Pago</h3>
+                <ol>
+                    <li>Realiza la transferencia por <strong>$99 MXN</strong> a la cuenta mostrada arriba</li>
+                    <li>Toma una captura de pantalla del comprobante de transferencia</li>
+                    <li>Haz clic en el botón de WhatsApp para enviarnos tu comprobante</li>
+                    <li>Recibirás tu paquete completo en menos de 2 horas</li>
+                </ol>
+            </div>
+
+            <div class="whatsapp-section">
+                <a href="https://wa.me/5214621579719?text=¡Hola! Ya realicé mi transferencia por el Paquete SolidWorks de $99 MXN. Adjunto mi comprobante de pago." class="whatsapp-btn" target="_blank">
+                    <svg class="whatsapp-icon" viewBox="0 0 24 24">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.63"/>
+                    </svg>
+                    Enviar Comprobante por WhatsApp
+                </a>
+                
+                <p class="support-text">
+                    ¿Tienes alguna duda? Contáctanos por WhatsApp<br>
+                    Horario de atención: 9:00 AM - 8:00 PM (México)
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function copyText(text) {
+            navigator.clipboard.writeText(text).then(function() {
+                // Find the button that was clicked
+                event.target.textContent = '¡Copiado!';
+                event.target.classList.add('copied');
+                
+                setTimeout(function() {
+                    event.target.textContent = 'Copiar';
+                    event.target.classList.remove('copied');
+                }, 2000);
+            }).catch(function(err) {
+                console.error('Error al copiar: ', err);
+                alert('Texto copiado: ' + text);
+            });
+        }
+
+        // Auto-focus and select text when clicking on bank values
+        document.querySelectorAll('.bank-value').forEach(element => {
+            element.addEventListener('click', function() {
+                if (this.childNodes[0]) {
+                    const text = this.childNodes[0].textContent.trim();
+                    copyText(text);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
