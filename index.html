@@ -71,7 +71,7 @@
             <p class="course-subtitle">
                 Domina SolidWorks desde cero y obtén tu certificación CSWA con apoyo personalizado
             </p>
-
+            
             <div class="course-info">
                 <span class="bestseller-badge">Lo más vendido</span>
                 
@@ -82,28 +82,62 @@
                     <span>3937 estudiantes</span>
                 </div>
             </div>
-
+            
             <div class="mb-20">
                 Creado por <a href="#Diego_Gaona" class="instructor-name">Diego Gaona</a>
             </div>
-
-            <a href="https://wa.me/5214621579719?text=Hola%2C%20vi%20tu%20curso%20de%20SolidWorks%20y%20me%20interesa.%20%C2%BFCu%C3%A1ndo%20inicia%3F" class="btn btn-primary">
-                Reserva tu lugar por WhatsApp
-            </a>
             
-            <div class="mt-20">
+            <div class="price-options">
+                
+                
+                <div class="price-display" id="currentPrice">
+                    Precio: $249 MXN
+                </div>
+                
+                <a href="https://pay.hotmart.com/U80396963E?off=2hagwnfj" 
+                   target="_blank" 
+                   class="btn btn-primary" 
+                   id="purchaseBtn">
+                    Inscríbete por $249 MXN
+                </a>
+
+                <div class="checkbox-container">
+                    <input type="checkbox" id="mentoria" onchange="togglePrice()">
+                    <label for="mentoria">
+                        🎯 Quiero asesoría personalizada para resolver cualquier duda
+                    </label>
+                </div>
+            </div>
+            <script>
+        function togglePrice() {
+            const checkbox = document.getElementById('mentoria');
+            const priceDisplay = document.getElementById('currentPrice');
+            const purchaseBtn = document.getElementById('purchaseBtn');
+            
+            if (checkbox.checked) {
+                // Precio con asesoría
+                priceDisplay.textContent = 'Precio: $549 MXN';
+                purchaseBtn.textContent = 'Inscríbete por $549 MXN';
+                purchaseBtn.href = 'https://pay.hotmart.com/TU-ENLACE-PREMIUM'; // Cambia por tu enlace premium
+            } else {
+                // Precio básico
+                priceDisplay.textContent = 'Precio: $249 MXN';
+                purchaseBtn.textContent = 'Inscríbete por $249 MXN';
+                purchaseBtn.href = 'https://pay.hotmart.com/U80396963E?off=2hagwnfj';
+            }
+        }
+    </script>
+            <div class="benefits-list">
                 <p>
-                    ✅ Apoyo personalizado<br>
                     ✅ Acceso de por vida<br>
                     ✅ +Incluye instalador Solidworks<br>
-                    ✅ Único pago <br>
+                    ✅ Único pago<br>
                     ✅ Garantía de reembolso por 30 días
                 </p>
                 <div class="mt-20">⚡ +47 estudiantes se inscribieron esta semana</div>
             </div>
         </div>
     </section>
-
     <!-- Welcome Section -->
     <section class="welcome-container">
         <h2 class="welcome-title">¡Bienvenido al curso de SolidWorks!</h2>
