@@ -3,24 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curso de SolidWorks CSWA | Diego Gaona</title>
+    <title>Curso de SolidWorks con Asesoría por WhatsApp | Diego Gaona</title>
 
     <!-- Meta Description para Google (SEO) -->
-    <meta name="description" content="Obtén tu certificación CSWA de SolidWorks con acompañamiento personalizado de Diego Gaona. +500 personas certificadas. Respuesta por WhatsApp el mismo día. Acceso de por vida.">
+    <meta name="description" content="Aprende SolidWorks sin quedarte atorado. Curso completo con asesoría directa de Diego Gaona por WhatsApp el mismo día. Deja los tutoriales y domina el diseño 3D.">
 
     <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔧</text></svg>">
 
-    <!-- Optimizaciones de carga -->
+    <!-- Optimizaciones de carga y Fuentes -->
     <link rel="preconnect" href="https://static.wixstatic.com">
-    <link rel="preconnect" href="https://www.youtube.com">
     <link rel="preconnect" href="https://connect.facebook.net">
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Open Graph / Facebook / WhatsApp Preview -->
-    <meta property="og:title" content="Curso SolidWorks CSWA — Certificación Internacional con Asesoría Personalizada">
-    <meta property="og:description" content="Obtén tu certificación CSWA con Diego Gaona. +500 personas certificadas. Asesoría directa por WhatsApp. Acceso de por vida.">
+    <meta property="og:title" content="Curso de SolidWorks — Aprende sin quedarte atorado">
+    <meta property="og:description" content="El único curso de SolidWorks donde el profesor te resuelve las dudas por WhatsApp el mismo día.">
     <meta property="og:image" content="https://static.wixstatic.com/media/32c95b_1aff33112fd7422e88b7743fda2f6d8c~mv2.webp">
     <meta property="og:url" content="https://cursodiegogaona.com">
     <meta property="og:type" content="website">
@@ -34,26 +34,7 @@
         gtag('config', 'G-RN68VLQLTW');
     </script>
 
-    <!-- Facebook Pixel -->
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '373277814132384');
-    fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=373277814132384&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Facebook Pixel -->
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-        
         * {
             margin: 0;
             padding: 0;
@@ -62,8 +43,8 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #EFEFF5;
-            color: #333;
+            background-color: #f1f5f9;
+            color: #1e293b;
             line-height: 1.6;
         }
 
@@ -71,109 +52,269 @@
         .hero-section {
             background-color: #0f172a;
             color: white;
-            padding: 20px;
+            padding: 60px 0 20px;
         }
 
         .container2 {
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
-            padding: 0 15px;
-            display: block;
-            font-size: 16px;
+            padding: 0 20px;
         }
 
-        .course-category {
-            background-color: #3b82f6;
-            color: white;
-            padding: 6px 14px;
+        .tags-container {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 25px;
+        }
+
+        .course-tag {
+            padding: 8px 16px;
             border-radius: 6px;
             font-size: 13px;
-            font-weight: 600;
+            font-weight: 800;
             display: inline-block;
-            margin-bottom: 15px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
         }
 
+        .tag-premium { background-color: #fbbf24; color: #0f172a; }
+        .tag-author { background-color: #3b82f6; color: white; }
+
         .course-title {
-            font-size: 28px;
-            font-weight: 700;
-            line-height: 1.3;
-            margin-bottom: 15px;
+            font-size: 36px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 25px;
         }
 
         .course-subtitle {
-            font-size: 16px;
-            color: #e2e8f0;
+            font-size: 20px;
+            color: #cbd5e1;
+            margin-bottom: 15px;
+            max-width: 900px;
+            line-height: 1.5;
+        }
+
+        /* VIDEO CONTAINER */
+        .hero-video-box {
+            max-width: 800px;
+            margin: 40px auto 0;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+
+        .hero-video-box p {
+            color: #94a3b8;
+            font-size: 15px;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        /* LETTER SECTIONS */
+        .story-container {
+            background: white;
+            border-radius: 24px;
+            padding: 35px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            margin: 20px auto;
+            max-width: 900px;
+            color: #1e293b;
+        }
+
+        .story-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 25px;
+            border-bottom: 1px solid #f1f5f9;
+            padding-bottom: 20px;
+        }
+
+        .story-avatar {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #3b82f6;
+        }
+
+        .story-content p {
+            font-size: 18px;
+            color: #334155;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .story-quote {
+            font-style: italic;
+            color: #0f172a;
+            font-weight: 600;
+            border-left: 5px solid #fbbf24;
+            padding-left: 20px;
+            margin: 35px 0;
+            font-size: 20px;
+            line-height: 1.5;
+        }
+        
+        .signature {
+            font-family: 'Caveat', cursive;
+            font-size: 32px;
+            color: #2563eb;
+            margin-top: 30px;
+            transform: rotate(-2deg);
+        }
+
+        /* PILLARS */
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin: 50px 0 40px;
+        }
+
+        .pillar-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 30px;
+        }
+
+        .pillar-card h3 { color: #fbbf24; font-size: 20px; margin: 10px 0; }
+        .pillar-card p { color: #94a3b8; font-size: 15px; }
+
+        /* PROGRAM SECTION */
+        .program-section {
+            padding: 80px 0;
+            background-color: #f8fafc;
+        }
+
+        .conversational-intro {
+            max-width: 800px;
+            margin: 0 auto 50px;
+            text-align: center;
+        }
+
+        .conversational-intro h2 {
+            font-size: 32px;
+            font-weight: 800;
+            color: #0f172a;
             margin-bottom: 20px;
         }
 
-        .course-info {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 15px;
-            font-size: 14px;
+        .conversational-intro p {
+            font-size: 18px;
+            color: #475569;
+            line-height: 1.7;
         }
 
-        .rating {
+        .program-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .program-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            border: 1px solid #e2e8f0;
+            transition: transform 0.3s ease;
+        }
+
+        .program-card:hover {
+            transform: translateY(-5px);
+            border-color: #3b82f6;
+        }
+
+        .card-img {
+            width: 100%;
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .card-content {
+            padding: 30px;
+        }
+
+        .card-step {
+            display: inline-block;
+            background: #eff6ff;
+            color: #2563eb;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .card-content h3 {
+            font-size: 22px;
+            font-weight: 800;
+            color: #1e293b;
+            margin-bottom: 12px;
+        }
+
+        .card-content p {
+            font-size: 15px;
+            color: #64748b;
+            margin-bottom: 20px;
+        }
+
+        .method-pills {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .pill {
+            background: #f1f5f9;
+            color: #475569;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 600;
             display: flex;
             align-items: center;
             gap: 6px;
-            flex-wrap: wrap;
         }
 
-        .rating-number {
-            color: #f59e0b;
-            font-weight: 600;
-            font-size: 15px;
+        .whatsapp-reminder {
+            background: #f0fdf4;
+            border: 2px dashed #22c55e;
+            padding: 30px;
+            border-radius: 20px;
+            max-width: 800px;
+            margin: 60px auto 0;
+            text-align: center;
         }
 
-        .stars {
-            display: flex;
-            gap: 2px;
+        .whatsapp-reminder h4 {
+            color: #166534;
+            font-size: 20px;
+            margin-bottom: 10px;
         }
 
-        .star {
-            width: 14px;
-            height: 14px;
-            background-color: #f59e0b;
-            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-        }
-
-        .star.half {
-            background: linear-gradient(90deg, #f59e0b 50%, #374151 50%);
-        }
-
-        .students-count {
-            color: #94a3b8;
-            text-decoration: underline;
-        }
-
-        .instructor-info {
-            margin: 15px 0;
-            font-size: 14px;
-            color: #94a3b8;
-        }
-
-        .instructor-name {
-            color: #3b82f6;
-            text-decoration: underline;
-        }
-
-        /* BOTONES CTA */
-        .cta-container {
-            margin: 25px 0;
-        }
-
+        /* CTA */
         .btn {
-            display: block;
-            max-width: 450px;
-            padding: 16px 24px;
-            border: none;
-            border-radius: 8px;
-            font-size: 18px;
-            font-weight: 600;
-            cursor: pointer;
+            display: inline-block;
+            width: 100%;
+            max-width: 500px;
+            padding: 22px 30px;
+            border-radius: 12px;
+            font-size: 20px;
+            font-weight: 800;
             text-decoration: none;
             text-align: center;
             transition: all 0.3s ease;
@@ -182,785 +323,192 @@
         .btn-primary {
             background-color: #ff5213;
             color: white;
-            margin-bottom: 15px;
+            box-shadow: 0 10px 25px rgba(255, 82, 19, 0.3);
         }
 
         .btn-primary:hover {
-            background-color: #00a3de;
-            transform: translateY(-2px);
+            transform: translateY(-3px);
+            background-color: #e04810;
         }
 
-        .benefits-list {
-            background-color: rgba(255,255,255,0.1);
-            padding: 15px;
-            border-radius: 8px;
-            margin-top: 15px;
-        }
-
-        .benefits-list p {
-            margin-bottom: 8px;
-            font-size: 14px;
-        }
-
-        /* WELCOME CARD */
-        .welcome-container {
-            background: white;
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-            padding: 25px 20px;
-            margin: 20px 15px;
-            text-align: center;
-        }
-
-        .welcome-container::before {
-            content: '';
-            display: block;
-            height: 3px;
-            background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899);
-            margin: -25px -20px 20px;
-            border-radius: 16px 16px 0 0;
-        }
-
-        .welcome-title {
-            font-size: 20px;
-            font-weight: 700;
-            color: #1f2937;
-            margin-bottom: 15px;
-        }
-
-        .description {
-            font-size: 15px;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-
-        .highlight {
-            color: #dc2626;
-            font-weight: 600;
-        }
-
-        .features {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .feature {
-            background: #f8fafc;
-            border-radius: 10px;
-            padding: 15px;
-            border: 1px solid #e2e8f0;
-        }
-
-        .feature-icon {
-            font-size: 30px;
-            margin-bottom: 8px;
-        }
-
-        .feature-text {
-            font-size: 14px;
-            font-weight: 600;
-            color: #374151;
-        }
-
-        /* BENEFITS SECTION */
-        .section {
-            padding: 40px 15px;
-        }
-
-        .section-light {
-            background: #f8f9fa;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 26px;
-            font-weight: 700;
-            margin-bottom: 25px;
-            color: #2c3e50;
-        }
-
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 20px;
-            margin-bottom: 25px;
-        }
-
-        .benefit-card {
-            background: white;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            text-align: center;
-        }
-
-        .benefit-icon {
-            font-size: 50px;
-            margin-bottom: 15px;
-        }
-
-        .benefit-card h3 {
-            font-size: 20px;
-            margin-bottom: 10px;
-            color: #2c3e50;
-        }
-
-        .benefit-card p {
-            font-size: 15px;
-            color: #666;
-            line-height: 1.9;
-        }
-
-        @media (min-width: 1024px) {
-            .benefit-card p {
-                font-size: 16px;
-            }
-        }
-
-        /* CURRICULUM */
-        .curriculum-list {
-            list-style: none;
-            display: grid;
-            gap: 12px;
-        }
-
-        .curriculum-list li {
-            padding: 12px 12px 12px 40px;
-            background: #f8f9fa;
-            border-left: 4px solid #e67e22;
-            border-radius: 6px;
-            font-size: 14px;
-            position: relative;
-        }
-
-        .curriculum-list li:before {
-            content: "✅";
-            position: absolute;
-            left: 12px;
-        }
-
-        /* BONUS SECTION */
-        .bonus-container {
-            background: white;
-            border: 1px solid #ddd;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            padding: 25px 20px;
-            margin: 20px 15px;
-            border-radius: 12px;
-            text-align: center;
-        }
-
-        .bonus-title {
-            font-size: 22px;
-            margin-bottom: 15px;
-        }
-
-        .bonus-title strong {
-            font-size: 28px;
-            color: #e67e22;
-        }
-
-        .bonus-image {
-            width: 100%;
-            max-width: 500px;
-            margin: 15px auto;
-            display: block;
-            border-radius: 8px;
-        }
-
-        /* PROJECTS SECTION */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 20px;
-            margin: 25px 0;
-        }
-
-        .project-card {
-            text-align: center;
-        }
-
-        .project-image {
-            width: 100%;
-            max-width: 400px;
-            margin: 0 auto 10px;
-            border-radius: 8px;
-            display: block;
-        }
-
-        .project-card p {
-            font-size: 14px;
-            font-weight: 600;
-        }
-
-        /* TOGGLE SECTION */
-        .toggle-content {
-            display: none;
-            margin: 20px 0;
-            padding: 15px;
-            background: #f8f9fa;
-            border-radius: 8px;
-            text-align: left;
-        }
-
-        .toggle-content.active {
-            display: block;
-        }
-
-        .toggle-btn {
-            padding: 10px 30px;
-            background-color: #fbbf24;
-            color: #000;
-            border: 1px solid rgba(0,0,0,0.2);
-            font-weight: 600;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 14px;
-            margin: 20px auto;
-            display: block;
-        }
-
-        /* CERTIFICATES */
-        .certificate-image {
-            width: 100%;
-            max-width: 600px;
-            margin: 20px auto;
-            display: block;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-            border-radius: 8px;
-        }
-
-        /* REVIEWS */
-        .reviews-section {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .reviews-header {
-            margin-bottom: 25px;
-        }
-
-        .reviews-title {
-            font-size: 24px;
-            font-weight: 700;
-            margin-bottom: 15px;
-        }
-
-        .overall-rating {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-
-        .review-card {
-            background: white;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 10px;
-            border-bottom: 2px solid #e5e7eb;
-        }
-
-        .review-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 12px;
-        }
-
-        .review-avatar {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            border-radius: 50%;
+        .security-badge {
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
-            font-weight: 700;
-            font-size: 16px;
-            margin-right: 12px;
-            flex-shrink: 0;
-        }
-
-        .review-info {
-            flex: 1;
-        }
-
-        .review-name {
-            font-weight: 700;
-            font-size: 16px;
-            margin-bottom: 4px;
-        }
-
-        .review-rating {
-            display: flex;
-            align-items: center;
             gap: 8px;
-            margin-bottom: 4px;
-        }
-
-        .review-date {
-            font-size: 12px;
-            color: #666;
-        }
-
-        .review-text {
-            font-size: 15px;
-            line-height: 1.6;
-            color: #444;
-        }
-
-        .view-all-btn {
-            padding: 12px 30px;
-            font-size: 16px;
-            color: white;
-            background-color: #8800c2;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            margin: 30px auto;
-            display: block;
-        }
-
-        /* INSTRUCTOR */
-        .instructor-section {
-            display: flex;
-            gap: 15px;
-            margin: 25px 0;
-            align-items: flex-start;
-        }
-
-        .instructor-image {
-            width: 100px;
-            height: 130px;
-            border-radius: 8px;
-            object-fit: cover;
-            flex-shrink: 0;
-        }
-
-        .instructor-content {
-            flex: 1;
-        }
-
-        .instructor-title {
-            font-size: 20px;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-
-        .instructor-badges {
-            display: flex;
-            gap: 8px;
-            margin: 10px 0;
-            flex-wrap: wrap;
-        }
-
-        .badge {
-            padding: 5px 12px;
-            border-radius: 4px;
-            font-size: 12px;
-            font-weight: 600;
-            color: white;
-        }
-
-        .badge-teacher { background-color: #00aaff; }
-        .badge-youtube { background-color: #ff0000; }
-
-        .social-icons {
-            display: flex;
-            gap: 12px;
-            margin-top: 10px;
-        }
-
-        .social-icons img {
-            width: 30px;
-            height: 30px;
-        }
-
-        .instructor-bio {
-            font-size: 15px;
-            line-height: 1.6;
+            color: #64748b;
+            font-size: 13px;
             margin-top: 15px;
         }
 
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-            margin: 25px 0;
-        }
-
-        .stat-card {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-        }
-
-        .stat-number {
-            font-size: 32px;
-            font-weight: 700;
-            color: #e67e22;
-            margin-bottom: 5px;
-        }
-
-        .stat-label {
-            font-size: 13px;
-            color: #666;
-        }
-
-        /* FAQ SECTION */
-        .faq-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 60px 20px;
-        }
-
-        .faq-header {
-            text-align: center;
-            color: white;
-            margin-bottom: 40px;
-        }
-
-        .faq-header h2 {
-            font-size: 2em;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-        }
-
-        .faq-header p {
-            font-size: 1.1em;
-            opacity: 0.9;
-        }
-
-        .faq-container {
-            background: white;
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .faq-item {
-            border-bottom: 1px solid #e0e0e0;
-            margin-bottom: 10px;
-        }
-
-        .faq-item:last-child {
-            border-bottom: none;
-        }
-
-        .faq-question {
-            width: 100%;
-            background: none;
-            border: none;
-            padding: 20px 50px 20px 20px;
-            text-align: left;
-            font-size: 1.1em;
-            font-weight: 600;
-            color: #333;
-            cursor: pointer;
-            position: relative;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .faq-question:hover {
-            background: #f8f9ff;
-            color: #667eea;
-        }
-
-        .faq-question .emoji {
-            font-size: 1.3em;
-            flex-shrink: 0;
-        }
-
-        .faq-question .icon {
-            position: absolute;
-            right: 20px;
-            width: 24px;
-            height: 24px;
-            transition: transform 0.3s ease;
-        }
-
-        .faq-question .icon::before,
-        .faq-question .icon::after {
-            content: '';
-            position: absolute;
-            background: #667eea;
-            transition: all 0.3s ease;
-        }
-
-        .faq-question .icon::before {
-            width: 20px;
-            height: 3px;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        .faq-question .icon::after {
-            width: 3px;
-            height: 20px;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        .faq-item.active .faq-question .icon::after {
-            transform: translate(-50%, -50%) rotate(90deg);
-            opacity: 0;
-        }
-
-        .faq-item.active .faq-question .icon::before {
-            transform: translate(-50%, -50%) rotate(180deg);
-        }
-
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s ease, padding 0.4s ease;
-            padding: 0 20px;
-        }
-
-        .faq-item.active .faq-answer {
-            max-height: 500px;
-            padding: 0 20px 20px 65px;
-        }
-
-        .faq-answer p {
-            color: #333;
-            line-height: 1.7;
-            font-size: 1em;
-        }
-
-        /* WHATSAPP FLOAT */
         .whatsapp-float {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 55px;
-            height: 55px;
+            bottom: 30px;
+            right: 30px;
+            width: 65px;
+            height: 65px;
             background: #25D366;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 4px 12px rgba(37,211,102,0.4);
-            cursor: pointer;
+            box-shadow: 0 10px 25px rgba(37,211,102,0.3);
             z-index: 1000;
             transition: transform 0.3s ease;
-            text-decoration: none;
         }
 
         .whatsapp-float:hover {
             transform: scale(1.1);
         }
 
-        .whatsapp-float img {
-            width: 35px;
-            height: 35px;
+        /* REVIEWS SECTION */
+        .reviews-section {
+            padding: 80px 0;
+            background-color: #fff;
         }
 
-        .whatsapp-float::before {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: #25D366;
-            border-radius: 50%;
-            animation: pulse 2s infinite;
-            z-index: -1;
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin-top: 40px;
         }
 
-        @keyframes pulse {
-            0%   { transform: scale(1); opacity: 1; }
-            100% { transform: scale(1.5); opacity: 0; }
-        }
-
-        /* CURRICULUM ACCORDION */
-        .curriculum-accordion {
-            border: 1px solid #e2e8f0;
-            border-radius: 12px;
-            overflow: hidden;
-        }
-
-        .ca-item {
-            border-bottom: 1px solid #e2e8f0;
-        }
-
-        .ca-item:last-child {
-            border-bottom: none;
-        }
-
-        .ca-header {
-            width: 100%;
+        .review-card {
             background: #f8fafc;
-            border: none;
-            padding: 16px 20px;
-            cursor: pointer;
+            border: 1px solid #e2e8f0;
+            padding: 30px;
+            border-radius: 16px;
+        }
+
+        .review-header {
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            gap: 12px;
-            transition: background 0.2s;
-            text-align: left;
+            gap: 15px;
+            margin-bottom: 15px;
         }
 
-        .ca-header:hover {
-            background: #eff6ff;
-        }
-
-        .ca-header.open {
-            background: #eff6ff;
-            border-bottom: 1px solid #bfdbfe;
-        }
-
-        .ca-left {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            flex: 1;
-        }
-
-        .ca-num {
-            background: #2563eb;
+        .review-avatar {
+            width: 50px;
+            height: 50px;
+            background: #3b82f6;
             color: white;
-            font-size: 13px;
-            font-weight: 700;
-            width: 32px;
-            height: 32px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            flex-shrink: 0;
+            font-weight: 700;
+            font-size: 18px;
         }
 
-        .ca-title {
-            font-size: 15px;
+        .review-stars {
+            color: #fbbf24;
+            font-size: 18px;
+            margin-bottom: 5px;
+            letter-spacing: 2px;
+        }
+
+        /* GUARANTEE */
+        .guarantee-box {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            color: white;
+            padding: 60px 40px;
+            border-radius: 24px;
+            margin: 60px 0;
+            text-align: center;
+            border: 1px solid #3b82f6;
+            box-shadow: 0 20px 40px -10px rgba(59, 130, 246, 0.3);
+        }
+
+        /* INSTRUCTOR SECTION */
+        .instructor-card {
+            background: white;
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border: 1px solid #e2e8f0;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin: 60px auto;
+        }
+        .instructor-profile {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .instructor-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #3b82f6;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .stat-box {
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+        }
+
+        /* FAQ SECTION */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+        .faq-question {
+            width: 100%;
+            text-align: left;
+            padding: 20px;
+            background: none;
+            border: none;
+            font-size: 18px;
             font-weight: 700;
             color: #1e293b;
-            line-height: 1.3;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-
-        .ca-meta {
-            font-size: 12px;
-            color: #64748b;
-            margin-top: 3px;
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            color: #475569;
+            font-size: 16px;
+            line-height: 1.6;
         }
-
-        .ca-arrow {
-            font-size: 12px;
-            color: #64748b;
+        .faq-item.active .faq-answer {
+            padding: 0 20px 20px;
+            max-height: 500px;
+        }
+        .faq-icon {
             transition: transform 0.3s ease;
-            flex-shrink: 0;
         }
-
-        .ca-header.open .ca-arrow {
+        .faq-item.active .faq-icon {
             transform: rotate(180deg);
         }
 
-        .ca-body {
-            display: none;
-            background: white;
-            padding: 8px 0;
-        }
-
-        .ca-body.open {
-            display: block;
-        }
-
-        .ca-lesson {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 9px 20px 9px 30px;
-            font-size: 14px;
-            color: #374151;
-            border-bottom: 1px solid #f1f5f9;
-            flex-wrap: wrap;
-        }
-
-        .ca-lesson:last-child {
-            border-bottom: none;
-        }
-
-        .ca-lesson.preview {
-            background: #f0fdf4;
-        }
-
-        .ca-icon {
-            font-size: 13px;
-            flex-shrink: 0;
-            width: 18px;
-        }
-
-        .ca-time {
-            margin-left: auto;
-            font-size: 12px;
-            color: #94a3b8;
-            flex-shrink: 0;
-        }
-
-        .ca-tag {
-            background: #dcfce7;
-            color: #16a34a;
-            font-size: 11px;
-            font-weight: 600;
-            padding: 2px 8px;
-            border-radius: 20px;
-            flex-shrink: 0;
-        }
-
-        /* CURRICULUM ACCORDION */
-        .footer {
-            background: #1f2937;
-            color: #9ca3af;
-            text-align: center;
-            padding: 25px 15px;
-            font-size: 13px;
-        }
-
-        .footer a {
-            color: #9ca3af;
-            text-decoration: underline;
-            margin: 0 8px;
-        }
-
-        /* RESPONSIVE TABLET */
-        @media (min-width: 600px) {
-            .course-title { font-size: 36px; }
-            .course-subtitle { font-size: 18px; }
-            .features { grid-template-columns: repeat(3, 1fr); }
-            .benefits-grid { grid-template-columns: repeat(2, 1fr); }
-            .stats-grid { grid-template-columns: repeat(4, 1fr); }
-            .projects-grid { grid-template-columns: repeat(2, 1fr); }
-            .instructor-image { width: 150px; height: 195px; }
-            .perfil-grid { grid-template-columns: repeat(2, 1fr) !important; }
-        }
-
-        /* RESPONSIVE DESKTOP */
-        @media (min-width: 1024px) {
-            .course-title { font-size: 48px; }
-            .section { padding: 60px 20px; }
-            .benefits-grid { grid-template-columns: repeat(3, 1fr); }
-            .projects-grid { grid-template-columns: repeat(3, 1fr); }
-            .instructor-image { width: 200px; height: 260px; }
-            .asesoria-grid { grid-template-columns: repeat(3, 1fr) !important; }
-            .cswa-grid { grid-template-columns: repeat(2, 1fr) !important; }
-        }
-
-        @media (max-width: 768px) {
-            .faq-container { padding: 25px 20px; }
-            .faq-question { font-size: 1em; padding: 15px 45px 15px 15px; }
-            .faq-item.active .faq-answer { padding: 0 15px 15px 55px; }
+        @media (min-width: 768px) {
+            .course-title { font-size: 52px; }
+            .pillars-grid { grid-template-columns: repeat(3, 1fr); }
+            .program-grid { grid-template-columns: repeat(2, 1fr); }
+            .reviews-grid { grid-template-columns: repeat(2, 1fr); }
         }
     </style>
 </head>
@@ -969,824 +517,521 @@
     <!-- HERO SECTION -->
     <div class="hero-section">
         <div class="container2">
-            <span class="course-category">⭐ Lo más vendido</span>
-            <h1 class="course-title">Obtén tu Certificación CSWA de SolidWorks con acompañamiento personalizado</h1>
-            <p class="course-subtitle">El único curso donde Diego Gaona te responde personalmente por WhatsApp — mismo día — hasta que apruebes tu examen</p>
-
-            <div class="course-info">
-                <div class="rating">
-                    <span class="rating-number">4.8</span>
-                    <div class="stars">
-                        <div class="star"></div>
-                        <div class="star"></div>
-                        <div class="star"></div>
-                        <div class="star"></div>
-                        <div class="star half"></div>
-                    </div>
-                </div>
-                <a href="#comentarios" class="students-count">(1,220 calificaciones)</a>
-                <span style="color:#94a3b8;">3937 estudiantes</span>
+            <div class="tags-container">
+                <span class="course-tag tag-premium">⭐ CURSO PREMIUM</span>
+                <span class="course-tag tag-author">⭐ DIEGO GAONA</span>
             </div>
 
-            <div class="instructor-info">
-                Creado por <a href="#Diego_Gaona" class="instructor-name">Diego Gaona</a>
-            </div>
+            <h1 class="course-title">Aprender SolidWorks con tutoriales sirve... hasta que te quedas atorado.</h1>
+            
+            <p class="course-subtitle" style="font-weight: 600; color: #f8fafc;">
+                Yo también me frustré intentando aprender solo, por eso hoy te respondo personalmente por WhatsApp cuando te trabas.
+            </p>
+            
+            <p class="course-subtitle" style="color: #cbd5e1; opacity: 0.9;">
+                Sé lo que es perder horas en tutoriales que no llevan a nada. Mi misión es que nunca te sientas solo en el proceso y que domines el diseño 3D con mi apoyo directo todos los días.
+            </p>
 
-            <!-- VIDEO PRESENTACIÓN - Lazy Load -->
-            <div style="margin: 20px 0; max-width: 720px;">
-                <div id="yt-facade" onclick="loadVideo()" style="
-                    position: relative;
-                    padding-bottom: 56.25%;
-                    height: 0;
-                    border-radius: 10px;
-                    overflow: hidden;
-                    cursor: pointer;
-                    background: #000;
-                ">
-                    <!-- Miniatura de YouTube -->
-                    <img 
-                        src="https://img.youtube.com/vi/U6Teuju10ec/maxresdefault.jpg"
-                        alt="Ver presentación del curso"
-                        style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;opacity:0.85;"
-                    >
-                    <!-- Botón de play -->
-                    <div style="
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
-                        width: 72px;
-                        height: 72px;
-                        background: #ff0000;
-                        border-radius: 50%;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        box-shadow: 0 4px 20px rgba(0,0,0,0.5);
-                        transition: transform 0.2s, background 0.2s;
-                    " id="play-btn">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
-                            <path d="M8 5v14l11-7z"/>
-                        </svg>
+            <!-- OPCIONAL: VIDEO DE HISTORIA -->
+            <div class="hero-video-box">
+                <p>¿Prefieres escuchar mi historia? Mira este video rápido (o sigue leyendo abajo) 👇</p>
+                <div id="yt-facade" onclick="loadVideo()" style="position: relative; padding-bottom: 56.25%; height: 0; border-radius: 12px; overflow: hidden; cursor: pointer; background: #000;">
+                    <img src="https://img.youtube.com/vi/U6Teuju10ec/maxresdefault.jpg" alt="Ver presentación" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;opacity:0.7;">
+                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 70px; height: 70px; background: #ff5213; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                        <svg width="35" height="35" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
                     </div>
-                    <!-- Texto debajo del play -->
-                    <div style="
-                        position: absolute;
-                        bottom: 16px;
-                        left: 0;
-                        right: 0;
-                        text-align: center;
-                        color: white;
-                        font-size: 14px;
-                        font-weight: 600;
-                        text-shadow: 0 1px 4px rgba(0,0,0,0.8);
-                    ">▶ Ver presentación del curso</div>
                 </div>
             </div>
 
             <script>
                 function loadVideo() {
                     const facade = document.getElementById('yt-facade');
-                    facade.innerHTML = '<iframe src="https://www.youtube.com/embed/U6Teuju10ec?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:10px;"></iframe>';
+                    facade.innerHTML = '<iframe src="https://www.youtube.com/embed/U6Teuju10ec?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:12px;"></iframe>';
                     facade.style.cursor = 'default';
                 }
-                // Hover effect on play button
-                document.addEventListener('DOMContentLoaded', function() {
-                    const facade = document.getElementById('yt-facade');
-                    const playBtn = document.getElementById('play-btn');
-                    if (facade && playBtn) {
-                        facade.addEventListener('mouseenter', () => playBtn.style.transform = 'translate(-50%, -50%) scale(1.1)');
-                        facade.addEventListener('mouseleave', () => playBtn.style.transform = 'translate(-50%, -50%) scale(1)');
-                    }
-                });
             </script>
+        </div>
+    </div>
+    
+    <div class="container2" style="margin-top: -30px; position: relative; z-index: 10;">
+        <!-- EL PROBLEMA DEL ALUMNO (LA TRAMPA) -->
+        <div class="story-container">
+            <h3 style="font-size: 26px; color: #0f172a; margin-bottom: 20px;">La trampa de los tutoriales "perfectos"</h3>
+            
+            <p>
+                Seguro te ha pasado: pones un tutorial, el instructor mueve el mouse rapidísimo y le queda una pieza perfecta. Tú pausas el video, haces <strong>exactamente lo mismo</strong> en tu computadora... y de repente tu pantalla se llena de líneas rojas, errores en el croquis y el ensamble simplemente no funciona.
+            </p>
+            
+            <p>
+                Te frustras y piensas: <em>"SolidWorks es muy difícil"</em> o <em>"Yo no sirvo para esto"</em>.
+            </p>
+            
+            <div style="background: #f8fafc; border-left: 5px solid #ff5213; padding: 20px 25px; margin: 25px 0; border-radius: 0 10px 10px 0;">
+                <p style="font-size: 19px; font-weight: 700; color: #1e293b; margin: 0; line-height: 1.5;">
+                    Pero el problema no eres tú. El problema es que grabar un video demostrativo NO es lo mismo que planear una clase paso a paso.
+                </p>
+            </div>
+            
+            <p style="margin-bottom: 0;">
+                Muchos "cursos" allá afuera son solo expertos grabando su pantalla mientras hacen piezas aleatorias. A ellos les sale bien a la primera, pero <strong>no identifican los problemas que a ti te pueden surgir</strong>. No te explican por qué eligieron esa herramienta, ni qué hacer si le das clic al botón equivocado.
+            </p>
+        </div>
 
-            <div class="cta-container">
+        <!-- MI HISTORIA (LA EMPATÍA Y SOLUCIÓN) -->
+        <div class="story-container">
+            <div class="story-header">
+                <img class="story-avatar" src="https://static.wixstatic.com/media/32c95b_6e097eebd8fc40a393329631b8189846~mv2.webp" alt="Diego Gaona">
+                <div>
+                    <h4 style="margin:0; color:#0f172a; font-size: 18px;">De Diego Gaona</h4>
+                    <p style="margin:0; font-size:15px; color:#64748b; font-weight: 500;">Ingeniero y Profesor</p>
+                </div>
+            </div>
+            
+            <div class="story-content">
+                <p><strong>Yo sé exactamente cómo se siente eso, porque seré honesto contigo: mi aprendizaje en SolidWorks fue un completo desastre.</strong></p>
+                
+                <p>Fui agarrando información de aquí y de allá, intentando armar un rompecabezas al que le faltaban la mitad de las piezas. Tenía exceso de información pero cero estructura. Y lo peor, estaba completamente solo.</p>
+                
+                <div class="story-quote">
+                    "Yo lo que más hubiera querido era un profesor que me dijera: 'Con esta opción haces eso que necesitas', o 'Aquí no te sale porque te falta este detalle'."
+                </div>
+
+                <p>Entendí algo fundamental: <strong>ser un buen ingeniero no es lo mismo que ser un buen profesor.</strong> Como educador, mi trabajo no es lucirme diseñando rápido. Mi trabajo es anticipar dónde te vas a atorar, explicarte el por qué de las fallas y enseñarte a pensar como diseñador.</p>
+                
+                <p>Por eso diseñé este curso: para no dejarte copiar a ciegas. Te doy la estructura que yo no tuve y te acompaño personalmente cada día.</p>
+                
+                <div class="signature">
+                    Nos vemos en clase,<br>
+                    Diego Gaona
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECCIÓN DE CINTILLO OSCURO PARA PILARES Y CTA -->
+    <div style="background-color: #0f172a; padding: 40px 0; margin-top: 40px; color: white;">
+        <div class="container2">
+            <!-- LOS 3 PILARES -->
+            <div class="pillars-grid" style="margin-top: 0;">
+                <div class="pillar-card">
+                    <span style="font-size: 32px;">🎯</span>
+                    <h3>Estructura Real</h3>
+                    <p>Un camino lógico diseñado pedagógicamente para que no te pierdas en el mar de información.</p>
+                </div>
+                <div class="pillar-card">
+                    <span style="font-size: 32px;">📱</span>
+                    <h3>Asesoría Directa</h3>
+                    <p>Mi WhatsApp personal a tu disposición. Si te trabas, me mandas foto y te desatoro el mismo día.</p>
+                </div>
+                <div class="pillar-card">
+                    <span style="font-size: 32px;">🏗️</span>
+                    <h3>Enfoque Práctico</h3>
+                    <p>Aprenderás la lógica de diseño real que se usa en la industria, no solo a picar botones.</p>
+                </div>
+            </div>
+
+            <!-- BOTONES CTA DESPUÉS DE LOS PILARES -->
+            <div class="cta-container" style="text-align: center;">
+                <p class="spots-counter" style="color: #fbbf24; font-size: 15px; font-weight: 700; margin-bottom: 15px; background: rgba(251, 191, 36, 0.1); display: inline-block; padding: 8px 16px; border-radius: 8px; border: 1px dashed rgba(251, 191, 36, 0.4);">⏳ Calculando lugares disponibles...</p>
+                <br>
                 <a href="https://diegogaona117.github.io/ficha-de-pago-02/" target="_blank" class="btn btn-primary">
-                    🚀 Inscribirme ahora <span style="text-decoration: line-through; opacity: 0.7; font-size: 15px;">$1,999</span> → $999
+                    🚀 Quiero que seas mi mentor <span style="text-decoration: line-through; opacity: 0.7; font-size: 16px;">$1,999</span> → $999
                 </a>
-                <div class="benefits-list">
-                    <p>✅ Invierte una vez, aprende para siempre</p>
-                    <p>✅ Incluye paquete de 200 planos en PDF</p>
-                    <p>✅ + de 140 clases con videos paso a paso en HD</p>
-                    <p>✅ Garantía de reembolso por 30 días</p>
-                    <p>✅ <strong>Acompañamiento y apoyo personalizado a lo largo del curso</strong></p>
+                <div class="security-badge" style="color: #cbd5e1;">
+                    🔒 Pago 100% seguro y encriptado.
+                </div>
+                <div style="background-color: rgba(255,255,255,0.06); padding: 25px; border-radius: 12px; margin: 25px auto 0; border: 1px solid rgba(255,255,255,0.1); max-width: 500px; text-align: left;">
+                    <p style="color:#f8fafc; font-size:15px; margin-bottom:10px; font-weight: 500;">✅ Acceso de por vida a la plataforma y actualizaciones</p>
+                    <p style="color:#f8fafc; font-size:15px; margin-bottom:10px; font-weight: 500;">✅ Ejercicios prácticos guiados en cada lección</p>
+                    <p style="color:#f8fafc; font-size:15px; margin-bottom:10px; font-weight: 500;">✅ Mi apoyo personal por WhatsApp todos los días</p>
+                    <p style="color:#f8fafc; font-size:15px; margin-bottom:0; font-weight: 500;">✅ Preparación directa para el examen oficial CSWA</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- WELCOME SECTION -->
-    <section class="section section-light">
+    <!-- PROGRAM SECTION -->
+    <section class="program-section">
         <div class="container2">
-            <h2 class="section-title">¿Para quién es este curso?</h2>
-            <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:20px;margin-bottom:20px;">
-                <div class="benefit-card" style="border-top:4px solid #3b82f6;max-width:440px;flex:1;min-width:260px;">
-                    <div class="benefit-icon">👷</div>
-                    <h3>Profesionales en activo</h3>
-                    <p>Ya trabajas con SolidWorks o en el área de ingeniería y quieres <strong>certificarte con CSWA para subir de puesto, ganar más o destacar en tu CV</strong>. No tienes tiempo que perder — necesitas preparación directa y alguien que resuelva tus dudas rápido.</p>
-                </div>
-                <div class="benefit-card" style="border-top:4px solid #16a34a;max-width:440px;flex:1;min-width:260px;">
-                    <div class="benefit-icon">👨‍🏫</div>
-                    <h3>Maestros y profesores</h3>
-                    <p>Das clases de SolidWorks o diseño mecánico y quieres <strong>dominar la herramienta a fondo para enseñar con más confianza y autoridad</strong>. Profundiza en los temas que más se le complican a tus alumnos y prepárate para resolver cualquier duda en clase.</p>
-                </div>
+            <div class="conversational-intro">
+                <h2>Mira, este no es solo un curso de "ver videos"...</h2>
+                <p>
+                    Sé que estás cansado de tutoriales que solo te enseñan a copiar. Por eso, aquí vas a encontrar <strong>clases explicativas, tareas dirigidas, ejercicios prácticos y exámenes de validación</strong>. 
+                </p>
+                <p style="margin-top: 15px;">
+                    Mi objetivo es que vayas poniendo a prueba tus conocimientos conforme avanzas. No te dejo avanzar a ciegas; te doy las herramientas para que tú mismo veas tu progreso.
+                </p>
             </div>
-            <p style="text-align:center;font-weight:700;font-size:16px;color:#1f2937;margin-top:10px;">+500 personas ya se han certificado con CSWA gracias a este curso 🏆</p>
-        </div>
-    </section>
 
-    <!-- BENEFITS SECTION -->
-    <section class="section section-light">
-        <div class="container2">
-            <h2 class="section-title">¿Por qué elegir este curso?</h2>
-            <div class="benefits-grid">
-                <div class="benefit-card" style="border-top:4px solid #25D366;">
-                    <div class="benefit-icon">📱</div>
-                    <h3>Diego te responde personalmente</h3>
-                    <p>No un asistente, no un foro. <strong>Diego Gaona responde tus dudas directamente por WhatsApp</strong>, el mismo día, durante todo el curso. Nunca te quedas atorado.</p>
+            <div class="program-grid">
+                <!-- Fase 1 -->
+                <div class="program-card">
+                    <div class="card-img" style="background-image: url('https://static-media.hotmart.com/yx2LzYddb2BtPBQyg58BHxW-sPk=/848x478/https://uploads.teachablecdn.com/attachments/519ed3f6c0914071abfa66bfa9c398f3.webp')"></div>
+                    <div class="card-content">
+                        <span class="card-step">Fase 1</span>
+                        <h3>Domina el Modelado 3D desde Cero</h3>
+                        <p>Aprende a diseñar cualquier componente mecánico con una metodología paso a paso. Pasarás de no saber nada a ser un experto creando piezas complejas.</p>
+                        <div class="method-pills">
+                            <span class="pill">🎥 Clases HD</span>
+                            <span class="pill">📝 Tareas</span>
+                            <span class="pill">⚙️ Prácticas</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="benefit-card" style="border-top:4px solid #f59e0b;">
-                    <div class="benefit-icon">🏆</div>
-                    <h3>Preparación real para el CSWA</h3>
-                    <p>Más de <strong>500 personas ya se han certificado</strong> con este curso. Incluye ejemplos, simulaciones y guía completa para presentarlo.</p>
+
+                <!-- Fase 2 -->
+                <div class="program-card">
+                    <div class="card-img" style="background-image: url('https://static-media.hotmart.com/0qhSRdPV7GepwwTwYd4tbGbW_gY=/848x478/https://uploads.teachablecdn.com/attachments/35a74d4b1f1044dcbdca135db1b361c5.webp')"></div>
+                    <div class="card-content">
+                        <span class="card-step">Fase 2</span>
+                        <h3>Planos Técnicos Profesionales</h3>
+                        <p>Saber modelar es solo la mitad del trabajo. Te enseñaré a crear documentación técnica y planos de fabricación con la precisión que exige la industria.</p>
+                        <div class="method-pills">
+                            <span class="pill">📐 Acotado</span>
+                            <span class="pill">📄 Formatos</span>
+                            <span class="pill">🏭 Normas ISO/ANSI</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="benefit-card" style="border-top:4px solid #3b82f6;">
-                    <div class="benefit-icon">📚</div>
-                    <h3>Material completo para maestros</h3>
-                    <p>+200 planos PDF y 140 clases organizadas por módulo. <strong>Material listo para adaptar y usar en tus clases</strong> sin prepararlo desde cero.</p>
+
+                <!-- Fase 3 -->
+                <div class="program-card">
+                    <div class="card-img" style="background-image: url('https://static-media.hotmart.com/KOSzOCnDXeDIUNC_dnjlMK6y_hs=/848x478/https://uploads.teachablecdn.com/attachments/c6d7e96ad5314a4899bd4c0baecbf551.webp')"></div>
+                    <div class="card-content">
+                        <span class="card-step">Fase 3</span>
+                        <h3>Ensambles y Mecanismos</h3>
+                        <p>Lleva tus diseños al siguiente nivel. Aprende a unir componentes, simular movimientos y dominar las relaciones de posición para crear maquinaria funcional.</p>
+                        <div class="method-pills">
+                            <span class="pill">🔗 Relaciones</span>
+                            <span class="pill">📽️ Animación</span>
+                            <span class="pill">🛠️ Mecanismos</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="benefit-card" style="border-top:4px solid #8b5cf6;">
-                    <div class="benefit-icon">♾️</div>
-                    <h3>Acceso de por vida</h3>
-                    <p>Un solo pago, acceso ilimitado. Aprende a tu ritmo y <strong>regresa cuando necesites repasar</strong> antes del examen.</p>
-                </div>
-                <div class="benefit-card" style="border-top:4px solid #ec4899;">
-                    <div class="benefit-icon">💯</div>
-                    <h3>Garantía 30 días</h3>
-                    <p>Si no estás satisfecho, te devolvemos tu dinero sin preguntas. <strong>Cero riesgo.</strong></p>
-                </div>
-                <div class="benefit-card" style="border-top:4px solid #e67e22;">
-                    <div class="benefit-icon">🎯</div>
-                    <h3>70% práctico</h3>
-                    <p>Desde la primera clase estarás modelando piezas reales. <strong>Aprendes haciendo</strong>, no solo viendo videos.</p>
+
+                <!-- Fase 4 -->
+                <div class="program-card">
+                    <div class="card-img" style="background-image: url('https://static-media.hotmart.com/ClaHmPRVn01Q3HknWRw_0ITUJN0=/848x478/https://uploads.teachablecdn.com/attachments/2193377a1c924134a1e4cc3996b1cb28.webp')"></div>
+                    <div class="card-content">
+                        <span class="card-step">Fase 4</span>
+                        <h3>Simulador del Examen CSWA</h3>
+                        <p>No arriesgues tu dinero. Practica con un simulador idéntico al examen oficial de SolidWorks y asegura tu certificado con total confianza.</p>
+                        <div class="method-pills">
+                            <span class="pill">🏆 Certificado</span>
+                            <span class="pill">⏱️ Tiempo Real</span>
+                            <span class="pill">🎓 Examen Final</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div style="text-align:center;">
-                <a href="https://diegogaona117.github.io/ficha-de-pago-02/" target="_blank" class="btn btn-primary" style="max-width:500px;margin:0 auto;">
-                    COMENZAR AHORA — <span style="text-decoration:line-through;opacity:0.7;font-size:15px;">$1,999</span> → $999
+
+            <div class="whatsapp-reminder">
+                <h4>Y ya sabes...</h4>
+                <p style="font-size: 17px; color: #166534;">
+                    Si en cualquier momento del camino llegas a tener una duda, no busques en foros. <strong>Envíame un mensaje directo por WhatsApp</strong> y yo te desatoro el mismo día. No estás solo en esto.
+                </p>
+            </div>
+
+            <div style="text-align:center; margin-top: 60px;">
+                <a href="https://diegogaona117.github.io/ficha-de-pago-02/" target="_blank" class="btn btn-primary">
+                    🚀 Empezar mi aprendizaje estructurado ahora
                 </a>
             </div>
-        </div>
-    </section>
-
-    <!-- ASESORÍA PERSONALIZADA SECTION -->
-    <section class="section" style="background:#0f172a;color:white;">
-        <div class="container2" style="text-align:center;">
-            <h2 style="font-size:28px;font-weight:700;margin-bottom:15px;color:white;">📱 Asesoría directa con Diego — mismo día</h2>
-            <p style="font-size:17px;color:#cbd5e1;max-width:700px;margin:0 auto 30px;">La mayoría de los cursos te dan videos y te dejan solo. Aquí es diferente: <strong style="color:#4ade80;">Diego Gaona te responde personalmente por WhatsApp</strong> cada vez que tengas una duda, sin importar en qué parte del curso estés.</p>
-            <div style="display:grid;grid-template-columns:1fr;gap:20px;max-width:800px;margin:0 auto 30px;" class="asesoria-grid">
-                <div style="background:#1e293b;border-radius:12px;padding:20px;border-left:4px solid #25D366;">
-                    <div style="font-size:28px;margin-bottom:8px;">⚡</div>
-                    <h3 style="font-size:16px;font-weight:700;color:white;margin-bottom:6px;">Respuesta el mismo día</h3>
-                    <p style="font-size:14px;color:#94a3b8;">No esperas días ni semanas. Diego responde en pocas horas.</p>
-                </div>
-                <div style="background:#1e293b;border-radius:12px;padding:20px;border-left:4px solid #3b82f6;">
-                    <div style="font-size:28px;margin-bottom:8px;">👨‍💻</div>
-                    <h3 style="font-size:16px;font-weight:700;color:white;margin-bottom:6px;">Directamente con el profesor</h3>
-                    <p style="font-size:14px;color:#94a3b8;">No un bot, no un asistente. Es Diego quien lee y responde tu mensaje.</p>
-                </div>
-                <div style="background:#1e293b;border-radius:12px;padding:20px;border-left:4px solid #f59e0b;">
-                    <div style="font-size:28px;margin-bottom:8px;">🔁</div>
-                    <h3 style="font-size:16px;font-weight:700;color:white;margin-bottom:6px;">Durante todo el curso</h3>
-                    <p style="font-size:14px;color:#94a3b8;">Desde la clase 1 hasta que apruebas tu examen CSWA. Sin límite de preguntas.</p>
-                </div>
-            </div>
-            <a href="https://wa.me/5214621579719?text=Hola%21%20Me%20interesa%20el%20curso%20CSWA%20de%20SolidWorks.%20Quisiera%20más%20información" target="_blank" class="btn" style="background:#25D366;color:white;max-width:400px;margin:0 auto;font-size:16px;">
-                💬 Escríbeme por WhatsApp ahora
-            </a>
-        </div>
-    </section>
-
-    <!-- CSWA SECTION -->
-    <section class="section" style="background:#fefce8;">
-        <div class="container2" style="text-align:center;">
-            <h2 class="section-title" style="color:#92400e;">🏆 Certificación CSWA — Reconocida mundialmente</h2>
-            <p style="font-size:16px;max-width:750px;margin:0 auto 25px;color:#444;">El <strong>Certified SolidWorks Associate (CSWA)</strong> es el certificado oficial de Dassault Systèmes, reconocido por empresas de manufactura, automotriz y aeroespacial en todo el mundo. Con él en tu CV abres puertas que antes estaban cerradas.</p>
-            <div style="display:grid;grid-template-columns:1fr;gap:15px;max-width:800px;margin:0 auto 25px;" class="cswa-grid">
-                <div style="background:white;border-radius:10px;padding:18px;box-shadow:0 2px 8px rgba(0,0,0,0.08);text-align:left;display:flex;gap:12px;align-items:flex-start;">
-                    <span style="font-size:24px;flex-shrink:0;">✅</span>
-                    <div><strong>+500 personas ya se han certificado</strong> con este curso</div>
-                </div>
-                <div style="background:white;border-radius:10px;padding:18px;box-shadow:0 2px 8px rgba(0,0,0,0.08);text-align:left;display:flex;gap:12px;align-items:flex-start;">
-                    <span style="font-size:24px;flex-shrink:0;">✅</span>
-                    <div>El examen se presenta <strong>100% en línea</strong> desde tu casa, en cualquier momento</div>
-                </div>
-                <div style="background:white;border-radius:10px;padding:18px;box-shadow:0 2px 8px rgba(0,0,0,0.08);text-align:left;display:flex;gap:12px;align-items:flex-start;">
-                    <span style="font-size:24px;flex-shrink:0;">✅</span>
-                    <div>Incluye <strong>ejemplos reales, simulación de examen</strong> y guía paso a paso para comprarlo y presentarlo</div>
-                </div>
-                <div style="background:white;border-radius:10px;padding:18px;box-shadow:0 2px 8px rgba(0,0,0,0.08);text-align:left;display:flex;gap:12px;align-items:flex-start;">
-                    <span style="font-size:24px;flex-shrink:0;">✅</span>
-                    <div>¿Dudas sobre el examen? <strong>Diego las resuelve directamente por WhatsApp</strong></div>
-                </div>
-            </div>
-            <img class="certificate-image" src="https://static.wixstatic.com/media/32c95b_5700ebf16db1452eaf9022720ff81df3~mv2.webp" alt="Certificado CSWA">
-            <a href="https://diegogaona117.github.io/ficha-de-pago-02/" target="_blank" class="btn btn-primary" style="max-width:500px;margin:25px auto 0;">
-                🏆 Quiero mi certificado CSWA — <span style="text-decoration:line-through;opacity:0.7;font-size:15px;">$1,999</span> → $999
-            </a>
-        </div>
-    </section>
-
-    <!-- CURRICULUM SECTION -->
-    <section class="section">
-        <div class="container2">
-            <h2 class="section-title">Clases que contiene este curso</h2>
-            <p style="text-align:center;color:#666;margin-bottom:25px;font-size:15px;">+140 clases organizadas en módulos — haz clic para ver el contenido</p>
-
-            <!-- Stats bar -->
-            <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:20px;margin-bottom:30px;">
-                <div style="background:#eff6ff;border-radius:8px;padding:12px 20px;text-align:center;">
-                    <div style="font-size:22px;font-weight:700;color:#2563eb;">140+</div>
-                    <div style="font-size:12px;color:#555;">Clases en video</div>
-                </div>
-                <div style="background:#f0fdf4;border-radius:8px;padding:12px 20px;text-align:center;">
-                    <div style="font-size:22px;font-weight:700;color:#16a34a;">17</div>
-                    <div style="font-size:12px;color:#555;">Módulos</div>
-                </div>
-                <div style="background:#fefce8;border-radius:8px;padding:12px 20px;text-align:center;">
-                    <div style="font-size:22px;font-weight:700;color:#ca8a04;">200+</div>
-                    <div style="font-size:12px;color:#555;">Planos PDF</div>
-                </div>
-                <div style="background:#fdf4ff;border-radius:8px;padding:12px 20px;text-align:center;">
-                    <div style="font-size:22px;font-weight:700;color:#9333ea;">∞</div>
-                    <div style="font-size:12px;color:#555;">Acceso de por vida</div>
-                </div>
-            </div>
-
-            <!-- Accordion -->
-            <div class="curriculum-accordion">
-
-                <!-- Módulo 1 -->
-                <div class="ca-item">
-                    <button class="ca-header" onclick="toggleModule(this)">
-                        <div class="ca-left">
-                            <span class="ca-num">01</span>
-                            <div>
-                                <div class="ca-title">Introducción e Interfaz de SolidWorks</div>
-                                <div class="ca-meta">6 clases</div>
-                            </div>
-                        </div>
-                        <span class="ca-arrow">▼</span>
-                    </button>
-                    <div class="ca-body">
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Clase 1: Interfaz del curso <span class="ca-time">4:07</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Puntos importantes antes de comenzar 1 <span class="ca-time">5:36</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">📝</span> Cuestionario 1</div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Forma de trabajo en SolidWorks <span class="ca-time">4:13</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Puntos importantes antes de comenzar 2 <span class="ca-time">3:56</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">📝</span> Cuestionario 2</div>
-                    </div>
-                </div>
-
-                <!-- Módulo 2 -->
-                <div class="ca-item">
-                    <button class="ca-header" onclick="toggleModule(this)">
-                        <div class="ca-left">
-                            <span class="ca-num">02</span>
-                            <div>
-                                <div class="ca-title">Modelado de Piezas 3D — Prácticas #1 al #4</div>
-                                <div class="ca-meta">24 clases · Ejercicios con solución incluida</div>
-                            </div>
-                        </div>
-                        <span class="ca-arrow">▼</span>
-                    </button>
-                    <div class="ca-body">
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Práctica 1 <span class="ca-time">8:34</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Agregar material y comprobar la pieza <span class="ca-time">1:36</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">📝</span> Tarea 1: Ejercicio 1</div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Solución Ejercicio 1 <span class="ca-time">4:11</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Problema con plano equivocado <span class="ca-time">2:59</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">📝</span> Cambiar croquis a otro plano</div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Activar enganche <span class="ca-time">1:42</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Relaciones Automáticas <span class="ca-time">1:00</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Práctica 2 <span class="ca-time">6:05</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">📝</span> Ejercicio 2</div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Solución ejercicio 2 <span class="ca-time">4:18</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Práctica 3 <span class="ca-time">4:57</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">📝</span> Ejercicio 3</div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Solución ejercicio 3 <span class="ca-time">3:45</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Práctica 4 <span class="ca-time">6:33</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">📝</span> Ejercicio 4</div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Solución ejercicio 4 <span class="ca-time">2:41</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Edición de Croquis y Operaciones <span class="ca-time">4:17</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Corrección de una pieza 1 <span class="ca-time">4:14</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">📝</span> Pieza con falla — ejercicio</div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Tarea 4: Ejercicio 4.1 — Solución <span class="ca-time">3:23</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Tarea 4: Ejercicio 4.2 — Solución <span class="ca-time">4:35</span></div>
-                    </div>
-                </div>
-
-                <!-- Módulo 3 -->
-                <div class="ca-item">
-                    <button class="ca-header" onclick="toggleModule(this)">
-                        <div class="ca-left">
-                            <span class="ca-num">03</span>
-                            <div>
-                                <div class="ca-title">Piezas Avanzadas — Prácticas #5 al #8</div>
-                                <div class="ca-meta">22 clases · Relaciones geométricas, tangencias y optimización</div>
-                            </div>
-                        </div>
-                        <span class="ca-arrow">▼</span>
-                    </button>
-                    <div class="ca-body">
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Práctica #5 <span class="ca-time">9:34</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">📝</span> Tarea 5: Ejercicio 5</div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Solución Ejercicio 5 <span class="ca-time">3:49</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Relaciones Geométricas <span class="ca-time">4:20</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Práctica #6 <span class="ca-time">9:14</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Solución Tarea 6 <span class="ca-time">7:08</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Modificar propiedades del documento <span class="ca-time">4:50</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Crear material personalizado <span class="ca-time">2:53</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Práctica #7 <span class="ca-time">5:52</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Solución Tarea 7 <span class="ca-time">6:41</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Práctica #8 <span class="ca-time">13:40</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> ¿Cuándo debe ir una línea tangente? <span class="ca-time">3:05</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Solución Tarea 8 <span class="ca-time">8:55</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Vista de sección de una pieza <span class="ca-time">2:34</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Ángulo de Salida <span class="ca-time">1:51</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> ¿Por qué optimizar nuestras piezas? <span class="ca-time">5:34</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Optimización de pieza servomotor <span class="ca-time">11:11</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">📝</span> Proyecto Servomotor MG995</div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Solución: Proyecto Servomotor MG995 <span class="ca-time">25:18</span></div>
-                    </div>
-                </div>
-
-                <!-- Módulo 4 -->
-                <div class="ca-item">
-                    <button class="ca-header" onclick="toggleModule(this)">
-                        <div class="ca-left">
-                            <span class="ca-num">04</span>
-                            <div>
-                                <div class="ca-title">Revolución, Nervio, Barrido y Geometría de Referencia — Prácticas #9 al #14</div>
-                                <div class="ca-meta">25 clases · Operaciones avanzadas con proyectos reales</div>
-                            </div>
-                        </div>
-                        <span class="ca-arrow">▼</span>
-                    </button>
-                    <div class="ca-body">
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Práctica #9: Revolución Saliente/Base <span class="ca-time">6:43</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Solución Tarea 9 <span class="ca-time">9:23</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Solución Polea <span class="ca-time">4:47</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Solución Polea doble <span class="ca-time">10:29</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Práctica #10: Nervio <span class="ca-time">10:07</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Solución Tarea 10 <span class="ca-time">6:41</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Práctica #11 <span class="ca-time">7:45</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Solución Ejercicio 11 <span class="ca-time">11:25</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Práctica #12: Geometría de Referencia <span class="ca-time">15:45</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Práctica #13: Saliente Base Barrido <span class="ca-time">6:32</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">📝</span> Ejercicios 13, 13.1 y 13.2</div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Práctica #14 <span class="ca-time">20:06</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Insertar texto <span class="ca-time">4:18</span></div>
-                    </div>
-                </div>
-
-                <!-- Módulo 5 -->
-                <div class="ca-item">
-                    <button class="ca-header" onclick="toggleModule(this)">
-                        <div class="ca-left">
-                            <span class="ca-num">05</span>
-                            <div>
-                                <div class="ca-title">Operaciones Complejas y Matriz — Prácticas #15 al #17</div>
-                                <div class="ca-meta">16 clases · Matriz lineal/circular, simetría, vaciado</div>
-                            </div>
-                        </div>
-                        <span class="ca-arrow">▼</span>
-                    </button>
-                    <div class="ca-body">
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Práctica #15 <span class="ca-time">30:20</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Práctica #16 <span class="ca-time">18:29</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Operación Matriz Lineal <span class="ca-time">5:40</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Operación Matriz Circular <span class="ca-time">2:37</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Matriz Circular de Croquis <span class="ca-time">2:41</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Matriz Lineal de Croquis <span class="ca-time">2:19</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Práctica #17: Convertir y Equidistanciar Entidades <span class="ca-time">9:26</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Operación de vaciado: Florero <span class="ca-time">3:22</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Modificar componentes de Toolbox <span class="ca-time">21:08</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Simetría de una pieza <span class="ca-time">4:00</span></div>
-                    </div>
-                </div>
-
-                <!-- Módulo 6 -->
-                <div class="ca-item">
-                    <button class="ca-header" onclick="toggleModule(this)">
-                        <div class="ca-left">
-                            <span class="ca-num">06</span>
-                            <div>
-                                <div class="ca-title">Planos 2D de Fabricación — Manual y Automático</div>
-                                <div class="ca-meta">32 clases · Cotas, vistas, exportación a PDF y plantillas automáticas</div>
-                            </div>
-                        </div>
-                        <span class="ca-arrow">▼</span>
-                    </button>
-                    <div class="ca-body">
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Documentos Asociados <span class="ca-time">2:37</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Crear nuevo documento 2D <span class="ca-time">2:55</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Añadir margen <span class="ca-time">1:57</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Editar formato de hoja <span class="ca-time">7:06</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Estilo de línea <span class="ca-time">2:27</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Añadir texto <span class="ca-time">2:04</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Guardar Plantilla 2D <span class="ca-time">2:21</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Insertar pieza a plano 2D <span class="ca-time">3:45</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Escala <span class="ca-time">2:39</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Cotas importadas y no importadas <span class="ca-time">2:38</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Insertar cotas al dibujo <span class="ca-time">2:18</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Cambiar el color de las cotas <span class="ca-time">1:29</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Exportar como PDF <span class="ca-time">1:10</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Vista de detalle <span class="ca-time">3:13</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Sección parcial <span class="ca-time">3:32</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Operación y anotación de Taladro <span class="ca-time">9:52</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Servomotor MG995 — Generar plano 2D <span class="ca-time">9:08</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Crear propiedades personalizadas <span class="ca-time">14:14</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Vincular propiedades <span class="ca-time">7:52</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> AUTOMÁTICO: Plano 1 <span class="ca-time">5:28</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> AUTOMÁTICO: Plano 2 <span class="ca-time">6:57</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> AUTOMÁTICO: Plano 3 <span class="ca-time">8:55</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> AUTOMÁTICO: Plano 4 <span class="ca-time">6:30</span></div>
-                    </div>
-                </div>
-
-                <!-- Módulo 7 -->
-                <div class="ca-item">
-                    <button class="ca-header" onclick="toggleModule(this)">
-                        <div class="ca-left">
-                            <span class="ca-num">07</span>
-                            <div>
-                                <div class="ca-title">Módulo de Ensamble — Proyectos Completos</div>
-                                <div class="ca-meta">10 clases · Bote de basura, engrane planetario, relaciones de posición</div>
-                            </div>
-                        </div>
-                        <span class="ca-arrow">▼</span>
-                    </button>
-                    <div class="ca-body">
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Introducción al Módulo de Ensamble <span class="ca-time">2:03</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Puntos importantes antes de crear un ensamblaje <span class="ca-time">1:32</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Ensamblaje Bote de basura parte 1 <span class="ca-time">12:17</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Ensamblaje Bote de basura parte 2 <span class="ca-time">5:53</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Relaciones de posición: Ángulo y Distancia <span class="ca-time">10:46</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Ensamblaje Engrane planetario <span class="ca-time">14:15</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Centro de masa de un ensamblaje <span class="ca-time">20:19</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Herramienta Medir <span class="ca-time">1:41</span></div>
-                    </div>
-                </div>
-
-                <!-- Módulo 8 -->
-                <div class="ca-item">
-                    <button class="ca-header" onclick="toggleModule(this)">
-                        <div class="ca-left">
-                            <span class="ca-num">08</span>
-                            <div>
-                                <div class="ca-title">Render, Colores y Apariencias</div>
-                                <div class="ca-meta">7 clases · Materiales, escenas, iluminación y calcomanías</div>
-                            </div>
-                        </div>
-                        <span class="ca-arrow">▼</span>
-                    </button>
-                    <div class="ca-body">
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Insertar colores a nuestras piezas <span class="ca-time">2:32</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Insertar Apariencias <span class="ca-time">3:08</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Insertar Escena <span class="ca-time">1:45</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Iluminación <span class="ca-time">2:39</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Render <span class="ca-time">5:44</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Insertar Calcomanías <span class="ca-time">5:32</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Editar calcomanía <span class="ca-time">3:18</span></div>
-                    </div>
-                </div>
-
-                <!-- Módulo 9 -->
-                <div class="ca-item">
-                    <button class="ca-header" onclick="toggleModule(this)">
-                        <div class="ca-left">
-                            <span class="ca-num">09</span>
-                            <div>
-                                <div class="ca-title">Proyecto Final — Diseño y Ensamblaje Brazo Robótico</div>
-                                <div class="ca-meta">6 clases · Diseño completo, tornillos, tuercas y animación</div>
-                            </div>
-                        </div>
-                        <span class="ca-arrow">▼</span>
-                    </button>
-                    <div class="ca-body">
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Diseño y ensamblaje: Cardán <span class="ca-time">1:11</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Solución: Ensamblaje y animación Cardán <span class="ca-time">14:58</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Diseño y ensamblaje: Pistón <span class="ca-time">3:34</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Ensamblaje del brazo robótico <span class="ca-time">19:07</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Agregar tornillos y tuercas <span class="ca-time">16:01</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Controladores de movimiento <span class="ca-time">11:25</span></div>
-                    </div>
-                </div>
-
-                <!-- Módulo 10 -->
-                <div class="ca-item" style="border-bottom:3px solid #f59e0b;">
-                    <button class="ca-header" onclick="toggleModule(this)" style="background:#fffbeb;">
-                        <div class="ca-left">
-                            <span class="ca-num" style="background:#f59e0b;">🏆</span>
-                            <div>
-                                <div class="ca-title" style="color:#92400e;">Preparación Examen CSWA — Certificación Oficial</div>
-                                <div class="ca-meta">3 clases · Ejemplos reales, simulación y guía completa de presentación</div>
-                            </div>
-                        </div>
-                        <span class="ca-arrow">▼</span>
-                    </button>
-                    <div class="ca-body">
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> ¿Cómo presentar mi examen CSWA? <span class="ca-time">3:47</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> ¿Cómo comprar mi examen CSWA? <span class="ca-time">3:58</span></div>
-                        <div class="ca-lesson"><span class="ca-icon">▶</span> Más ejemplos de examen para practicar <span class="ca-time">0:35</span></div>
-                    </div>
-                </div>
-
-            </div><!-- end accordion -->
-
-            <div style="text-align:center;margin-top:25px;">
-                <a href="https://diegogaona117.github.io/ficha-de-pago-02/" target="_blank" class="btn btn-primary" style="max-width:500px;margin:0 auto;">
-                    🚀 Acceder a todo el contenido — <span style="text-decoration:line-through;opacity:0.7;font-size:15px;">$1,999</span> → $999
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- BONUS SECTION -->
-    <div class="bonus-container">
-        <p class="bonus-title">¡BONUS: <strong>+200 Planos PDF</strong> para practicar!</p>
-        <p style="font-size:16px;line-height:1.6;margin-top:10px;">
-            Obtén mi libro completo de paquete de ejercicios, <strong>practica con proyectos reales de ingeniería después de cada clase</strong>.
-        </p>
-        <img class="bonus-image" src="https://static.wixstatic.com/media/32c95b_8463090d40ef44a1822ff6037511eccc~mv2.webp" alt="200 Planos PDF">
-    </div>
-
-
-    <!-- PROJECTS SECTION -->
-    <section class="section">
-        <div class="container2">
-            <h2 class="section-title">¿Cuáles son los proyectos del curso?</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <img class="project-image" src="https://static.wixstatic.com/media/32c95b_5da5326cfcb54fd59bfd93afa22707fd~mv2.webp" alt="Proyecto 1">
-                    <p>Dibujarás <b>desde cero</b> tus propias piezas</p>
-                </div>
-                <div class="project-card">
-                    <img class="project-image" src="https://static.wixstatic.com/media/32c95b_bfa3e6bc18b1413cb44887ec6092aace~mv2.webp" alt="Proyecto 2">
-                    <p>Obtendrás los <b>Planos 2D</b> de tus propias piezas</p>
-                </div>
-                <div class="project-card">
-                    <img class="project-image" src="https://static.wixstatic.com/media/32c95b_fdecea207ff14ad4bf494f4959ccc6bd~mv2.webp" alt="Proyecto 3">
-                    <p>Proyecto <b>desde cero</b> ensamble motor estrella</p>
-                </div>
-                <div class="project-card">
-                    <img class="project-image" src="https://static.wixstatic.com/media/32c95b_6c4985930c144df98fba67099bef0292~mv2.webp" alt="Proyecto Cardán">
-                    <p>⚙️ <b>Cardán</b> — ensamblaje completo con animación de movimiento</p>
-                </div>
-                <div class="project-card">
-                    <img class="project-image" src="https://static.wixstatic.com/media/32c95b_035c871f1059424b93b50af3be66da8d~mv2.webp" alt="Proyecto Pistón">
-                    <p>🔩 <b>Pistón con biela y cigüeñal</b> — ensamblaje mecánico completo</p>
-                </div>
-                <div class="project-card">
-                    <img class="project-image" src="https://static.wixstatic.com/media/32c95b_f629ccad16254329ad0bb013c29b7352~mv2.webp" alt="Brazo Robótico">
-                    <p>🦾 <b>Brazo robótico</b> — diseño, ensamble y animación de movimiento</p>
-                </div>
-                <div class="project-card">
-                    <img class="project-image" src="https://static.wixstatic.com/media/32c95b_cfe0bb36e01e4ba2b0b6c8c320dd6917~mv2.webp" alt="Brazo Robótico 2">
-                    <p>🦾 <b>Brazo robótico — versión avanzada</b> — render fotorrealista con materiales</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA SECTION -->
-    <section class="section section-light">
-        <div class="container2" style="text-align:center;">
-            <h2 style="font-size:22px;font-weight:700;margin-bottom:15px;color:#1f2937;">¿Listo para obtener tu certificado CSWA?</h2>
-            <p style="color:#555;margin-bottom:20px;">Únete a más de 500 personas que ya tienen su certificación CSWA internacional</p>
-            <a href="https://diegogaona117.github.io/ficha-de-pago-02/" target="_blank" class="btn btn-primary" style="max-width:500px;margin:0 auto;">
-                🏆 Quiero inscribirme ahora — <span style="text-decoration:line-through;opacity:0.7;font-size:15px;">$1,999</span> → $999
-            </a>
-        </div>
-    </section>
-
-    <!-- REVIEWS SECTION -->
-    <section id="comentarios" class="section">
-        <div class="container2 reviews-section">
-            <div class="reviews-header">
-                <h2 class="reviews-title">Comentarios de los estudiantes</h2>
-                <div class="overall-rating">
-                    <span>4.8</span>
-                    <div class="stars">
-                        <div class="star"></div>
-                        <div class="star"></div>
-                        <div class="star"></div>
-                        <div class="star"></div>
-                        <div class="star half"></div>
-                    </div>
-                </div>
-                <p style="font-size:14px;color:#666;">Valoración del curso</p>
-            </div>
-
-            <div class="review-card">
-                <div class="review-header">
-                    <div class="review-avatar">OG</div>
-                    <div class="review-info">
-                        <div class="review-name">Omar Garcia H.</div>
-                        <div class="review-rating">
-                            <div class="stars"><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div></div>
-                            <span class="review-date">Hace un momento</span>
-                        </div>
-                    </div>
-                </div>
-                <p class="review-text">Definitivamente este no es un curso como los otros, donde compras, te entregan los videos y ahí hazle como puedas. El ing. Diego me respondió siempre incluso sábado o domingo. Cursos con profesor para asesorías como este si hay, pero valen 10 veces más. Muchas gracias ing. Diego, ahora ya me dieron el puesto en mi trabajo.</p>
-            </div>
-
-            <div class="review-card">
-                <div class="review-header">
-                    <div class="review-avatar">JB</div>
-                    <div class="review-info">
-                        <div class="review-name">Jorge Adrian Guillen B.</div>
-                        <div class="review-rating">
-                            <div class="stars"><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div></div>
-                            <span class="review-date">Hace 1 semana</span>
-                        </div>
-                    </div>
-                </div>
-                <p class="review-text">Estuve tomando otros cursos de Solid antes que este, incluso con un precio elevado, subestimé 100% el valor de este curso. Me hubiese ahorrado mucho dinero solo invirtiendo en este mismo. Saludos. 10/10.</p>
-            </div>
-
-            <div class="review-card">
-                <div class="review-header">
-                    <div class="review-avatar">MH</div>
-                    <div class="review-info">
-                        <div class="review-name">Miguel Eduardo Torres H.</div>
-                        <div class="review-rating">
-                            <div class="stars"><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div></div>
-                            <span class="review-date">Hace 1 semana</span>
-                        </div>
-                    </div>
-                </div>
-                <p class="review-text">Excelente curso, se aprende muy bien, tiene un material muy completo y es fácil seguir el ritmo, vale completamente la pena la inversión. El instructor incluso brinda su número de WhatsApp por si te surgen dudas a lo largo del curso.</p>
-            </div>
-
-            <div class="review-card">
-                <div class="review-header">
-                    <div class="review-avatar">CS</div>
-                    <div class="review-info">
-                        <div class="review-name">Caleb S.</div>
-                        <div class="review-rating">
-                            <div class="stars"><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div></div>
-                            <span class="review-date">Hace 1 semana</span>
-                        </div>
-                    </div>
-                </div>
-                <p class="review-text">Ya finalizado el curso, puedo decirles a aquellos que están dudando en comprarlo que es muy recomendable. Es un muy buen curso para aquellos que quieren comenzar con el modelado y diseño 3D en SolidWorks. Por otro lado, es muy útil para el examen de CSWA.</p>
-            </div>
-
-            <a href="https://cursodiegogaona.teachable.com/p/resenas-curso-solidworks" target="_blank" style="text-decoration:none;">
-                <button class="view-all-btn">Ver todos los comentarios</button>
-            </a>
         </div>
     </section>
 
     <!-- INSTRUCTOR SECTION -->
-    <section id="Diego_Gaona" class="section section-light">
-        <div class="container2">
-            <h2 class="section-title">Instructor</h2>
-            <div class="instructor-section">
-                <img class="instructor-image" src="https://static.wixstatic.com/media/32c95b_6e097eebd8fc40a393329631b8189846~mv2.webp" alt="Diego Gaona">
-                <div class="instructor-content">
-                    <h3 class="instructor-title">Diego Gaona</h3>
-                    <div class="instructor-badges">
-                        <span class="badge badge-teacher">Profesor</span>
-                        <span class="badge badge-youtube">Youtuber</span>
+    <section class="container2">
+        <div class="instructor-card">
+            <div style="text-align: center; margin-bottom: 10px;">
+                <h2 style="font-size: 32px; font-weight: 800; color: #0f172a;">¿Quién será tu mentor?</h2>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center;">
+                <div style="flex: 1; min-width: 300px;">
+                    <div class="instructor-profile" style="margin-bottom: 20px;">
+                        <img src="https://static.wixstatic.com/media/32c95b_6e097eebd8fc40a393329631b8189846~mv2.webp" alt="Diego Gaona" class="instructor-photo">
+                        <div>
+                            <h3 style="font-size: 24px; font-weight: 800; color: #0f172a; margin-bottom: 5px;">Diego Gaona</h3>
+                            <span style="background: #3b82f6; color: white; padding: 4px 10px; border-radius: 6px; font-size: 13px; font-weight: 700;">Profesor Experto</span>
+                            <span style="background: #ef4444; color: white; padding: 4px 10px; border-radius: 6px; font-size: 13px; font-weight: 700; margin-left: 5px;">YouTuber</span>
+                        </div>
                     </div>
-                    <div class="social-icons">
-                        <a href="https://www.facebook.com/DiegoGaonaSW/" target="_blank">
-                            <img src="https://static.wixstatic.com/media/32c95b_e0b1f76cc3934f0fa4849e61cd800171~mv2.png" alt="Facebook">
-                        </a>
-                        <a href="https://www.youtube.com/channel/UCJZ0ryYLqc-UqH6VaDF-D3Q" target="_blank">
-                            <img src="https://static.wixstatic.com/media/32c95b_8edd438cf0254d6492444d3a4d1febd1~mv2.png" alt="YouTube">
-                        </a>
+                    <p style="font-size: 17px; color: #475569; line-height: 1.7; margin-bottom: 15px;">
+                        Soy profesor con más de 15 años de experiencia en la enseñanza y llevo más de 10 años utilizando SolidWorks en proyectos reales de ingeniería.
+                    </p>
+                    <p style="font-size: 17px; color: #475569; line-height: 1.7;">
+                        A diferencia de otros instructores, <strong>mi mayor fortaleza no es solo diseñar, sino mi capacidad de transmitir el conocimiento</strong> de forma clara, paciente y sencilla. Mi misión es que tú no pases por la misma frustración que yo viví al aprender solo.
+                    </p>
+                </div>
+                <div style="flex: 1; min-width: 300px;">
+                    <div class="stats-grid">
+                        <div class="stat-box">
+                            <div style="font-size: 32px; font-weight: 800; color: #fbbf24;">4.8/5</div>
+                            <div style="font-size: 14px; color: #64748b; font-weight: 600;">Calificación</div>
+                        </div>
+                        <div class="stat-box">
+                            <div style="font-size: 32px; font-weight: 800; color: #3b82f6;">15+</div>
+                            <div style="font-size: 14px; color: #64748b; font-weight: 600;">Años de Docencia</div>
+                        </div>
+                        <div class="stat-box">
+                            <div style="font-size: 32px; font-weight: 800; color: #10b981;">19k+</div>
+                            <div style="font-size: 14px; color: #64748b; font-weight: 600;">Estudiantes Globales</div>
+                        </div>
+                        <div class="stat-box">
+                            <div style="font-size: 32px; font-weight: 800; color: #8b5cf6;">500+</div>
+                            <div style="font-size: 14px; color: #64748b; font-weight: 600;">Certificados CSWA</div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="instructor-bio">
-                <strong>Profesor especialista en SolidWorks con más de 15 años de experiencia</strong>
-                <p style="margin-top:10px;">Soy profesor con más de 15 años de experiencia en la enseñanza y llevo más de 10 años utilizando SolidWorks. Mi mayor fortaleza es la capacidad de transmitir el conocimiento de forma clara y sencilla.</p>
+        </div>
+    </section>
+
+    <!-- REVIEWS SECTION -->
+    <section class="reviews-section">
+        <div class="container2">
+            <div class="conversational-intro" style="text-align: center; margin-bottom: 40px;">
+                <h2 style="font-size: 32px; font-weight: 800; color: #0f172a; margin-bottom: 15px;">Lo que dicen mis alumnos</h2>
+                <p style="font-size: 18px; color: #475569;">No te quedes solo con mis palabras. Mira lo que han logrado quienes ya tomaron la decisión de aprender con este método.</p>
             </div>
-            <div class="stats-grid">
-                <div class="stat-card"><div class="stat-number">4.8</div><div class="stat-label">Calificación</div></div>
-                <div class="stat-card"><div class="stat-number">2,297</div><div class="stat-label">Reseñas</div></div>
-                <div class="stat-card"><div class="stat-number">19,648</div><div class="stat-label">Estudiantes</div></div>
-                <div class="stat-card"><div class="stat-number">15+</div><div class="stat-label">Años enseñando</div></div>
+            
+            <div class="reviews-grid">
+                <!-- Review 1 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">OG</div>
+                        <div>
+                            <h4 style="color: #0f172a; font-size: 17px; margin-bottom: 2px;">Omar Garcia H.</h4>
+                            <div class="review-stars">★★★★★</div>
+                        </div>
+                    </div>
+                    <p style="color: #475569; font-size: 16px; line-height: 1.6;">"Definitivamente este no es un curso como los otros, donde compras, te entregan los videos y ahí hazle como puedas. El ing. Diego me respondió siempre incluso sábado o domingo. Cursos con profesor para asesorías como este si hay, pero valen 10 veces más. Muchas gracias ing. Diego, ahora ya me dieron el puesto en mi trabajo."</p>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar" style="background: #8b5cf6;">JB</div>
+                        <div>
+                            <h4 style="color: #0f172a; font-size: 17px; margin-bottom: 2px;">Jorge Adrian Guillen B.</h4>
+                            <div class="review-stars">★★★★★</div>
+                        </div>
+                    </div>
+                    <p style="color: #475569; font-size: 16px; line-height: 1.6;">"Estuve tomando otros cursos de Solid antes que este, incluso con un precio elevado, subestimé 100% el valor de este curso. Me hubiese ahorrado mucho dinero solo invirtiendo en este mismo. Saludos. 10/10."</p>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar" style="background: #10b981;">MT</div>
+                        <div>
+                            <h4 style="color: #0f172a; font-size: 17px; margin-bottom: 2px;">Miguel Eduardo Torres H.</h4>
+                            <div class="review-stars">★★★★★</div>
+                        </div>
+                    </div>
+                    <p style="color: #475569; font-size: 16px; line-height: 1.6;">"Excelente curso, se aprende muy bien, tiene un material muy completo y es fácil seguir el ritmo, vale completamente la pena la inversión. El instructor incluso brinda su número de WhatsApp por si te surgen dudas a lo largo del curso."</p>
+                </div>
+
+                <!-- Review 4 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar" style="background: #f59e0b;">CS</div>
+                        <div>
+                            <h4 style="color: #0f172a; font-size: 17px; margin-bottom: 2px;">Caleb S.</h4>
+                            <div class="review-stars">★★★★★</div>
+                        </div>
+                    </div>
+                    <p style="color: #475569; font-size: 16px; line-height: 1.6;">"Ya finalizado el curso, puedo decirles a aquellos que están dudando en comprarlo que es muy recomendable. Es un muy buen curso para aquellos que quieren comenzar con el modelado y diseño 3D en SolidWorks. Por otro lado, es muy útil para el examen de CSWA."</p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="https://cursodiegogaona.teachable.com/p/resenas-curso-solidworks" target="_blank" style="color: #3b82f6; font-weight: 600; text-decoration: underline; font-size: 16px;">Ver todos los comentarios de alumnos</a>
             </div>
         </div>
     </section>
 
     <!-- FAQ SECTION -->
-    <section class="faq-section">
-        <div class="faq-header">
-            <h2>❓ Preguntas Frecuentes</h2>
-            <p>Curso de SolidWorks en Línea</p>
-        </div>
-        <div class="faq-container">
-            <div class="faq-item">
-                <button class="faq-question"><span class="emoji">💡</span><span>¿Necesito experiencia previa?</span><span class="icon"></span></button>
-                <div class="faq-answer"><p>Nada de eso. Empezamos desde cero, paso a paso, hasta que domines piezas, ensambles y planos técnicos.</p></div>
+    <section style="padding: 80px 0; background-color: #f8fafc;">
+        <div class="container2">
+            <div style="text-align: center; margin-bottom: 40px;">
+                <h2 style="font-size: 32px; font-weight: 800; color: #0f172a; margin-bottom: 15px;">Preguntas Frecuentes</h2>
+                <p style="font-size: 18px; color: #475569;">Resolvemos tus últimas dudas antes de entrar.</p>
             </div>
-            <div class="faq-item">
-                <button class="faq-question"><span class="emoji">🧠</span><span>¿Qué versión de SolidWorks se usa?</span><span class="icon"></span></button>
-                <div class="faq-answer"><p>Trabajamos con SolidWorks 2022, 2023, 2024 y 2025, pero puedes seguir el curso con versiones anteriores o más nuevas sin problema.</p></div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question"><span class="emoji">📜</span><span>¿Recibo certificado al terminar?</span><span class="icon"></span></button>
-                <div class="faq-answer"><p>Sí 🎓 Al finalizar, obtienes un certificado digital con tu nombre, ideal para tu portafolio o LinkedIn.</p></div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question"><span class="emoji">⏰</span><span>¿Cuánto dura el curso?</span><span class="icon"></span></button>
-                <div class="faq-answer"><p>Depende de tu ritmo. En promedio lo completas en 4 a 6 semanas, pero el acceso es de por vida, así que no hay prisa.</p></div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question"><span class="emoji">🙋‍♂️</span><span>¿Y si tengo dudas?</span><span class="icon"></span></button>
-                <div class="faq-answer"><p>No te preocupes. Incluye asesorías personalizadas, donde resuelvo tus dudas directamente.</p></div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question"><span class="emoji">🧩</span><span>¿Qué voy a aprender?</span><span class="icon"></span></button>
-                <div class="faq-answer"><p>Todo lo esencial: croquis, piezas, ensambles, planos y proyectos prácticos. Nada de teoría sin sentido, aprendes haciendo.</p></div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question"><span class="emoji">💻</span><span>¿Qué computadora necesito?</span><span class="icon"></span></button>
-                <div class="faq-answer"><p>Con Windows, 8 GB de RAM y una tarjeta gráfica básica vas bien. Si tu equipo es más potente, aún mejor.</p></div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question"><span class="emoji">🆓</span><span>¿Puedo usar una versión educativa o de prueba?</span><span class="icon"></span></button>
-                <div class="faq-answer"><p>Sí, puedes usar alguna versión de prueba o educativa para iniciar tu curso sin ningún problema.</p></div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question"><span class="emoji">🚀</span><span>¿Por qué este curso y no otro?</span><span class="icon"></span></button>
-                <div class="faq-answer"><p>Porque aquí no solo ves videos, sino que aprendes con proyectos reales y acompañamiento directo.</p></div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question"><span class="emoji">💳</span><span>¿Cómo puedo pagar?</span><span class="icon"></span></button>
-                <div class="faq-answer"><p>Acepto tarjeta, Oxxo, Mercado Pago, PayPal o transferencia bancaria, y puedes inscribirte desde cualquier país.</p></div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question"><span class="emoji">💰</span><span>¿Puedo pedir un reembolso?</span><span class="icon"></span></button>
-                <div class="faq-answer"><p>Sí, cuentas con una <strong>garantía de reembolso de 30 días</strong>. Si el curso no cumple tus expectativas, puedes solicitar la devolución sin problema.</p></div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>¿Necesito experiencia previa?</span>
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Nada de eso. Empezamos desde cero, paso a paso, hasta que domines piezas, ensambles y planos técnicos.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>¿Qué versión de SolidWorks se usa?</span>
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Trabajamos con versiones recientes (2022 a 2025), pero puedes seguir el curso con versiones anteriores o estudiantiles sin ningún problema.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>¿Cuánto tiempo tengo para terminarlo?</span>
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>El acceso al curso es <strong>de por vida</strong>. Puedes avanzar a tu propio ritmo, pausar y regresar a repasar las clases cuando lo necesites, sin pagar mensualidades.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>¿De verdad me respondes por WhatsApp?</span>
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>¡Sí! Esa es mi mayor promesa. No hablas con un asistente ni con un bot. Me mandas un mensaje, veo tu problema y te respondo yo mismo el mismo día para desatorarte.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>¿Qué computadora necesito?</span>
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Con Windows, 8 GB de RAM y una tarjeta gráfica básica vas bien. Si tu equipo es más potente, aún mejor.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>¿Puedo usar una versión educativa o de prueba?</span>
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sí, por supuesto. Puedes usar cualquier versión de prueba o licencia educativa (Student Edition) para tomar todas las clases sin ningún inconveniente.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>¿Recibo certificado al terminar?</span>
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sí. Al finalizar todas las lecciones obtienes un certificado digital de terminación a tu nombre, independiente de tu preparación para presentar el examen oficial CSWA.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>¿Cuáles son los métodos de pago?</span>
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Aceptamos tarjetas de crédito/débito, PayPal, Mercado Pago y pago en efectivo (Oxxo). Puedes inscribirte desde cualquier país, la plataforma hace la conversión a tu moneda local automáticamente.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-        <p>© Curso Diego Gaona 2025</p>
-        <p style="margin-top:8px;">
-            <a href="#">Terms of Use</a>
-            <a href="#">Privacy Policy</a>
-        </p>
+    <!-- GUARANTEE SECTION -->
+    <section class="container2">
+        <div class="guarantee-box">
+            <div style="font-size: 50px; margin-bottom: 20px;">🛡️</div>
+            <h2 style="font-size: 32px; margin-bottom: 20px;">Mi Garantía Incondicional de 30 Días</h2>
+            <p style="font-size: 19px; color: #cbd5e1; margin-bottom: 30px; max-width: 800px; margin-left: auto; margin-right: auto; line-height: 1.6;">
+                Mi promesa más grande es no dejarte solo. Si entras al curso y en algún momento sientes que <strong>no te estoy brindando el apoyo personalizado para resolver tus dudas</strong>, o simplemente mi método no te convence, mándame un mensaje.
+            </p>
+            <p style="font-weight: 700; color: #fbbf24; font-size: 20px;">Te devuelvo el 100% de tu dinero completo. Sin letras pequeñas ni preguntas.</p>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section style="text-align: center; padding-bottom: 80px;">
+        <div class="container2">
+            <h2 style="font-size: 32px; margin-bottom: 10px; color: #0f172a;">¿Listo para dejar de adivinar y empezar a diseñar con seguridad?</h2>
+            <p class="spots-counter-light" style="color: #ef4444; font-size: 16px; font-weight: 700; margin-bottom: 30px; background: #fef2f2; display: inline-block; padding: 8px 16px; border-radius: 8px; border: 1px dashed #f87171;">⏳ Calculando lugares disponibles...</p>
+            <br>
+            <a href="https://diegogaona117.github.io/ficha-de-pago-02/" target="_blank" class="btn btn-primary" style="margin: 0 auto;">
+                🚀 Quiero empezar mi formación profesional
+            </a>
+            <div class="security-badge" style="justify-content: center; margin-top: 15px;">
+                🔒 Pago 100% seguro. Aceptamos tarjetas, PayPal y efectivo.
+            </div>
+            <div style="margin-top: 30px; text-align: left; background: #f8fafc; padding: 30px; border-radius: 15px; border: 1px solid #e2e8f0; max-width: 600px; margin-left: auto; margin-right: auto;">
+                <p style="font-weight: 700; margin-bottom: 15px; font-size: 18px; color: #1e293b;">Resumen de lo que obtienes hoy:</p>
+                <ul style="list-style: none; font-size: 16px; color: #475569;">
+                    <li style="margin-bottom: 10px;">✅ <strong>Estructura clara:</strong> Clases, tareas y proyectos paso a paso.</li>
+                    <li style="margin-bottom: 10px;">✅ <strong>Acceso de por vida:</strong> Sin mensualidades, pagas una sola vez.</li>
+                    <li style="margin-bottom: 10px;">✅ <strong>Mi WhatsApp personal:</strong> Tu mentor privado todos los días.</li>
+                    <li style="margin-bottom: 10px;">✅ <strong>Preparación CSWA:</strong> Todo lo necesario para tu certificación oficial.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer style="background: #0f172a; color: #94a3b8; text-align: center; padding: 50px 20px; font-size: 14px;">
+        <p>© 2025 Diego Gaona | Mentoría SolidWorks</p>
+        <p style="margin-top: 10px; opacity: 0.7; font-size: 12px;">Dassault Systèmes y SolidWorks son marcas registradas.</p>
     </footer>
 
-    <!-- WHATSAPP FLOAT BUTTON -->
-    <a href="https://wa.me/5214621579719?text=Hola%21%20Me%20interesa%20el%20curso%20CSWA%20de%20SolidWorks.%20Quisiera%20más%20información"
-       class="whatsapp-float"
-       target="_blank"
-       rel="noopener noreferrer">
-        <img src="https://static.wixstatic.com/media/32c95b_ba51d58815674787bd12dc6321e576cd~mv2.png" alt="WhatsApp">
+    <!-- WHATSAPP FLOAT -->
+    <a href="https://wa.me/5214621579719?text=Hola%20Diego%21%20Vengo%20de%20tu%20página%20y%20quiero%20aprender%20SolidWorks" class="whatsapp-float" target="_blank">
+        <img src="https://static.wixstatic.com/media/32c95b_ba51d58815674787bd12dc6321e576cd~mv2.png" alt="WhatsApp" style="width: 38px;">
     </a>
 
+    <!-- SCRIPT FOR FAQ ACCORDION -->
     <script>
-        // Curriculum accordion
-        function toggleModule(btn) {
-            const body = btn.nextElementSibling;
-            const isOpen = btn.classList.contains('open');
-            btn.classList.toggle('open', !isOpen);
-            body.classList.toggle('open', !isOpen);
-        }
+        document.addEventListener('DOMContentLoaded', function() {
+            // --- LÓGICA DEL ACORDEÓN DE FAQ ---
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const button = item.querySelector('.faq-question');
+                button.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+                    
+                    // Cierra todas las preguntas
+                    faqItems.forEach(faq => faq.classList.remove('active'));
+                    
+                    // Si no estaba activa, la abre
+                    if (!isActive) {
+                        item.classList.add('active');
+                    }
+                });
+            });
 
-        // Toggle CSWA info
-        function toggleCSWA(event) {
-            const content = document.getElementById('cswaInfo');
-            const btn = event.target;
-            if (content.classList.contains('active')) {
-                content.classList.remove('active');
-                btn.textContent = 'Ver Más CSWA';
+            // --- LÓGICA DE ESCASEZ (LUGARES LIMITADOS) ---
+            const totalSpots = 20;
+            const minSpots = 3; // Límite para que nunca llegue a 0 y sigan comprando
+            let spotsLeft = localStorage.getItem("sw_curso_spots");
+            
+            if (!spotsLeft) {
+                // Primera vez que entra a la página
+                spotsLeft = 15;
             } else {
-                content.classList.add('active');
-                btn.textContent = 'Ocultar';
+                // Siguientes visitas: le restamos un número aleatorio entre 1 y 4
+                spotsLeft = parseInt(spotsLeft, 10);
+                if (spotsLeft > minSpots) {
+                    const decrease = Math.floor(Math.random() * 4) + 1; 
+                    spotsLeft = Math.max(minSpots, spotsLeft - decrease);
+                }
             }
-        }
+            
+            // Guardamos el nuevo valor en el navegador del usuario
+            localStorage.setItem("sw_curso_spots", spotsLeft);
+            
+            // Actualizamos los textos en la página
+            const darkCounters = document.querySelectorAll('.spots-counter');
+            darkCounters.forEach(el => {
+                el.innerHTML = `⚠️ <strong>¡Atención!</strong> Quedan solo <span style="color: #fff; font-size: 18px; padding: 0 4px;">${spotsLeft} de ${totalSpots}</span> lugares con 50% de descuento.`;
+            });
 
-        // FAQ accordion
-        const faqItems = document.querySelectorAll('.faq-item');
-        faqItems.forEach(item => {
-            item.querySelector('.faq-question').addEventListener('click', () => {
-                const isActive = item.classList.contains('active');
-                faqItems.forEach(i => i.classList.remove('active'));
-                if (!isActive) item.classList.add('active');
+            const lightCounters = document.querySelectorAll('.spots-counter-light');
+            lightCounters.forEach(el => {
+                el.innerHTML = `⚠️ <strong>¡Atención!</strong> Quedan solo <span style="color: #b91c1c; font-size: 18px; padding: 0 4px;">${spotsLeft} de ${totalSpots}</span> lugares con 50% de descuento.`;
             });
         });
     </script>
