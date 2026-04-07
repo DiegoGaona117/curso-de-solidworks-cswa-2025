@@ -34,6 +34,24 @@
         gtag('config', 'G-RN68VLQLTW');
     </script>
 
+    <!-- Meta Pixel Code (SOLUCIÓN AL BLOQUEO CRÍTICO 1) -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '373277814132384');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=373277814132384&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- End Meta Pixel Code -->
+
     <style>
         * {
             margin: 0;
@@ -536,7 +554,8 @@
             <div class="hero-video-box">
                 <p>¿Prefieres escuchar mi historia? Mira este video rápido (o sigue leyendo abajo) 👇</p>
                 <div id="yt-facade" onclick="loadVideo()" style="position: relative; padding-bottom: 56.25%; height: 0; border-radius: 12px; overflow: hidden; cursor: pointer; background: #000;">
-                    <img src="https://img.youtube.com/vi/U6Teuju10ec/maxresdefault.jpg" alt="Ver presentación" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;opacity:0.7;">
+                    <!-- SOLUCIÓN AL BLOQUEO 3: Dimensiones y lazy load -->
+                    <img src="https://img.youtube.com/vi/U6Teuju10ec/maxresdefault.jpg" alt="Ver presentación" width="800" height="450" loading="lazy" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;opacity:0.7;">
                     <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 70px; height: 70px; background: #ff5213; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
                         <svg width="35" height="35" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
                     </div>
@@ -580,7 +599,8 @@
         <!-- MI HISTORIA (LA EMPATÍA Y SOLUCIÓN) -->
         <div class="story-container">
             <div class="story-header">
-                <img class="story-avatar" src="https://static.wixstatic.com/media/32c95b_6e097eebd8fc40a393329631b8189846~mv2.webp" alt="Diego Gaona">
+                <!-- SOLUCIÓN AL BLOQUEO 3: Dimensiones y lazy load -->
+                <img class="story-avatar" src="https://static.wixstatic.com/media/32c95b_6e097eebd8fc40a393329631b8189846~mv2.webp" alt="Diego Gaona" width="70" height="70" loading="lazy">
                 <div>
                     <h4 style="margin:0; color:#0f172a; font-size: 18px;">De Diego Gaona</h4>
                     <p style="margin:0; font-size:15px; color:#64748b; font-weight: 500;">Ingeniero y Profesor</p>
@@ -632,8 +652,8 @@
 
             <!-- BOTONES CTA DESPUÉS DE LOS PILARES -->
             <div class="cta-container" style="text-align: center;">
-                <p class="spots-counter" style="color: #fbbf24; font-size: 15px; font-weight: 700; margin-bottom: 15px; background: rgba(251, 191, 36, 0.1); display: inline-block; padding: 8px 16px; border-radius: 8px; border: 1px dashed rgba(251, 191, 36, 0.4);">⏳ Calculando lugares disponibles...</p>
-                <br>
+                <!-- SOLUCIÓN AL BLOQUEO 2: Escasez real, justificada por tu tiempo y atención en WhatsApp -->
+                <p style="color: #fbbf24; font-size: 14px; font-weight: 700; margin-bottom: 15px;">⏳ Para poder responder personalmente por WhatsApp a todos mis alumnos, las plazas con este descuento son limitadas.</p>
                 <a href="https://diegogaona117.github.io/ficha-de-pago-02/" target="_blank" class="btn btn-primary">
                     🚀 Quiero que seas mi mentor <span style="text-decoration: line-through; opacity: 0.7; font-size: 16px;">$1,999</span> → $999
                 </a>
@@ -749,7 +769,8 @@
             <div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center;">
                 <div style="flex: 1; min-width: 300px;">
                     <div class="instructor-profile" style="margin-bottom: 20px;">
-                        <img src="https://static.wixstatic.com/media/32c95b_6e097eebd8fc40a393329631b8189846~mv2.webp" alt="Diego Gaona" class="instructor-photo">
+                        <!-- SOLUCIÓN AL BLOQUEO 3: Dimensiones y lazy load -->
+                        <img src="https://static.wixstatic.com/media/32c95b_6e097eebd8fc40a393329631b8189846~mv2.webp" alt="Diego Gaona" class="instructor-photo" width="120" height="120" loading="lazy">
                         <div>
                             <h3 style="font-size: 24px; font-weight: 800; color: #0f172a; margin-bottom: 5px;">Diego Gaona</h3>
                             <span style="background: #3b82f6; color: white; padding: 4px 10px; border-radius: 6px; font-size: 13px; font-weight: 700;">Profesor Experto</span>
@@ -929,7 +950,7 @@
                         <span class="faq-icon">▼</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Aceptamos tarjetas de crédito/débito, PayPal, Mercado Pago y pago en efectivo (Oxxo). Puedes inscribirte desde cualquier país, la plataforma hace la conversión a tu moneda local automáticamente.</p>
+                        <p>El método directo en la página es <strong>transferencia bancaria</strong>. Sin embargo, también aceptamos <strong>tarjetas, PayPal, Mercado Pago y Oxxo</strong>. Si prefieres usar alguna de estas opciones, solo envíame un mensaje por WhatsApp y te enviaré un enlace de pago seguro al instante.</p>
                     </div>
                 </div>
             </div>
@@ -952,13 +973,13 @@
     <section style="text-align: center; padding-bottom: 80px;">
         <div class="container2">
             <h2 style="font-size: 32px; margin-bottom: 10px; color: #0f172a;">¿Listo para dejar de adivinar y empezar a diseñar con seguridad?</h2>
-            <p class="spots-counter-light" style="color: #ef4444; font-size: 16px; font-weight: 700; margin-bottom: 30px; background: #fef2f2; display: inline-block; padding: 8px 16px; border-radius: 8px; border: 1px dashed #f87171;">⏳ Calculando lugares disponibles...</p>
-            <br>
+            <!-- SOLUCIÓN AL BLOQUEO 2: Escasez real, lógica y sin trucos detectables -->
+            <p style="color: #ef4444; font-size: 16px; font-weight: 700; margin-bottom: 30px;">⏳ Recuerda: Las plazas con descuento de hoy están sujetas a disponibilidad.</p>
             <a href="https://diegogaona117.github.io/ficha-de-pago-02/" target="_blank" class="btn btn-primary" style="margin: 0 auto;">
                 🚀 Quiero empezar mi formación profesional
             </a>
             <div class="security-badge" style="justify-content: center; margin-top: 15px;">
-                🔒 Pago 100% seguro. Aceptamos tarjetas, PayPal y efectivo.
+                🔒 Pago 100% seguro por transferencia. Escríbeme al WhatsApp para usar tarjeta o PayPal.
             </div>
             <div style="margin-top: 30px; text-align: left; background: #f8fafc; padding: 30px; border-radius: 15px; border: 1px solid #e2e8f0; max-width: 600px; margin-left: auto; margin-right: auto;">
                 <p style="font-weight: 700; margin-bottom: 15px; font-size: 18px; color: #1e293b;">Resumen de lo que obtienes hoy:</p>
@@ -979,7 +1000,8 @@
 
     <!-- WHATSAPP FLOAT -->
     <a href="https://wa.me/5214621579719?text=Hola%20Diego%21%20Vengo%20de%20tu%20página%20y%20quiero%20aprender%20SolidWorks" class="whatsapp-float" target="_blank">
-        <img src="https://static.wixstatic.com/media/32c95b_ba51d58815674787bd12dc6321e576cd~mv2.png" alt="WhatsApp" style="width: 38px;">
+        <!-- SOLUCIÓN AL BLOQUEO 3: Dimensiones y lazy load -->
+        <img src="https://static.wixstatic.com/media/32c95b_ba51d58815674787bd12dc6321e576cd~mv2.png" alt="WhatsApp" style="width: 38px; height: 38px;" width="38" height="38" loading="lazy">
     </a>
 
     <!-- SCRIPT FOR FAQ ACCORDION -->
@@ -1002,37 +1024,8 @@
                     }
                 });
             });
-
-            // --- LÓGICA DE ESCASEZ (LUGARES LIMITADOS) ---
-            const totalSpots = 20;
-            const minSpots = 3; // Límite para que nunca llegue a 0 y sigan comprando
-            let spotsLeft = localStorage.getItem("sw_curso_spots");
             
-            if (!spotsLeft) {
-                // Primera vez que entra a la página
-                spotsLeft = 15;
-            } else {
-                // Siguientes visitas: le restamos un número aleatorio entre 1 y 4
-                spotsLeft = parseInt(spotsLeft, 10);
-                if (spotsLeft > minSpots) {
-                    const decrease = Math.floor(Math.random() * 4) + 1; 
-                    spotsLeft = Math.max(minSpots, spotsLeft - decrease);
-                }
-            }
-            
-            // Guardamos el nuevo valor en el navegador del usuario
-            localStorage.setItem("sw_curso_spots", spotsLeft);
-            
-            // Actualizamos los textos en la página
-            const darkCounters = document.querySelectorAll('.spots-counter');
-            darkCounters.forEach(el => {
-                el.innerHTML = `⚠️ <strong>¡Atención!</strong> Quedan solo <span style="color: #fff; font-size: 18px; padding: 0 4px;">${spotsLeft} de ${totalSpots}</span> lugares con 50% de descuento.`;
-            });
-
-            const lightCounters = document.querySelectorAll('.spots-counter-light');
-            lightCounters.forEach(el => {
-                el.innerHTML = `⚠️ <strong>¡Atención!</strong> Quedan solo <span style="color: #b91c1c; font-size: 18px; padding: 0 4px;">${spotsLeft} de ${totalSpots}</span> lugares con 50% de descuento.`;
-            });
+            // Nota: Se ha eliminado el script del localStorage para proteger la credibilidad de la página.
         });
     </script>
 </body>
