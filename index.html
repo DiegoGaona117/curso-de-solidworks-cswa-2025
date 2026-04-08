@@ -3,29 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curso de SolidWorks con Asesoría por WhatsApp | Diego Gaona</title>
+    <title>Aprende SolidWorks conmigo — te respondo yo mismo cuando te trabas | Diego Gaona</title>
 
-    <!-- Meta Description para Google (SEO) -->
-    <meta name="description" content="Aprende SolidWorks sin quedarte atorado. Curso completo con asesoría directa de Diego Gaona por WhatsApp el mismo día. Deja los tutoriales y domina el diseño 3D.">
+    <meta name="description" content="Curso de SolidWorks con acompañamiento real. Si te trabas, me mandas un mensaje por WhatsApp y yo te respondo ese mismo día. Sin bots, sin foros, sin quedarte solo.">
 
-    <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔧</text></svg>">
 
-    <!-- Optimizaciones de carga y Fuentes -->
     <link rel="preconnect" href="https://static.wixstatic.com">
     <link rel="preconnect" href="https://connect.facebook.net">
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Open Graph / Facebook / WhatsApp Preview -->
-    <meta property="og:title" content="Curso de SolidWorks — Aprende sin quedarte atorado">
-    <meta property="og:description" content="El único curso de SolidWorks donde el profesor te resuelve las dudas por WhatsApp el mismo día.">
-    <meta property="og:image" content="https://static-media.hotmart.com/yx2LzYddb2BtPBQyg58BHxW-sPk=/848x478/https://uploads.teachablecdn.com/attachments/519ed3f6c0914071abfa66bfa9c398f3.webp">
+    <meta property="og:title" content="¿Nadie te enseña de forma correcta SolidWorks?">
+    <meta property="og:description" content="Aprende con asesorías de un experto y certifícate en 30 días. Únete a más de 19,000 estudiantes.">
+    <meta property="og:image" content="https://static.wixstatic.com/media/32c95b_1aff33112fd7422e88b7743fda2f6d8c~mv2.webp">
     <meta property="og:url" content="https://cursodiegogaona.com">
     <meta property="og:type" content="website">
 
-    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-RN68VLQLTW"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -34,7 +29,6 @@
         gtag('config', 'G-RN68VLQLTW');
     </script>
 
-    <!-- Meta Pixel Code (SOLUCIÓN AL BLOQUEO CRÍTICO 1) -->
     <script>
         !function(f,b,e,v,n,t,s)
         {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -47,17 +41,10 @@
         fbq('init', '373277814132384');
         fbq('track', 'PageView');
     </script>
-    <noscript>
-        <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=373277814132384&ev=PageView&noscript=1"/>
-    </noscript>
-    <!-- End Meta Pixel Code -->
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=373277814132384&ev=PageView&noscript=1"/></noscript>
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: 'Inter', sans-serif;
@@ -66,11 +53,22 @@
             line-height: 1.6;
         }
 
-        /* HERO SECTION */
+        /* ── ANNOUNCEMENT BAR ── */
+        .announcement-bar {
+            background: linear-gradient(90deg, #ff5213, #e04810);
+            color: white;
+            text-align: center;
+            padding: 10px 20px;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 0.3px;
+        }
+
+        /* ── HERO ── */
         .hero-section {
             background-color: #0f172a;
             color: white;
-            padding: 60px 0 20px;
+            padding: 60px 0 40px;
         }
 
         .container2 {
@@ -95,36 +93,100 @@
             letter-spacing: 0.5px;
             text-transform: uppercase;
         }
+        .tag-author  { background-color: #3b82f6; color: white; }
+        .tag-promo   { background-color: #ef4444; color: white; }
 
-        .tag-premium { background-color: #fbbf24; color: #0f172a; }
-        .tag-author { background-color: #3b82f6; color: white; }
-
-        .course-title {
-            font-size: 36px;
+        /* Headline principal */
+        .hero-question {
+            font-size: 42px;
             font-weight: 800;
-            line-height: 1.2;
-            margin-bottom: 25px;
+            line-height: 1.15;
+            color: #ffffff;
+            margin-bottom: 18px;
+        }
+        .hero-question span { color: #fbbf24; }
+
+        .hero-sub1 {
+            font-size: 22px;
+            font-weight: 700;
+            color: #f8fafc;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+        .hero-sub1 strong { color: #fbbf24; }
+
+        .hero-sub2 {
+            font-size: 17px;
+            color: #94a3b8;
+            margin-bottom: 30px;
+            max-width: 700px;
+            line-height: 1.7;
         }
 
-        .course-subtitle {
-            font-size: 20px;
+        /* Social proof bar */
+        .social-proof-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: center;
+            padding: 18px 20px;
+            background: rgba(255,255,255,0.06);
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.1);
+            margin-bottom: 35px;
+        }
+        .proof-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
             color: #cbd5e1;
-            margin-bottom: 15px;
-            max-width: 900px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        .proof-item .num { color: #fbbf24; font-size: 18px; font-weight: 800; }
+
+        /* CTA hero */
+        .btn {
+            display: inline-block;
+            padding: 22px 36px;
+            border-radius: 12px;
+            font-size: 19px;
+            font-weight: 800;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #ff5213 0%, #e04810 100%);
+            color: white;
+            box-shadow: 0 12px 30px rgba(255, 82, 19, 0.4);
+            width: 100%;
+            max-width: 520px;
+            display: block;
+        }
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 18px 35px rgba(255,82,19,0.5); }
+
+        .price-display {
+            margin-top: 12px;
+            font-size: 15px;
+            color: #94a3b8;
             line-height: 1.5;
         }
+        .price-display s { opacity: 0.6; }
+        .price-display strong { color: #fbbf24; font-size: 18px; }
 
-        /* VIDEO CONTAINER */
+        /* ── VIDEO ── */
         .hero-video-box {
-            max-width: 800px;
+            max-width: 760px;
             margin: 40px auto 0;
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(255,255,255,0.05);
             padding: 20px;
             border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255,255,255,0.1);
             text-align: center;
         }
-
         .hero-video-box p {
             color: #94a3b8;
             font-size: 15px;
@@ -132,15 +194,40 @@
             font-weight: 500;
         }
 
-        /* LETTER SECTIONS */
+        /* ── PROBLEM SECTION ── */
+        .section-light { background: #ffffff; padding: 70px 0; }
+        .section-gray  { background: #f8fafc; padding: 70px 0; }
+        .section-dark  { background: #0f172a; padding: 60px 0; color: white; }
+
         .story-container {
             background: white;
             border-radius: 24px;
             padding: 35px;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-            margin: 20px auto;
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.12);
+            margin: 0 auto 30px;
             max-width: 900px;
-            color: #1e293b;
+        }
+        .story-container p {
+            font-size: 18px;
+            color: #334155;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+        .story-container p:last-child { margin-bottom: 0; }
+
+        .callout-box {
+            background: #f8fafc;
+            border-left: 5px solid #ff5213;
+            padding: 20px 25px;
+            margin: 25px 0;
+            border-radius: 0 10px 10px 0;
+        }
+        .callout-box p {
+            font-size: 19px !important;
+            font-weight: 700;
+            color: #1e293b !important;
+            margin: 0 !important;
+            line-height: 1.5;
         }
 
         .story-header {
@@ -151,22 +238,11 @@
             border-bottom: 1px solid #f1f5f9;
             padding-bottom: 20px;
         }
-
         .story-avatar {
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            object-fit: cover;
+            width: 70px; height: 70px;
+            border-radius: 50%; object-fit: cover;
             border: 3px solid #3b82f6;
         }
-
-        .story-content p {
-            font-size: 18px;
-            color: #334155;
-            margin-bottom: 20px;
-            line-height: 1.8;
-        }
-
         .story-quote {
             font-style: italic;
             color: #0f172a;
@@ -177,520 +253,430 @@
             font-size: 20px;
             line-height: 1.5;
         }
-        
         .signature {
             font-family: 'Caveat', cursive;
             font-size: 32px;
             color: #2563eb;
             margin-top: 30px;
             transform: rotate(-2deg);
+            display: inline-block;
         }
 
-        /* PILLARS */
+        /* ── PILLARS ── */
         .pillars-grid {
             display: grid;
             grid-template-columns: 1fr;
             gap: 20px;
-            margin: 50px 0 40px;
+            margin: 40px 0;
         }
-
         .pillar-card {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.12);
             border-radius: 16px;
             padding: 30px;
         }
-
         .pillar-card h3 { color: #fbbf24; font-size: 20px; margin: 10px 0; }
-        .pillar-card p { color: #94a3b8; font-size: 15px; }
+        .pillar-card p  { color: #94a3b8; font-size: 15px; }
 
-        /* PROGRAM SECTION */
-        .program-section {
-            padding: 80px 0;
-            background-color: #f8fafc;
-        }
-
-        .conversational-intro {
-            max-width: 800px;
-            margin: 0 auto 50px;
-            text-align: center;
-        }
-
-        .conversational-intro h2 {
+        /* ── PROGRAM ── */
+        .section-title {
             font-size: 32px;
             font-weight: 800;
             color: #0f172a;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
+            text-align: center;
         }
-
-        .conversational-intro p {
+        .section-subtitle {
             font-size: 18px;
             color: #475569;
+            text-align: center;
+            max-width: 750px;
+            margin: 0 auto 50px;
             line-height: 1.7;
         }
 
         .program-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 30px;
+            gap: 25px;
             max-width: 1000px;
             margin: 0 auto;
         }
-
         .program-card {
             background: white;
             border-radius: 20px;
             overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.06);
             border: 1px solid #e2e8f0;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, border-color 0.3s ease;
         }
-
-        .program-card:hover {
-            transform: translateY(-5px);
-            border-color: #3b82f6;
-        }
-
+        .program-card:hover { transform: translateY(-5px); border-color: #3b82f6; }
         .card-img {
-            width: 100%;
-            height: 250px;
-            background-size: cover;
-            background-position: center;
-            position: relative;
+            width: 100%; height: 220px;
+            background-size: cover; background-position: center;
         }
-
-        .card-content {
-            padding: 30px;
-        }
-
+        .card-content { padding: 28px; }
         .card-step {
+            background: #eff6ff; color: #2563eb;
+            padding: 4px 12px; border-radius: 20px;
+            font-size: 12px; font-weight: 700;
+            text-transform: uppercase; margin-bottom: 12px;
             display: inline-block;
-            background: #eff6ff;
-            color: #2563eb;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 700;
-            margin-bottom: 15px;
-            text-transform: uppercase;
         }
-
-        .card-content h3 {
-            font-size: 22px;
-            font-weight: 800;
-            color: #1e293b;
-            margin-bottom: 12px;
-        }
-
-        .card-content p {
-            font-size: 15px;
-            color: #64748b;
-            margin-bottom: 20px;
-        }
-
-        .method-pills {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-
+        .card-content h3 { font-size: 22px; font-weight: 800; color: #1e293b; margin-bottom: 10px; }
+        .card-content p  { font-size: 15px; color: #64748b; margin-bottom: 18px; }
+        .method-pills { display: flex; gap: 8px; flex-wrap: wrap; }
         .pill {
-            background: #f1f5f9;
-            color: #475569;
-            padding: 6px 12px;
-            border-radius: 6px;
-            font-size: 13px;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 6px;
+            background: #f1f5f9; color: #475569;
+            padding: 6px 12px; border-radius: 6px;
+            font-size: 13px; font-weight: 600;
+            display: flex; align-items: center; gap: 5px;
         }
 
         .whatsapp-reminder {
             background: #f0fdf4;
             border: 2px dashed #22c55e;
-            padding: 30px;
-            border-radius: 20px;
-            max-width: 800px;
-            margin: 60px auto 0;
+            padding: 30px; border-radius: 20px;
+            max-width: 800px; margin: 50px auto 0;
             text-align: center;
         }
+        .whatsapp-reminder h4 { color: #166534; font-size: 20px; margin-bottom: 10px; }
+        .whatsapp-reminder p  { font-size: 17px; color: #166534; }
 
-        .whatsapp-reminder h4 {
-            color: #166534;
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
-
-        /* CTA */
-        .btn {
-            display: inline-block;
-            width: 100%;
-            max-width: 500px;
-            padding: 22px 30px;
-            border-radius: 12px;
-            font-size: 20px;
-            font-weight: 800;
-            text-decoration: none;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .btn-primary {
-            background-color: #ff5213;
-            color: white;
-            box-shadow: 0 10px 25px rgba(255, 82, 19, 0.3);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            background-color: #e04810;
-        }
-
-        .security-badge {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            color: #64748b;
-            font-size: 13px;
-            margin-top: 15px;
-        }
-
-        .whatsapp-float {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 65px;
-            height: 65px;
-            background: #25D366;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 10px 25px rgba(37,211,102,0.3);
-            z-index: 1000;
-            transition: transform 0.3s ease;
-        }
-
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-        }
-
-        /* REVIEWS SECTION */
-        .reviews-section {
-            padding: 80px 0;
-            background-color: #fff;
-        }
-
-        .reviews-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 20px;
-            margin-top: 40px;
-        }
-
-        .review-card {
-            background: #f8fafc;
-            border: 1px solid #e2e8f0;
-            padding: 30px;
-            border-radius: 16px;
-        }
-
-        .review-header {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 15px;
-        }
-
-        .review-avatar {
-            width: 50px;
-            height: 50px;
-            background: #3b82f6;
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            font-size: 18px;
-        }
-
-        .review-stars {
-            color: #fbbf24;
-            font-size: 18px;
-            margin-bottom: 5px;
-            letter-spacing: 2px;
-        }
-
-        /* GUARANTEE */
-        .guarantee-box {
-            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-            color: white;
-            padding: 60px 40px;
-            border-radius: 24px;
-            margin: 60px 0;
-            text-align: center;
-            border: 1px solid #3b82f6;
-            box-shadow: 0 20px 40px -10px rgba(59, 130, 246, 0.3);
-        }
-
-        /* INSTRUCTOR SECTION */
+        /* ── INSTRUCTOR ── */
         .instructor-card {
             background: white;
             border-radius: 24px;
             padding: 40px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
             border: 1px solid #e2e8f0;
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-            margin: 60px auto;
+            max-width: 1000px;
+            margin: 0 auto;
         }
         .instructor-profile {
-            display: flex;
-            align-items: center;
-            gap: 20px;
+            display: flex; align-items: center; gap: 20px; margin-bottom: 20px;
         }
         .instructor-photo {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            object-fit: cover;
+            width: 120px; height: 120px;
+            border-radius: 50%; object-fit: cover;
             border: 4px solid #3b82f6;
         }
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-            margin-top: 20px;
+            gap: 15px; margin-top: 10px;
         }
         .stat-box {
-            background: #f8fafc;
-            padding: 15px;
-            border-radius: 12px;
-            text-align: center;
+            background: #f8fafc; padding: 18px;
+            border-radius: 12px; text-align: center;
             border: 1px solid #e2e8f0;
         }
 
-        /* FAQ SECTION */
-        .faq-container {
-            max-width: 800px;
-            margin: 0 auto;
+        /* ── REVIEWS ── */
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px; margin-top: 40px;
         }
+        .review-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            padding: 28px; border-radius: 16px;
+        }
+        .review-header {
+            display: flex; align-items: center;
+            gap: 15px; margin-bottom: 15px;
+        }
+        .review-avatar {
+            width: 50px; height: 50px;
+            background: #3b82f6; color: white;
+            border-radius: 50%; display: flex;
+            align-items: center; justify-content: center;
+            font-weight: 700; font-size: 18px;
+            flex-shrink: 0;
+        }
+        .review-stars { color: #fbbf24; font-size: 18px; margin-bottom: 4px; }
+
+        /* ── PRICING ── */
+        .pricing-box {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+            border-radius: 24px;
+            padding: 50px 40px;
+            max-width: 680px;
+            margin: 0 auto;
+            text-align: center;
+            border: 2px solid #3b82f6;
+            box-shadow: 0 20px 50px rgba(59,130,246,0.25);
+            color: white;
+        }
+        .pricing-box .old-price {
+            font-size: 20px; color: #94a3b8;
+            margin-bottom: 5px;
+        }
+        .pricing-box .new-price {
+            font-size: 58px; font-weight: 800;
+            color: #fbbf24; line-height: 1;
+            margin-bottom: 8px;
+        }
+        .pricing-box .price-note {
+            font-size: 15px; color: #94a3b8; margin-bottom: 30px;
+        }
+        .include-list {
+            text-align: left;
+            background: rgba(255,255,255,0.06);
+            border-radius: 14px;
+            padding: 25px 30px;
+            margin: 25px 0 30px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .include-list li {
+            list-style: none;
+            font-size: 16px; color: #f8fafc;
+            margin-bottom: 12px;
+            display: flex; align-items: flex-start; gap: 10px;
+        }
+        .include-list li:last-child { margin-bottom: 0; }
+
+        /* ── GUARANTEE ── */
+        .guarantee-box {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            color: white;
+            padding: 55px 40px;
+            border-radius: 24px;
+            max-width: 850px;
+            margin: 0 auto;
+            text-align: center;
+            border: 1px solid #3b82f6;
+            box-shadow: 0 20px 40px -10px rgba(59,130,246,0.3);
+        }
+
+        /* ── FAQ ── */
+        .faq-container { max-width: 800px; margin: 0 auto; }
         .faq-item {
             background: white;
             border: 1px solid #e2e8f0;
             border-radius: 12px;
-            margin-bottom: 15px;
+            margin-bottom: 14px;
             overflow: hidden;
         }
         .faq-question {
-            width: 100%;
-            text-align: left;
-            padding: 20px;
-            background: none;
-            border: none;
-            font-size: 18px;
-            font-weight: 700;
-            color: #1e293b;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            width: 100%; text-align: left; padding: 20px;
+            background: none; border: none;
+            font-size: 17px; font-weight: 700;
+            color: #1e293b; cursor: pointer;
+            display: flex; justify-content: space-between; align-items: center;
         }
         .faq-answer {
-            padding: 0 20px;
-            max-height: 0;
-            overflow: hidden;
-            transition: all 0.3s ease;
-            color: #475569;
-            font-size: 16px;
-            line-height: 1.6;
+            padding: 0 20px; max-height: 0;
+            overflow: hidden; transition: all 0.3s ease;
+            color: #475569; font-size: 16px; line-height: 1.6;
         }
-        .faq-item.active .faq-answer {
-            padding: 0 20px 20px;
-            max-height: 500px;
+        .faq-item.active .faq-answer { padding: 0 20px 20px; max-height: 500px; }
+        .faq-icon { transition: transform 0.3s ease; }
+        .faq-item.active .faq-icon { transform: rotate(180deg); }
+
+        /* ── WHATSAPP FLOAT ── */
+        .whatsapp-float {
+            position: fixed; bottom: 28px; right: 28px;
+            width: 64px; height: 64px;
+            background: #25D366; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 10px 25px rgba(37,211,102,0.4);
+            z-index: 1000; transition: transform 0.3s ease;
         }
-        .faq-icon {
-            transition: transform 0.3s ease;
-        }
-        .faq-item.active .faq-icon {
-            transform: rotate(180deg);
+        .whatsapp-float:hover { transform: scale(1.1); }
+
+        .security-badge {
+            display: flex; align-items: center; justify-content: center;
+            gap: 8px; color: #64748b; font-size: 13px; margin-top: 14px;
         }
 
+        /* ── RESPONSIVE ── */
         @media (min-width: 768px) {
-            .course-title { font-size: 52px; }
-            .pillars-grid { grid-template-columns: repeat(3, 1fr); }
-            .program-grid { grid-template-columns: repeat(2, 1fr); }
-            .reviews-grid { grid-template-columns: repeat(2, 1fr); }
+            .hero-question { font-size: 54px; }
+            .pillars-grid  { grid-template-columns: repeat(3, 1fr); }
+            .program-grid  { grid-template-columns: repeat(2, 1fr); }
+            .reviews-grid  { grid-template-columns: repeat(2, 1fr); }
         }
     </style>
 </head>
 <body>
 
-    <!-- HERO SECTION -->
+    <div class="announcement-bar">
+        📱 Cada alumno tiene mi WhatsApp. Si hoy te trabas, hoy te respondo yo.
+    </div>
+
     <div class="hero-section">
         <div class="container2">
+
             <div class="tags-container">
-                <span class="course-tag tag-premium">⭐ CURSO PREMIUM</span>
-                <span class="course-tag tag-author">⭐ DIEGO GAONA</span>
+                <span class="course-tag tag-author">📐 DIEGO GAONA</span>
+                <span class="course-tag tag-promo">🔥 DESCUENTO ACTIVO</span>
             </div>
 
-            <h1 class="course-title">Aprender SolidWorks con tutoriales sirve... hasta que te quedas atorado.</h1>
-            
-            <p class="course-subtitle" style="font-weight: 600; color: #f8fafc;">
-                Yo también me frustré intentando aprender solo, por eso hoy te respondo personalmente por WhatsApp cuando te trabas.
-            </p>
-            
-            <p class="course-subtitle" style="color: #cbd5e1; opacity: 0.9;">
-                Sé lo que es perder horas en tutoriales que no llevan a nada. Mi misión es que nunca te sientas solo en el proceso y que domines el diseño 3D con mi apoyo directo todos los días.
+            <h1 class="hero-question">
+                Aprender SolidWorks solo<br>
+                <span>es frustrante. Aprenderlo conmigo, no.</span>
+            </h1>
+
+            <p class="hero-sub1">
+                Cuando te trabas en una lección, <strong>me mandas un mensaje y ese mismo día te digo qué está pasando.</strong> Yo. No un asistente. No un bot. Yo.
             </p>
 
-            <!-- OPCIONAL: VIDEO DE HISTORIA -->
+            <p class="hero-sub2">
+                Llevo 15 años enseñando SolidWorks y sé exactamente en qué punto vas a tener problemas antes de que tú lo sepas. Por eso diseñé este curso: para que no pases por la frustración de aprender a ciegas y solo.
+            </p>
+
+            <div class="social-proof-bar">
+                <div class="proof-item">
+                    <span class="num">+19k</span>
+                    <span>estudiantes globales</span>
+                </div>
+                <div class="proof-item">
+                    <span class="num">+500</span>
+                    <span>estudiantes certificados</span>
+                </div>
+                <div class="proof-item">
+                    <span class="num">4.8/5</span>
+                    <span>⭐ calificación</span>
+                </div>
+                <div class="proof-item">
+                    <span class="num">30 días</span>
+                    <span>para tu certificado CSWA</span>
+                </div>
+            </div>
+
+            <a href="https://diegogaona117.github.io/ficha-de-pago-02/" target="_blank" class="btn btn-primary">
+                🚀 Quiero aprender con Diego — $999 MXN
+            </a>
+            <div class="price-display">
+                Precio regular: <s>$1,999 MXN</s> → Descuento activo <strong>$999 MXN</strong><br>
+                <span style="color:#f8fafc; font-weight:700;">Pago único · Acceso de por vida · Mi WhatsApp incluido</span>
+            </div>
+            <div class="security-badge" style="color:#64748b; margin-top:8px;">
+                🔒 Pago 100% seguro · Garantía 30 días sin preguntas
+            </div>
+
             <div class="hero-video-box">
-                <p>¿Prefieres escuchar mi historia? Mira este video rápido (o sigue leyendo abajo) 👇</p>
-                <div id="yt-facade" onclick="loadVideo()" style="position: relative; padding-bottom: 56.25%; height: 0; border-radius: 12px; overflow: hidden; cursor: pointer; background: #000;">
-                    <!-- SOLUCIÓN AL BLOQUEO 3: Dimensiones y lazy load -->
+                <p>👇 Te cuento en video por qué creé este curso (2 min)</p>
+                <div id="yt-facade" onclick="loadVideo()" style="position:relative;padding-bottom:56.25%;height:0;border-radius:12px;overflow:hidden;cursor:pointer;background:#000;">
                     <img src="https://img.youtube.com/vi/c3VFF5SfXb4/maxresdefault.jpg" alt="Ver presentación" width="800" height="450" loading="lazy" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;opacity:0.7;">
-                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 70px; height: 70px; background: #ff5213; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                    <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:70px;height:70px;background:#ff5213;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 15px rgba(0,0,0,0.5);">
                         <svg width="35" height="35" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
                     </div>
                 </div>
             </div>
-
             <script>
-                function loadVideo() {
-                    const facade = document.getElementById('yt-facade');
-                    facade.innerHTML = '<iframe src="https://www.youtube.com/embed/c3VFF5SfXb4?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:12px;"></iframe>';
-                    facade.style.cursor = 'default';
+                function loadVideo(){
+                    const f=document.getElementById('yt-facade');
+                    f.innerHTML='<iframe src="https://www.youtube.com/embed/c3VFF5SfXb4?autoplay=1" frameborder="0" allow="autoplay;encrypted-media" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:12px;"></iframe>';
+                    f.style.cursor='default';
                 }
             </script>
         </div>
     </div>
-    
-    <div class="container2" style="margin-top: -30px; position: relative; z-index: 10;">
-        <!-- EL PROBLEMA DEL ALUMNO (LA TRAMPA) -->
-        <div class="story-container">
-            <h3 style="font-size: 26px; color: #0f172a; margin-bottom: 20px;">La trampa de los tutoriales "perfectos"</h3>
-            
-            <p>
-                Seguro te ha pasado: pones un tutorial, el instructor mueve el mouse rapidísimo y le queda una pieza perfecta. Tú pausas el video, haces <strong>exactamente lo mismo</strong> en tu computadora... y de repente tu pantalla se llena de líneas rojas, errores en el croquis y el ensamble simplemente no funciona.
-            </p>
-            
-            <p>
-                Te frustras y piensas: <em>"SolidWorks es muy difícil"</em> o <em>"Yo no sirvo para esto"</em>.
-            </p>
-            
-            <div style="background: #f8fafc; border-left: 5px solid #ff5213; padding: 20px 25px; margin: 25px 0; border-radius: 0 10px 10px 0;">
-                <p style="font-size: 19px; font-weight: 700; color: #1e293b; margin: 0; line-height: 1.5;">
-                    Pero el problema no eres tú. El problema es que grabar un video demostrativo NO es lo mismo que planear una clase paso a paso.
-                </p>
-            </div>
-            
-            <p style="margin-bottom: 0;">
-                Muchos "cursos" allá afuera son solo expertos grabando su pantalla mientras hacen piezas aleatorias. A ellos les sale bien a la primera, pero <strong>no identifican los problemas que a ti te pueden surgir</strong>. No te explican por qué eligieron esa herramienta, ni qué hacer si le das clic al botón equivocado.
-            </p>
-        </div>
 
-        <!-- MI HISTORIA (LA EMPATÍA Y SOLUCIÓN) -->
-        <div class="story-container">
-            <div class="story-header">
-                <!-- SOLUCIÓN AL BLOQUEO 3: Dimensiones y lazy load -->
-                <img class="story-avatar" src="https://static.wixstatic.com/media/32c95b_6e097eebd8fc40a393329631b8189846~mv2.webp" alt="Diego Gaona" width="70" height="70" loading="lazy">
-                <div>
-                    <h4 style="margin:0; color:#0f172a; font-size: 18px;">De Diego Gaona</h4>
-                    <p style="margin:0; font-size:15px; color:#64748b; font-weight: 500;">Ingeniero y Profesor</p>
-                </div>
-            </div>
-            
-            <div class="story-content">
-                <p><strong>Yo sé exactamente cómo se siente eso, porque seré honesto contigo: mi aprendizaje en SolidWorks fue un completo desastre.</strong></p>
-                
-                <p>Fui agarrando información de aquí y de allá, intentando armar un rompecabezas al que le faltaban la mitad de las piezas. Tenía exceso de información pero cero estructura. Y lo peor, estaba completamente solo.</p>
-                
-                <div class="story-quote">
-                    "Yo lo que más hubiera querido era un profesor que me dijera: 'Con esta opción haces eso que necesitas', o 'Aquí no te sale porque te falta este detalle'."
-                </div>
-
-                <p>Entendí algo fundamental: <strong>ser un buen ingeniero no es lo mismo que ser un buen profesor.</strong> Como educador, mi trabajo no es lucirme diseñando rápido. Mi trabajo es anticipar dónde te vas a atorar, explicarte el por qué de las fallas y enseñarte a pensar como diseñador.</p>
-                
-                <p>Por eso diseñé este curso: para no dejarte copiar a ciegas. Te doy la estructura que yo no tuve y te acompaño personalmente cada día.</p>
-                
-                <div class="signature">
-                    Nos vemos en clase,<br>
-                    Diego Gaona
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- SECCIÓN DE CINTILLO OSCURO PARA PILARES Y CTA -->
-    <div style="background-color: #0f172a; padding: 40px 0; margin-top: 40px; color: white;">
+    <div class="section-light">
         <div class="container2">
-            <!-- LOS 3 PILARES -->
-            <div class="pillars-grid" style="margin-top: 0;">
-                <div class="pillar-card">
-                    <span style="font-size: 32px;">🎯</span>
-                    <h3>Estructura Real</h3>
-                    <p>Un camino lógico diseñado pedagógicamente para que no te pierdas en el mar de información.</p>
-                </div>
-                <div class="pillar-card">
-                    <span style="font-size: 32px;">📱</span>
-                    <h3>Asesoría Directa</h3>
-                    <p>Mi WhatsApp personal a tu disposición. Si te trabas, me mandas foto y te desatoro el mismo día.</p>
-                </div>
-                <div class="pillar-card">
-                    <span style="font-size: 32px;">🏗️</span>
-                    <h3>Enfoque Práctico</h3>
-                    <p>Aprenderás la lógica de diseño real que se usa en la industria, no solo a picar botones.</p>
-                </div>
-            </div>
 
-            <!-- BOTONES CTA DESPUÉS DE LOS PILARES -->
-            <div class="cta-container" style="text-align: center;">
-                <!-- SOLUCIÓN AL BLOQUEO 2: Escasez real, justificada por tu tiempo y atención en WhatsApp -->
-                <p style="color: #fbbf24; font-size: 14px; font-weight: 700; margin-bottom: 15px;">⏳ Para poder responder personalmente por WhatsApp a todos mis alumnos, las plazas con este descuento son limitadas.</p>
-                <a href="https://diegogaona117.github.io/ficha-de-pago-02/" target="_blank" class="btn btn-primary">
-                    🚀 Quiero que seas mi mentor <span style="text-decoration: line-through; opacity: 0.7; font-size: 16px;">$1,999</span> → $999
-                </a>
-                <div class="security-badge" style="color: #cbd5e1;">
-                    🔒 Pago 100% seguro y encriptado.
-                </div>
-                <div style="background-color: rgba(255,255,255,0.06); padding: 25px; border-radius: 12px; margin: 25px auto 0; border: 1px solid rgba(255,255,255,0.1); max-width: 500px; text-align: left;">
-                    <p style="color:#f8fafc; font-size:15px; margin-bottom:10px; font-weight: 500;">✅ Acceso de por vida a la plataforma y actualizaciones</p>
-                    <p style="color:#f8fafc; font-size:15px; margin-bottom:10px; font-weight: 500;">✅ Ejercicios prácticos guiados en cada lección</p>
-                    <p style="color:#f8fafc; font-size:15px; margin-bottom:10px; font-weight: 500;">✅ Mi apoyo personal por WhatsApp todos los días</p>
-                    <p style="color:#f8fafc; font-size:15px; margin-bottom:0; font-weight: 500;">✅ Preparación directa para el examen oficial CSWA</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- PROGRAM SECTION -->
-    <section class="program-section">
-        <div class="container2">
-            <div class="conversational-intro">
-                <h2>Mira, este no es solo un curso de "ver videos"...</h2>
+            <div class="story-container">
+                <h3 style="font-size:26px;font-weight:800;color:#0f172a;margin-bottom:20px;">
+                    Te voy a describir algo que probablemente ya viviste
+                </h3>
                 <p>
-                    Sé que estás cansado de tutoriales que solo te enseñan a copiar. Por eso, aquí vas a encontrar <strong>clases explicativas, tareas dirigidas, ejercicios prácticos y exámenes de validación</strong>. 
+                    Pones un tutorial. El tipo mueve el mouse rapidísimo, le queda todo perfecto. Tú pausas, haces <strong>exactamente lo mismo</strong>… y el croquis te queda azul cuando debería estar negro, la extrusión no jala, o de plano no entiendes por qué hay una línea amarilla ahí que nadie explicó.
                 </p>
-                <p style="margin-top: 15px;">
-                    Mi objetivo es que vayas poniendo a prueba tus conocimientos conforme avanzas. No te dejo avanzar a ciegas; te doy las herramientas para que tú mismo veas tu progreso.
+                <p>
+                    En ese momento piensas: <em>"SolidWorks es muy difícil"</em> o peor, <em>"yo no sirvo para esto"</em>. Y no es verdad ninguna de las dos.
+                </p>
+                <div class="callout-box">
+                    <p>El problema es que nadie te está enseñando de verdad. Te están mostrando cómo a ellos les sale — que no es lo mismo.</p>
+                </div>
+                <p style="margin-bottom:0;">
+                    La mayoría de los "cursos" que encuentras en internet los hizo alguien que grabó un puñado de piezas, las subió a una plataforma y le puso el título de curso. <strong>No hay estructura, no hay pedagogía, no hay nadie que sepa dónde te vas a trabar.</strong> Solo una pantalla grabada de alguien que ya sabe hacerlo. Y tú ahí, solo, tratando de adivinar qué hiciste mal.
                 </p>
             </div>
+
+            <div class="story-container">
+                <div class="story-header">
+                    <img class="story-avatar" src="https://static.wixstatic.com/media/32c95b_6e097eebd8fc40a393329631b8189846~mv2.webp" alt="Diego Gaona" width="70" height="70" loading="lazy">
+                    <div>
+                        <h4 style="margin:0;color:#0f172a;font-size:18px;">Diego Gaona te habla directo</h4>
+                        <p style="margin:0;font-size:15px;color:#64748b;font-weight:500;">Ingeniero y Profesor · 15 años enseñando</p>
+                    </div>
+                </div>
+                <p><strong>Te voy a ser completamente honesto: yo aprendí SolidWorks de la peor manera posible.</strong></p>
+                <p>Agarré información de aquí y de allá, tutoriales sueltos, videos en YouTube, foros con respuestas a medias. Tenía montones de información y cero claridad. Y lo más pesado de todo: estaba completamente solo cuando me trababa.</p>
+                <p>Y lo curioso es que hoy, con todo lo que hay en internet, el problema es exactamente el mismo. Más videos, más tutoriales, más canales — y la misma gente picando de aquí y de allá sin llegar a ningún lado. La información sobra. Lo que falta es estructura y alguien que te guíe.</p>
+                <div class="story-quote">
+                    "Lo que yo más hubiera querido era alguien que me dijera: 'Oye, aquí te está fallando porque te falta este detalle' — o 'eso que necesitas se hace con esta opción'. Alguien que viera mi pantalla, no la suya."
+                </div>
+                <p>Cuando empecé a enseñar entendí algo que cambió cómo diseño mis cursos: <strong>saber hacer algo y saber enseñarlo son dos habilidades completamente distintas.</strong> Yo no grabo mi pantalla y lo subo. Yo planeo cada lección pensando en dónde exactamente te vas a atascar, y diseño la explicación para que eso no pase.</p>
+                <p>Y cuando pasa de todas formas — porque a veces pasa — ahí estoy yo en tu WhatsApp.</p>
+                <p style="margin-bottom:0;">Eso es lo que te ofrezco. No un catálogo de videos. Un proceso de aprendizaje donde no estás solo en ningún momento.</p>
+                <div class="signature">Nos vemos adentro,<br>Diego Gaona</div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="section-dark">
+        <div class="container2">
+
+            <h2 style="font-size:30px;font-weight:800;text-align:center;margin-bottom:10px;">
+                Qué hace diferente estudiar conmigo
+            </h2>
+            <p style="text-align:center;color:#94a3b8;font-size:17px;margin-bottom:40px;max-width:650px;margin-left:auto;margin-right:auto;">
+                No son características de marketing. Son las tres cosas que hacen que mis alumnos terminen el curso y los de otros no.
+            </p>
+
+            <div class="pillars-grid">
+                <div class="pillar-card">
+                    <span style="font-size:34px;">🎯</span>
+                    <h3>Un camino, no un mar de videos</h3>
+                    <p>Cada lección tiene un lugar específico. Sabes exactamente qué estás aprendiendo, para qué, y qué sigue después. No te pierdes. No te abrumas.</p>
+                </div>
+                <div class="pillar-card">
+                    <span style="font-size:34px;">📱</span>
+                    <h3>Mi WhatsApp. El mío de verdad.</h3>
+                    <p>Si te trabas, me mandas foto de tu pantalla y te explico qué está pasando. Ese mismo día. Soy yo quien te responde — no un equipo, no un bot, no un FAQ.</p>
+                </div>
+                <div class="pillar-card">
+                    <span style="font-size:34px;">🏗️</span>
+                    <h3>Entiendes, no solo copias</h3>
+                    <p>Te explico el por qué detrás de cada herramienta. Así cuando algo no sale como esperabas, tú sabes qué revisar — sin depender de que alguien más te rescate.</p>
+                </div>
+            </div>
+
+            <div style="text-align:center;margin-top:50px;">
+                <p style="color:#fbbf24;font-size:14px;font-weight:700;margin-bottom:15px;">
+                    ⏳ Puedo dar acompañamiento real a un número limitado de alumnos al mismo tiempo. Cuando se llenan las plazas, quito el descuento.
+                </p>
+                <a href="https://diegogaona117.github.io/ficha-de-pago-02/" target="_blank" class="btn btn-primary" style="margin:0 auto;">
+                    🚀 Quiero aprender con Diego
+                </a>
+                <div class="price-display" style="color:#94a3b8;">
+                    Precio regular: <s>$1,999 MXN</s> → Descuento activo <strong>$999 MXN</strong> · Pago único, acceso de por vida
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-gray">
+        <div class="container2">
+            <h2 class="section-title">Lo que vas a aprender, paso a paso</h2>
+            <p class="section-subtitle">
+                No te voy a soltar frente a 200 videos sin contexto. El curso está dividido en fases con un orden que tiene sentido. Cada fase tiene sus clases, sus tareas y su examen para que sepas si de verdad lo entendiste — antes de avanzar.
+            </p>
 
             <div class="program-grid">
-                <!-- Fase 1 -->
+
                 <div class="program-card">
-                    <div class="card-img" style="background-image: url('https://static-media.hotmart.com/yx2LzYddb2BtPBQyg58BHxW-sPk=/848x478/https://uploads.teachablecdn.com/attachments/519ed3f6c0914071abfa66bfa9c398f3.webp')"></div>
+                    <div class="card-img" style="background-image:url('https://static-media.hotmart.com/yx2LzYddb2BtPBQyg58BHxW-sPk=/848x478/https://uploads.teachablecdn.com/attachments/519ed3f6c0914071abfa66bfa9c398f3.webp')"></div>
                     <div class="card-content">
                         <span class="card-step">Fase 1</span>
-                        <h3>Domina el Modelado 3D desde Cero</h3>
-                        <p>Aprende a diseñar cualquier componente mecánico con una metodología paso a paso. Pasarás de no saber nada a ser un experto creando piezas complejas.</p>
+                        <h3>Modelado 3D desde Cero</h3>
+                        <p>Aquí construyes la base. Aprenderás a crear piezas desde cero entendiendo por qué funciona cada herramienta — no solo dónde está el botón.</p>
                         <div class="method-pills">
                             <span class="pill">🎥 Clases HD</span>
                             <span class="pill">📝 Tareas</span>
@@ -699,13 +685,12 @@
                     </div>
                 </div>
 
-                <!-- Fase 2 -->
                 <div class="program-card">
-                    <div class="card-img" style="background-image: url('https://static-media.hotmart.com/0qhSRdPV7GepwwTwYd4tbGbW_gY=/848x478/https://uploads.teachablecdn.com/attachments/35a74d4b1f1044dcbdca135db1b361c5.webp')"></div>
+                    <div class="card-img" style="background-image:url('https://static-media.hotmart.com/0qhSRdPV7GepwwTwYd4tbGbW_gY=/848x478/https://uploads.teachablecdn.com/attachments/35a74d4b1f1044dcbdca135db1b361c5.webp')"></div>
                     <div class="card-content">
                         <span class="card-step">Fase 2</span>
                         <h3>Planos Técnicos Profesionales</h3>
-                        <p>Saber modelar es solo la mitad del trabajo. Te enseñaré a crear documentación técnica y planos de fabricación con la precisión que exige la industria.</p>
+                        <p>Modelar es la mitad. La otra mitad es documentar. Te enseño a crear planos de fabricación reales con normas ISO y ANSI — los que pide la industria.</p>
                         <div class="method-pills">
                             <span class="pill">📐 Acotado</span>
                             <span class="pill">📄 Formatos</span>
@@ -714,13 +699,12 @@
                     </div>
                 </div>
 
-                <!-- Fase 3 -->
                 <div class="program-card">
-                    <div class="card-img" style="background-image: url('https://static-media.hotmart.com/KOSzOCnDXeDIUNC_dnjlMK6y_hs=/848x478/https://uploads.teachablecdn.com/attachments/c6d7e96ad5314a4899bd4c0baecbf551.webp')"></div>
+                    <div class="card-img" style="background-image:url('https://static-media.hotmart.com/KOSzOCnDXeDIUNC_dnjlMK6y_hs=/848x478/https://uploads.teachablecdn.com/attachments/c6d7e96ad5314a4899bd4c0baecbf551.webp')"></div>
                     <div class="card-content">
                         <span class="card-step">Fase 3</span>
                         <h3>Ensambles y Mecanismos</h3>
-                        <p>Lleva tus diseños al siguiente nivel. Aprende a unir componentes, simular movimientos y dominar las relaciones de posición para crear maquinaria funcional.</p>
+                        <p>Ahora conectamos todo. Aprenderás a ensamblar piezas, definir relaciones de posición y simular movimientos como en un producto real.</p>
                         <div class="method-pills">
                             <span class="pill">🔗 Relaciones</span>
                             <span class="pill">📽️ Animación</span>
@@ -729,13 +713,12 @@
                     </div>
                 </div>
 
-                <!-- Fase 4 -->
                 <div class="program-card">
-                    <div class="card-img" style="background-image: url('https://static-media.hotmart.com/ClaHmPRVn01Q3HknWRw_0ITUJN0=/848x478/https://uploads.teachablecdn.com/attachments/2193377a1c924134a1e4cc3996b1cb28.webp')"></div>
+                    <div class="card-img" style="background-image:url('https://static-media.hotmart.com/ClaHmPRVn01Q3HknWRw_0ITUJN0=/848x478/https://uploads.teachablecdn.com/attachments/2193377a1c924134a1e4cc3996b1cb28.webp')"></div>
                     <div class="card-content">
                         <span class="card-step">Fase 4</span>
                         <h3>Simulador del Examen CSWA</h3>
-                        <p>No arriesgues tu dinero. Practica con un simulador idéntico al examen oficial de SolidWorks y asegura tu certificado con total confianza.</p>
+                        <p>Si quieres el certificado oficial, aquí te preparo para eso. Practicas con un simulador idéntico al examen real para que el día del examen no haya sorpresas.</p>
                         <div class="method-pills">
                             <span class="pill">🏆 Certificado</span>
                             <span class="pill">⏱️ Tiempo Real</span>
@@ -743,290 +726,283 @@
                         </div>
                     </div>
                 </div>
+
             </div>
 
             <div class="whatsapp-reminder">
-                <h4>Y ya sabes...</h4>
-                <p style="font-size: 17px; color: #166534;">
-                    Si en cualquier momento del camino llegas a tener una duda, no busques en foros. <strong>Envíame un mensaje directo por WhatsApp</strong> y yo te desatoro el mismo día. No estás solo en esto.
-                </p>
+                <h4>Así funciona el acompañamiento — de verdad</h4>
+                <p>Imagina que son las 9 de la noche, estás en la Fase 2 y tu croquis no cierra. No sabes qué está mal. En cualquier otro curso ahí se acaba tu noche — buscas en foros, nadie te responde bien, y lo dejas para mañana.</p>
+                <p style="margin-top:12px;">Aquí no. <strong>Me mandas una foto de tu pantalla por WhatsApp y yo te digo exactamente qué está pasando.</strong> Sin cita previa, sin ticket de soporte, sin esperar días. Ese mismo día seguimos.</p>
+                <p style="margin-top:12px; font-weight:700; color:#166534;">Eso no es un extra. Es parte del curso desde el primer día.</p>
             </div>
 
-            <div style="text-align:center; margin-top: 60px;">
-                <a href="https://diegogaona117.github.io/ficha-de-pago-02/" target="_blank" class="btn btn-primary">
-                    🚀 Empezar mi aprendizaje estructurado ahora
-                </a>
-            </div>
         </div>
-    </section>
+    </div>
 
-    <!-- INSTRUCTOR SECTION -->
-    <section class="container2">
-        <div class="instructor-card">
-            <div style="text-align: center; margin-bottom: 10px;">
-                <h2 style="font-size: 32px; font-weight: 800; color: #0f172a;">¿Quién será tu mentor?</h2>
-            </div>
-            <div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center;">
-                <div style="flex: 1; min-width: 300px;">
-                    <div class="instructor-profile" style="margin-bottom: 20px;">
-                        <!-- SOLUCIÓN AL BLOQUEO 3: Dimensiones y lazy load -->
-                        <img src="https://static.wixstatic.com/media/32c95b_6e097eebd8fc40a393329631b8189846~mv2.webp" alt="Diego Gaona" class="instructor-photo" width="120" height="120" loading="lazy">
-                        <div>
-                            <h3 style="font-size: 24px; font-weight: 800; color: #0f172a; margin-bottom: 5px;">Diego Gaona</h3>
-                            <span style="background: #3b82f6; color: white; padding: 4px 10px; border-radius: 6px; font-size: 13px; font-weight: 700;">Profesor Experto</span>
-                            <span style="background: #ef4444; color: white; padding: 4px 10px; border-radius: 6px; font-size: 13px; font-weight: 700; margin-left: 5px;">YouTuber</span>
-                        </div>
-                    </div>
-                    <p style="font-size: 17px; color: #475569; line-height: 1.7; margin-bottom: 15px;">
-                        Soy profesor con más de 15 años de experiencia en la enseñanza y llevo más de 10 años utilizando SolidWorks en proyectos reales de ingeniería.
-                    </p>
-                    <p style="font-size: 17px; color: #475569; line-height: 1.7;">
-                        A diferencia de otros instructores, <strong>mi mayor fortaleza no es solo diseñar, sino mi capacidad de transmitir el conocimiento</strong> de forma clara, paciente y sencilla. Mi misión es que tú no pases por la misma frustración que yo viví al aprender solo.
-                    </p>
-                </div>
-                <div style="flex: 1; min-width: 300px;">
-                    <div class="stats-grid">
-                        <div class="stat-box">
-                            <div style="font-size: 32px; font-weight: 800; color: #fbbf24;">4.8/5</div>
-                            <div style="font-size: 14px; color: #64748b; font-weight: 600;">Calificación</div>
-                        </div>
-                        <div class="stat-box">
-                            <div style="font-size: 32px; font-weight: 800; color: #3b82f6;">15+</div>
-                            <div style="font-size: 14px; color: #64748b; font-weight: 600;">Años de Docencia</div>
-                        </div>
-                        <div class="stat-box">
-                            <div style="font-size: 32px; font-weight: 800; color: #10b981;">19k+</div>
-                            <div style="font-size: 14px; color: #64748b; font-weight: 600;">Estudiantes Globales</div>
-                        </div>
-                        <div class="stat-box">
-                            <div style="font-size: 32px; font-weight: 800; color: #8b5cf6;">500+</div>
-                            <div style="font-size: 14px; color: #64748b; font-weight: 600;">Certificados CSWA</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- REVIEWS SECTION -->
-    <section class="reviews-section">
+    <div class="section-light">
         <div class="container2">
-            <div class="conversational-intro" style="text-align: center; margin-bottom: 40px;">
-                <h2 style="font-size: 32px; font-weight: 800; color: #0f172a; margin-bottom: 15px;">Lo que dicen mis alumnos</h2>
-                <p style="font-size: 18px; color: #475569;">No te quedes solo con mis palabras. Mira lo que han logrado quienes ya tomaron la decisión de aprender con este método.</p>
+            <h2 class="section-title" style="margin-bottom:30px;">Quién va a estar contigo en este proceso</h2>
+
+            <div class="instructor-card">
+                <div style="display:flex;flex-wrap:wrap;gap:40px;align-items:center;">
+                    <div style="flex:1;min-width:280px;">
+                        <div class="instructor-profile">
+                            <img src="https://static.wixstatic.com/media/32c95b_6e097eebd8fc40a393329631b8189846~mv2.webp" alt="Diego Gaona" class="instructor-photo" width="120" height="120" loading="lazy">
+                            <div>
+                                <h3 style="font-size:24px;font-weight:800;color:#0f172a;margin-bottom:6px;">Diego Gaona</h3>
+                                <span style="background:#3b82f6;color:white;padding:4px 10px;border-radius:6px;font-size:13px;font-weight:700;">Profesor</span>
+                                <span style="background:#ef4444;color:white;padding:4px 10px;border-radius:6px;font-size:13px;font-weight:700;margin-left:5px;">YouTuber</span>
+                            </div>
+                        </div>
+                        <p style="font-size:17px;color:#475569;line-height:1.7;margin-bottom:15px;">
+                            Llevo más de 15 años enseñando y más de 10 años trabajando con SolidWorks en proyectos reales de ingeniería. Tengo el canal de SolidWorks más visto en español, con más de 80,000 suscriptores.
+                        </p>
+                        <p style="font-size:17px;color:#475569;line-height:1.7;">
+                            Pero lo que mis alumnos más valoran no es eso. Es que <strong>cuando tienen un problema, yo estoy ahí.</strong> No un equipo, no un manual de ayuda — yo. Esa es la promesa que hago y la que cumplo.
+                        </p>
+                    </div>
+                    <div style="flex:1;min-width:260px;">
+                        <div class="stats-grid">
+                            <div class="stat-box">
+                                <div style="font-size:32px;font-weight:800;color:#fbbf24;">4.8/5</div>
+                                <div style="font-size:14px;color:#64748b;font-weight:600;">Calificación promedio</div>
+                            </div>
+                            <div class="stat-box">
+                                <div style="font-size:32px;font-weight:800;color:#3b82f6;">15+</div>
+                                <div style="font-size:14px;color:#64748b;font-weight:600;">Años enseñando</div>
+                            </div>
+                            <div class="stat-box">
+                                <div style="font-size:32px;font-weight:800;color:#10b981;">80k+</div>
+                                <div style="font-size:14px;color:#64748b;font-weight:600;">Suscriptores YouTube</div>
+                            </div>
+                            <div class="stat-box">
+                                <div style="font-size:32px;font-weight:800;color:#8b5cf6;">+500</div>
+                                <div style="font-size:14px;color:#64748b;font-weight:600;">Certificados CSWA</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            
+        </div>
+    </div>
+
+    <div class="section-gray">
+        <div class="container2">
+            <h2 class="section-title">Lo que dicen los que ya entraron</h2>
+            <p class="section-subtitle">
+                No te quedes solo con lo que yo te digo. Esto es lo que escribieron alumnos reales después de pasar por el curso.
+            </p>
+
             <div class="reviews-grid">
-                <!-- Review 1 -->
                 <div class="review-card">
                     <div class="review-header">
                         <div class="review-avatar">OG</div>
                         <div>
-                            <h4 style="color: #0f172a; font-size: 17px; margin-bottom: 2px;">Omar Garcia H.</h4>
+                            <h4 style="color:#0f172a;font-size:17px;margin-bottom:2px;">Omar Garcia H.</h4>
                             <div class="review-stars">★★★★★</div>
                         </div>
                     </div>
-                    <p style="color: #475569; font-size: 16px; line-height: 1.6;">"Definitivamente este no es un curso como los otros, donde compras, te entregan los videos y ahí hazle como puedas. El ing. Diego me respondió siempre incluso sábado o domingo. Cursos con profesor para asesorías como este si hay, pero valen 10 veces más. Muchas gracias ing. Diego, ahora ya me dieron el puesto en mi trabajo."</p>
+                    <p style="color:#475569;font-size:16px;line-height:1.6;">"Definitivamente este no es un curso como los otros, donde compras, te entregan los videos y ahí hazle como puedas. El ing. Diego me respondió siempre, incluso sábado o domingo. Cursos con asesoría como este sí hay, pero valen 10 veces más. <strong>Ahora ya me dieron el puesto en mi trabajo.</strong>"</p>
                 </div>
 
-                <!-- Review 2 -->
                 <div class="review-card">
                     <div class="review-header">
-                        <div class="review-avatar" style="background: #8b5cf6;">JB</div>
+                        <div class="review-avatar" style="background:#8b5cf6;">JB</div>
                         <div>
-                            <h4 style="color: #0f172a; font-size: 17px; margin-bottom: 2px;">Jorge Adrian Guillen B.</h4>
+                            <h4 style="color:#0f172a;font-size:17px;margin-bottom:2px;">Jorge Adrian Guillen B.</h4>
                             <div class="review-stars">★★★★★</div>
                         </div>
                     </div>
-                    <p style="color: #475569; font-size: 16px; line-height: 1.6;">"Estuve tomando otros cursos de Solid antes que este, incluso con un precio elevado, subestimé 100% el valor de este curso. Me hubiese ahorrado mucho dinero solo invirtiendo en este mismo. Saludos. 10/10."</p>
+                    <p style="color:#475569;font-size:16px;line-height:1.6;">"Estuve tomando otros cursos de Solid antes que este, incluso con un precio elevado. Subestimé 100% el valor de este curso. <strong>Me hubiese ahorrado mucho dinero solo invirtiendo en este desde el inicio.</strong> 10/10."</p>
                 </div>
 
-                <!-- Review 3 -->
                 <div class="review-card">
                     <div class="review-header">
-                        <div class="review-avatar" style="background: #10b981;">MT</div>
+                        <div class="review-avatar" style="background:#10b981;">MT</div>
                         <div>
-                            <h4 style="color: #0f172a; font-size: 17px; margin-bottom: 2px;">Miguel Eduardo Torres H.</h4>
+                            <h4 style="color:#0f172a;font-size:17px;margin-bottom:2px;">Miguel Eduardo Torres H.</h4>
                             <div class="review-stars">★★★★★</div>
                         </div>
                     </div>
-                    <p style="color: #475569; font-size: 16px; line-height: 1.6;">"Excelente curso, se aprende muy bien, tiene un material muy completo y es fácil seguir el ritmo, vale completamente la pena la inversión. El instructor incluso brinda su número de WhatsApp por si te surgen dudas a lo largo del curso."</p>
+                    <p style="color:#475569;font-size:16px;line-height:1.6;">"Excelente curso, material muy completo y fácil de seguir. Vale completamente la pena la inversión. <strong>El instructor brinda su WhatsApp personal por si te surgen dudas a lo largo del curso.</strong>"</p>
                 </div>
 
-                <!-- Review 4 -->
                 <div class="review-card">
                     <div class="review-header">
-                        <div class="review-avatar" style="background: #f59e0b;">CS</div>
+                        <div class="review-avatar" style="background:#f59e0b;">CS</div>
                         <div>
-                            <h4 style="color: #0f172a; font-size: 17px; margin-bottom: 2px;">Caleb S.</h4>
+                            <h4 style="color:#0f172a;font-size:17px;margin-bottom:2px;">Caleb S.</h4>
                             <div class="review-stars">★★★★★</div>
                         </div>
                     </div>
-                    <p style="color: #475569; font-size: 16px; line-height: 1.6;">"Ya finalizado el curso, puedo decirles a aquellos que están dudando en comprarlo que es muy recomendable. Es un muy buen curso para aquellos que quieren comenzar con el modelado y diseño 3D en SolidWorks. Por otro lado, es muy útil para el examen de CSWA."</p>
+                    <p style="color:#475569;font-size:16px;line-height:1.6;">"Ya finalizado el curso, puedo decirles a aquellos que están dudando: es muy recomendable. Excelente para comenzar con el modelado 3D. <strong>Y muy útil para prepararse para el examen CSWA.</strong>"</p>
                 </div>
             </div>
-            
-            <div style="text-align: center; margin-top: 30px;">
-                <a href="https://cursodiegogaona.teachable.com/p/resenas-curso-solidworks" target="_blank" style="color: #3b82f6; font-weight: 600; text-decoration: underline; font-size: 16px;">Ver todos los comentarios de alumnos</a>
+
+            <div style="text-align:center;margin-top:30px;">
+                <a href="https://cursodiegogaona.teachable.com/p/resenas-curso-solidworks" target="_blank" style="color:#3b82f6;font-weight:600;text-decoration:underline;font-size:16px;">
+                    Ver todos los comentarios de alumnos →
+                </a>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- FAQ SECTION -->
-    <section style="padding: 80px 0; background-color: #f8fafc;">
+    <div class="section-light">
         <div class="container2">
-            <div style="text-align: center; margin-bottom: 40px;">
-                <h2 style="font-size: 32px; font-weight: 800; color: #0f172a; margin-bottom: 15px;">Preguntas Frecuentes</h2>
-                <p style="font-size: 18px; color: #475569;">Resolvemos tus últimas dudas antes de entrar.</p>
-            </div>
-            
-            <div class="faq-container">
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>¿Necesito experiencia previa?</span>
-                        <span class="faq-icon">▼</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Nada de eso. Empezamos desde cero, paso a paso, hasta que domines piezas, ensambles y planos técnicos.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>¿Qué versión de SolidWorks se usa?</span>
-                        <span class="faq-icon">▼</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Trabajamos con versiones recientes (2022 a 2025), pero puedes seguir el curso con versiones anteriores o estudiantiles sin ningún problema.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>¿Cuánto tiempo tengo para terminarlo?</span>
-                        <span class="faq-icon">▼</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>El acceso al curso es <strong>de por vida</strong>. Puedes avanzar a tu propio ritmo, pausar y regresar a repasar las clases cuando lo necesites, sin pagar mensualidades.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>¿De verdad me respondes por WhatsApp?</span>
-                        <span class="faq-icon">▼</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>¡Sí! Esa es mi mayor promesa. No hablas con un asistente ni con un bot. Me mandas un mensaje, veo tu problema y te respondo yo mismo el mismo día para desatorarte.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>¿Qué computadora necesito?</span>
-                        <span class="faq-icon">▼</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Con Windows, 8 GB de RAM y una tarjeta gráfica básica vas bien. Si tu equipo es más potente, aún mejor.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>¿Puedo usar una versión educativa o de prueba?</span>
-                        <span class="faq-icon">▼</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Sí, por supuesto. Puedes usar cualquier versión de prueba o licencia educativa (Student Edition) para tomar todas las clases sin ningún inconveniente.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>¿Recibo certificado al terminar?</span>
-                        <span class="faq-icon">▼</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Sí. Al finalizar todas las lecciones obtienes un certificado digital de terminación a tu nombre, independiente de tu preparación para presentar el examen oficial CSWA.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>¿Cuáles son los métodos de pago?</span>
-                        <span class="faq-icon">▼</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>El método directo en la página es <strong>transferencia bancaria</strong>. Sin embargo, también aceptamos <strong>tarjetas, PayPal, Mercado Pago y Oxxo</strong>. Si prefieres usar alguna de estas opciones, solo envíame un mensaje por WhatsApp y te enviaré un enlace de pago seguro al instante.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- GUARANTEE SECTION -->
-    <section class="container2">
-        <div class="guarantee-box">
-            <div style="font-size: 50px; margin-bottom: 20px;">🛡️</div>
-            <h2 style="font-size: 32px; margin-bottom: 20px;">Mi Garantía Incondicional de 30 Días</h2>
-            <p style="font-size: 19px; color: #cbd5e1; margin-bottom: 30px; max-width: 800px; margin-left: auto; margin-right: auto; line-height: 1.6;">
-                Mi promesa más grande es no dejarte solo. Si entras al curso y en algún momento sientes que <strong>no te estoy brindando el apoyo personalizado para resolver tus dudas</strong>, o simplemente mi método no te convence, mándame un mensaje.
+            <h2 class="section-title">Tu inversión para entrar</h2>
+            <p class="section-subtitle">
+                Un pago único. Sin mensualidades, sin sorpresas. Y con mi WhatsApp personal incluido desde el primer día.
             </p>
-            <p style="font-weight: 700; color: #fbbf24; font-size: 20px;">Te devuelvo el 100% de tu dinero completo. Sin letras pequeñas ni preguntas.</p>
-        </div>
-    </section>
 
-    <!-- FINAL CTA -->
-    <section style="text-align: center; padding-bottom: 80px;">
-        <div class="container2">
-            <h2 style="font-size: 32px; margin-bottom: 10px; color: #0f172a;">¿Listo para dejar de adivinar y empezar a diseñar con seguridad?</h2>
-            <!-- SOLUCIÓN AL BLOQUEO 2: Escasez real, lógica y sin trucos detectables -->
-            <p style="color: #ef4444; font-size: 16px; font-weight: 700; margin-bottom: 30px;">⏳ Recuerda: Las plazas con descuento de hoy están sujetas a disponibilidad.</p>
-            <a href="https://diegogaona117.github.io/ficha-de-pago-02/" target="_blank" class="btn btn-primary" style="margin: 0 auto;">
-                🚀 Quiero empezar mi formación profesional
-            </a>
-            <div class="security-badge" style="justify-content: center; margin-top: 15px;">
-                🔒 Pago 100% seguro por transferencia. Escríbeme al WhatsApp para usar tarjeta o PayPal.
+            <div class="pricing-box">
+                <div class="old-price">Cursos similares con asesoría cobran entre $3,000 y $8,000 MXN.</div>
+                <div class="new-price">$999</div>
+                <div class="price-note">MXN · Pago único · Acceso de por vida</div>
+
+                <ul class="include-list">
+                    <li>✅ <span>Acceso de por vida a todas las clases y actualizaciones</span></li>
+                    <li>✅ <span>Asesoría personal por WhatsApp todos los días</span></li>
+                    <li>✅ <span>Ejercicios, tareas y exámenes de validación por fase</span></li>
+                    <li>✅ <span>Simulador completo del examen oficial CSWA</span></li>
+                    <li>✅ <span>Certificado digital de terminación a tu nombre</span></li>
+                    <li>✅ <span>Garantía incondicional de 30 días o te devuelvo el 100%</span></li>
+                </ul>
+
+                <a href="https://diegogaona117.github.io/ficha-de-pago-02/" target="_blank" class="btn btn-primary" style="margin:0 auto;font-size:20px;">
+                    🚀 Quiero mi lugar con descuento
+                </a>
+
+                <div style="color:#94a3b8;font-size:13px;margin-top:14px;">
+                    💳 Transferencia bancaria · Tarjeta · PayPal · Mercado Pago · Oxxo<br>
+                    <span style="font-size:12px;">Para pagar con tarjeta o PayPal, escríbeme al WhatsApp y te envío el enlace al instante.</span>
+                </div>
             </div>
-            <div style="margin-top: 30px; text-align: left; background: #f8fafc; padding: 30px; border-radius: 15px; border: 1px solid #e2e8f0; max-width: 600px; margin-left: auto; margin-right: auto;">
-                <p style="font-weight: 700; margin-bottom: 15px; font-size: 18px; color: #1e293b;">Resumen de lo que obtienes hoy:</p>
-                <ul style="list-style: none; font-size: 16px; color: #475569;">
-                    <li style="margin-bottom: 10px;">✅ <strong>Estructura clara:</strong> Clases, tareas y proyectos paso a paso.</li>
-                    <li style="margin-bottom: 10px;">✅ <strong>Acceso de por vida:</strong> Sin mensualidades, pagas una sola vez.</li>
-                    <li style="margin-bottom: 10px;">✅ <strong>Mi WhatsApp personal:</strong> Tu mentor privado todos los días.</li>
-                    <li style="margin-bottom: 10px;">✅ <strong>Preparación CSWA:</strong> Todo lo necesario para tu certificación oficial.</li>
+        </div>
+    </div>
+
+    <div class="section-gray">
+        <div class="container2">
+            <h2 class="section-title">Preguntas frecuentes</h2>
+            <p class="section-subtitle">Resolvemos tus últimas dudas antes de que entres.</p>
+
+            <div class="faq-container">
+
+                <div class="faq-item">
+                    <button class="faq-question"><span>¿Necesito experiencia previa?</span><span class="faq-icon">▼</span></button>
+                    <div class="faq-answer"><p>Nada de eso. Empezamos desde cero, paso a paso, hasta que domines piezas, ensambles y planos técnicos.</p></div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question"><span>¿Qué versión de SolidWorks se usa?</span><span class="faq-icon">▼</span></button>
+                    <div class="faq-answer"><p>Trabajamos con versiones 2022 a 2025, pero puedes seguir el curso con versiones anteriores o estudiantiles sin ningún problema.</p></div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question"><span>¿Cuánto tiempo tengo para terminarlo?</span><span class="faq-icon">▼</span></button>
+                    <div class="faq-answer"><p>El acceso es <strong>de por vida</strong>. Puedes avanzar a tu ritmo, pausar y regresar cuando lo necesites. Sin mensualidades.</p></div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question"><span>¿De verdad me respondes por WhatsApp?</span><span class="faq-icon">▼</span></button>
+                    <div class="faq-answer"><p>¡Sí! No hablas con un asistente ni con un bot. Me mandas un mensaje, veo tu problema y te respondo yo mismo el mismo día para desatorarte.</p></div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question"><span>¿Qué computadora necesito?</span><span class="faq-icon">▼</span></button>
+                    <div class="faq-answer"><p>Windows, 8 GB de RAM y una tarjeta gráfica básica son suficientes. Si tu equipo es más potente, aún mejor.</p></div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question"><span>¿Puedo usar versión educativa o de prueba?</span><span class="faq-icon">▼</span></button>
+                    <div class="faq-answer"><p>Sí. Puedes usar cualquier versión de prueba o licencia estudiantil (Student Edition) para tomar todas las clases sin inconveniente.</p></div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question"><span>¿Recibo certificado al terminar?</span><span class="faq-icon">▼</span></button>
+                    <div class="faq-answer"><p>Sí. Al finalizar obtienes un certificado digital de terminación a tu nombre, además de la preparación completa para el examen oficial CSWA.</p></div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question"><span>¿Cuáles son los métodos de pago?</span><span class="faq-icon">▼</span></button>
+                    <div class="faq-answer"><p>El método directo en la página es <strong>transferencia bancaria</strong>. También aceptamos <strong>tarjetas, PayPal, Mercado Pago y Oxxo</strong>. Para estas opciones, escríbeme al WhatsApp y te envío un enlace de pago seguro.</p></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="section-light">
+        <div class="container2">
+            <div class="guarantee-box">
+                <div style="font-size:52px;margin-bottom:20px;">🛡️</div>
+                <h2 style="font-size:30px;font-weight:800;margin-bottom:20px;">Mi garantía personal de 30 días</h2>
+                <p style="font-size:18px;color:#cbd5e1;margin-bottom:25px;max-width:700px;margin-left:auto;margin-right:auto;line-height:1.7;">
+                    Si entras al curso, me mandas mensajes y sientes que <strong>no te estoy respondiendo con la atención que prometí</strong>, o simplemente el método no es lo que esperabas — escríbeme.
+                </p>
+                <p style="font-weight:700;color:#fbbf24;font-size:20px;">
+                    Te devuelvo el 100% de tu dinero. Sin preguntas, sin letras pequeñas, sin rollos.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-dark" style="text-align:center;padding:80px 0;">
+        <div class="container2">
+            <h2 style="font-size:34px;font-weight:800;color:white;margin-bottom:10px;">
+                ¿Listo para aprender SolidWorks de la forma correcta?
+            </h2>
+            <p style="color:#94a3b8;font-size:18px;margin-bottom:8px;">
+                Más de 19,000 estudiantes ya tomaron la decisión. Descuento activo hoy.
+            </p>
+            <p style="color:#ef4444;font-size:15px;font-weight:700;margin-bottom:35px;">
+                ⏳ Plazas con descuento sujetas a disponibilidad.
+            </p>
+
+            <a href="https://diegogaona117.github.io/ficha-de-pago-02/" target="_blank" class="btn btn-primary" style="margin:0 auto;font-size:21px;">
+                🚀 Quiero mi lugar con descuento
+            </a>
+            <div class="price-display" style="color:#94a3b8;">
+                Precio regular: <s>$1,999 MXN</s> → Descuento activo <strong>$999 MXN</strong><br>
+                <span style="color:#f8fafc; font-weight:700;">Pago único, acceso de por vida</span>
+            </div>
+            <div class="security-badge" style="color:#64748b;">
+                🔒 Pago 100% seguro · Garantía 30 días
+            </div>
+
+            <div style="margin-top:35px;text-align:left;background:rgba(255,255,255,0.05);padding:30px;border-radius:15px;border:1px solid rgba(255,255,255,0.1);max-width:580px;margin-left:auto;margin-right:auto;">
+                <p style="font-weight:700;margin-bottom:18px;font-size:18px;color:#f8fafc;">Resumen de lo que obtienes hoy:</p>
+                <ul style="list-style:none;font-size:16px;color:#cbd5e1;">
+                    <li style="margin-bottom:10px;">✅ <strong>Estructura clara:</strong> Clases, tareas y proyectos paso a paso.</li>
+                    <li style="margin-bottom:10px;">✅ <strong>Acceso de por vida:</strong> Sin mensualidades, pagas una sola vez.</li>
+                    <li style="margin-bottom:10px;">✅ <strong>Mi WhatsApp personal:</strong> Tu mentor privado todos los días.</li>
+                    <li style="margin-bottom:10px;">✅ <strong>Preparación CSWA:</strong> Todo lo necesario para tu certificación oficial.</li>
+                    <li>✅ <strong>Garantía total:</strong> 30 días o te devuelvo el dinero completo.</li>
                 </ul>
             </div>
         </div>
-    </section>
+    </div>
 
-    <footer style="background: #0f172a; color: #94a3b8; text-align: center; padding: 50px 20px; font-size: 14px;">
+    <footer style="background:#0f172a;color:#94a3b8;text-align:center;padding:45px 20px;font-size:14px;">
         <p>© 2025 Diego Gaona | Mentoría SolidWorks</p>
-        <p style="margin-top: 10px; opacity: 0.7; font-size: 12px;">Dassault Systèmes y SolidWorks son marcas registradas.</p>
+        <p style="margin-top:8px;opacity:0.6;font-size:12px;">Dassault Systèmes y SolidWorks son marcas registradas.</p>
     </footer>
 
-    <!-- WHATSAPP FLOAT -->
-    <a href="https://wa.me/5214621579719?text=Hola%20Diego%21%20Vengo%20de%20tu%20página%20y%20quiero%20aprender%20SolidWorks" class="whatsapp-float" target="_blank">
-        <!-- SOLUCIÓN AL BLOQUEO 3: Dimensiones y lazy load -->
-        <img src="https://static.wixstatic.com/media/32c95b_ba51d58815674787bd12dc6321e576cd~mv2.png" alt="WhatsApp" style="width: 38px; height: 38px;" width="38" height="38" loading="lazy">
+    <a href="https://wa.me/5214621579719?text=Hola%20Diego%21%20Vengo%20de%20tu%20p%C3%A1gina%20y%20quiero%20aprender%20SolidWorks" class="whatsapp-float" target="_blank">
+        <img src="https://static.wixstatic.com/media/32c95b_ba51d58815674787bd12dc6321e576cd~mv2.png" alt="WhatsApp" width="38" height="38" loading="lazy" style="width:38px;height:38px;">
     </a>
 
-    <!-- SCRIPT FOR FAQ ACCORDION -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // --- LÓGICA DEL ACORDEÓN DE FAQ ---
-            const faqItems = document.querySelectorAll('.faq-item');
-            
-            faqItems.forEach(item => {
-                const button = item.querySelector('.faq-question');
-                button.addEventListener('click', () => {
-                    const isActive = item.classList.contains('active');
-                    
-                    // Cierra todas las preguntas
-                    faqItems.forEach(faq => faq.classList.remove('active'));
-                    
-                    // Si no estaba activa, la abre
-                    if (!isActive) {
-                        item.classList.add('active');
-                    }
+        document.addEventListener('DOMContentLoaded', function () {
+            const items = document.querySelectorAll('.faq-item');
+            items.forEach(item => {
+                item.querySelector('.faq-question').addEventListener('click', () => {
+                    const active = item.classList.contains('active');
+                    items.forEach(i => i.classList.remove('active'));
+                    if (!active) item.classList.add('active');
                 });
             });
-            
-            // Nota: Se ha eliminado el script del localStorage para proteger la credibilidad de la página.
         });
     </script>
+
 </body>
 </html>
