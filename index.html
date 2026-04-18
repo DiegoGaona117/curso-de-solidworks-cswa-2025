@@ -302,15 +302,29 @@
             max-width: 1000px;
             margin: 0 auto;
         }
+
+        /* ── CARD LINK WRAPPER ── */
+        .program-card-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
         .program-card {
             background: white;
             border-radius: 20px;
             overflow: hidden;
             box-shadow: 0 10px 25px rgba(0,0,0,0.06);
             border: 1px solid #e2e8f0;
-            transition: transform 0.3s ease, border-color 0.3s ease;
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
         }
-        .program-card:hover { transform: translateY(-5px); border-color: #3b82f6; }
+        .program-card:hover {
+            transform: translateY(-5px);
+            border-color: #3b82f6;
+            box-shadow: 0 20px 40px rgba(59,130,246,0.15);
+        }
+
         .card-img {
             width: 100%; height: 220px;
             background-size: cover; background-position: center;
@@ -331,6 +345,24 @@
             padding: 6px 12px; border-radius: 6px;
             font-size: 13px; font-weight: 600;
             display: flex; align-items: center; gap: 5px;
+        }
+
+        /* ── VER CURSO BUTTON dentro de la card ── */
+        .card-ver-btn {
+            display: inline-block;
+            margin-top: 18px;
+            padding: 10px 20px;
+            background: #eff6ff;
+            color: #2563eb;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 700;
+            border: 1px solid #bfdbfe;
+            transition: background 0.25s ease, color 0.25s ease;
+        }
+        .program-card:hover .card-ver-btn {
+            background: #2563eb;
+            color: white;
         }
 
         .whatsapp-reminder {
@@ -671,61 +703,77 @@
 
             <div class="program-grid">
 
-                <div class="program-card">
-                    <div class="card-img" style="background-image:url('https://static-media.hotmart.com/yx2LzYddb2BtPBQyg58BHxW-sPk=/848x478/https://uploads.teachablecdn.com/attachments/519ed3f6c0914071abfa66bfa9c398f3.webp')"></div>
-                    <div class="card-content">
-                        <span class="card-step">Fase 1</span>
-                        <h3>Modelado 3D desde Cero</h3>
-                        <p>Aquí construyes la base. Aprenderás a crear piezas desde cero entendiendo por qué funciona cada herramienta — no solo dónde está el botón.</p>
-                        <div class="method-pills">
-                            <span class="pill">🎥 Clases HD</span>
-                            <span class="pill">📝 Tareas</span>
-                            <span class="pill">⚙️ Prácticas</span>
+                <!-- FASE 1 -->
+                <a href="https://cursodiegogaona.teachable.com/l/products?enrolled=true&sortKey=recommended&sortDirection=asc&page=1" target="_blank" class="program-card-link">
+                    <div class="program-card">
+                        <div class="card-img" style="background-image:url('https://static-media.hotmart.com/yx2LzYddb2BtPBQyg58BHxW-sPk=/848x478/https://uploads.teachablecdn.com/attachments/519ed3f6c0914071abfa66bfa9c398f3.webp')"></div>
+                        <div class="card-content">
+                            <span class="card-step">Fase 1</span>
+                            <h3>Modelado 3D desde Cero</h3>
+                            <p>Aquí construyes la base. Aprenderás a crear piezas desde cero entendiendo por qué funciona cada herramienta — no solo dónde está el botón.</p>
+                            <div class="method-pills">
+                                <span class="pill">🎥 Clases HD</span>
+                                <span class="pill">📝 Tareas</span>
+                                <span class="pill">⚙️ Prácticas</span>
+                            </div>
+                            <span class="card-ver-btn">Ver contenido del curso →</span>
                         </div>
                     </div>
-                </div>
+                </a>
 
-                <div class="program-card">
-                    <div class="card-img" style="background-image:url('https://static-media.hotmart.com/0qhSRdPV7GepwwTwYd4tbGbW_gY=/848x478/https://uploads.teachablecdn.com/attachments/35a74d4b1f1044dcbdca135db1b361c5.webp')"></div>
-                    <div class="card-content">
-                        <span class="card-step">Fase 2</span>
-                        <h3>Planos Técnicos Profesionales</h3>
-                        <p>Modelar es la mitad. La otra mitad es documentar. Te enseño a crear planos de fabricación reales con normas ISO y ANSI — los que pide la industria.</p>
-                        <div class="method-pills">
-                            <span class="pill">📐 Acotado</span>
-                            <span class="pill">📄 Formatos</span>
-                            <span class="pill">🏭 Normas ISO/ANSI</span>
+                <!-- FASE 2 -->
+                <a href="https://cursodiegogaona.teachable.com/l/products?enrolled=true&sortKey=recommended&sortDirection=asc&page=1" target="_blank" class="program-card-link">
+                    <div class="program-card">
+                        <div class="card-img" style="background-image:url('https://static-media.hotmart.com/0qhSRdPV7GepwwTwYd4tbGbW_gY=/848x478/https://uploads.teachablecdn.com/attachments/35a74d4b1f1044dcbdca135db1b361c5.webp')"></div>
+                        <div class="card-content">
+                            <span class="card-step">Fase 2</span>
+                            <h3>Planos Técnicos Profesionales</h3>
+                            <p>Modelar es la mitad. La otra mitad es documentar. Te enseño a crear planos de fabricación reales con normas ISO y ANSI — los que pide la industria.</p>
+                            <div class="method-pills">
+                                <span class="pill">📐 Acotado</span>
+                                <span class="pill">📄 Formatos</span>
+                                <span class="pill">🏭 Normas ISO/ANSI</span>
+                            </div>
+                            <span class="card-ver-btn">Ver contenido del curso →</span>
                         </div>
                     </div>
-                </div>
+                </a>
 
-                <div class="program-card">
-                    <div class="card-img" style="background-image:url('https://static-media.hotmart.com/KOSzOCnDXeDIUNC_dnjlMK6y_hs=/848x478/https://uploads.teachablecdn.com/attachments/c6d7e96ad5314a4899bd4c0baecbf551.webp')"></div>
-                    <div class="card-content">
-                        <span class="card-step">Fase 3</span>
-                        <h3>Ensambles y Mecanismos</h3>
-                        <p>Ahora conectamos todo. Aprenderás a ensamblar piezas, definir relaciones de posición y simular movimientos como en un producto real.</p>
-                        <div class="method-pills">
-                            <span class="pill">🔗 Relaciones</span>
-                            <span class="pill">📽️ Animación</span>
-                            <span class="pill">🛠️ Mecanismos</span>
+                <!-- FASE 3 -->
+                <a href="https://cursodiegogaona.teachable.com/l/products?enrolled=true&sortKey=recommended&sortDirection=asc&page=1" target="_blank" class="program-card-link">
+                    <div class="program-card">
+                        <div class="card-img" style="background-image:url('https://static-media.hotmart.com/KOSzOCnDXeDIUNC_dnjlMK6y_hs=/848x478/https://uploads.teachablecdn.com/attachments/c6d7e96ad5314a4899bd4c0baecbf551.webp')"></div>
+                        <div class="card-content">
+                            <span class="card-step">Fase 3</span>
+                            <h3>Ensambles y Mecanismos</h3>
+                            <p>Ahora conectamos todo. Aprenderás a ensamblar piezas, definir relaciones de posición y simular movimientos como en un producto real.</p>
+                            <div class="method-pills">
+                                <span class="pill">🔗 Relaciones</span>
+                                <span class="pill">📽️ Animación</span>
+                                <span class="pill">🛠️ Mecanismos</span>
+                            </div>
+                            <span class="card-ver-btn">Ver contenido del curso →</span>
                         </div>
                     </div>
-                </div>
+                </a>
 
-                <div class="program-card">
-                    <div class="card-img" style="background-image:url('https://static-media.hotmart.com/ClaHmPRVn01Q3HknWRw_0ITUJN0=/848x478/https://uploads.teachablecdn.com/attachments/2193377a1c924134a1e4cc3996b1cb28.webp')"></div>
-                    <div class="card-content">
-                        <span class="card-step">Fase 4</span>
-                        <h3>Simulador del Examen CSWA</h3>
-                        <p>Si quieres el certificado oficial, aquí te preparo para eso. Practicas con un simulador idéntico al examen real para que el día del examen no haya sorpresas.</p>
-                        <div class="method-pills">
-                            <span class="pill">🏆 Certificado</span>
-                            <span class="pill">⏱️ Tiempo Real</span>
-                            <span class="pill">🎓 Examen Final</span>
+                <!-- FASE 4 -->
+                <a href="https://cursodiegogaona.teachable.com/l/products?enrolled=true&sortKey=recommended&sortDirection=asc&page=1" target="_blank" class="program-card-link">
+                    <div class="program-card">
+                        <div class="card-img" style="background-image:url('https://static-media.hotmart.com/ClaHmPRVn01Q3HknWRw_0ITUJN0=/848x478/https://uploads.teachablecdn.com/attachments/2193377a1c924134a1e4cc3996b1cb28.webp')"></div>
+                        <div class="card-content">
+                            <span class="card-step">Fase 4</span>
+                            <h3>Simulador del Examen CSWA</h3>
+                            <p>Si quieres el certificado oficial, aquí te preparo para eso. Practicas con un simulador idéntico al examen real para que el día del examen no haya sorpresas.</p>
+                            <div class="method-pills">
+                                <span class="pill">🏆 Certificado</span>
+                                <span class="pill">⏱️ Tiempo Real</span>
+                                <span class="pill">🎓 Examen Final</span>
+                            </div>
+                            <span class="card-ver-btn">Ver contenido del curso →</span>
                         </div>
                     </div>
-                </div>
+                </a>
 
             </div>
 
@@ -860,7 +908,7 @@
                 <div class="price-note">MXN · Pago único · Acceso de por vida</div>
 
                 <ul class="include-list">
-                    <li>✅ <span>Acceso de por vida a todas las clases y actualizaciones</span></li>
+                    <li>✅ <span>Acceso de por vida a todos los cursos y actualizaciones</span></li>
                     <li>✅ <span>Asesoría personal por WhatsApp todos los días</span></li>
                     <li>✅ <span>Ejercicios, tareas y exámenes de validación por fase</span></li>
                     <li>✅ <span>Simulador completo del examen oficial CSWA</span></li>
