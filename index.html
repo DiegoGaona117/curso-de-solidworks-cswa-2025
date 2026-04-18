@@ -1049,6 +1049,36 @@
                 });
             });
         });
+
+        // LÓGICA DE TRACKING DE SCROLL AL 75%
+        let scroll75Fired = false;
+        
+        window.addEventListener('scroll', function() {
+            // Si ya se disparó el evento, no hacer nada más
+            if (scroll75Fired) return;
+
+            // Calcular el porcentaje de scroll
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight;
+            const clientHeight = document.documentElement.clientHeight;
+
+            const scrollPercentage = (scrollTop + clientHeight) / scrollHeight;
+
+            // Si el porcentaje es mayor o igual a 75% (0.75)
+            if (scrollPercentage >= 0.75) {
+                // Asegurarnos de que el pixel esté cargado y enviar el evento
+                if (typeof fbq === 'function') {
+                    fbq('track', 'ViewContent', {
+                        content_name: 'Página de Ventas',
+                        scroll_depth: '75%'
+                    });
+                    console.log('Evento ViewContent enviado (75% Scroll)'); // Puedes borrar esta línea si quieres
+                }
+                
+                // Marcar como disparado para no saturar de eventos
+                scroll75Fired = true; 
+            }
+        });
     </script>
 
 </body>
