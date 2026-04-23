@@ -1038,48 +1038,43 @@
         <img src="https://static.wixstatic.com/media/32c95b_ba51d58815674787bd12dc6321e576cd~mv2.png" alt="WhatsApp" width="38" height="38" loading="lazy" style="width:38px;height:38px;">
     </a>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const items = document.querySelectorAll('.faq-item');
-            items.forEach(item => {
-                item.querySelector('.faq-question').addEventListener('click', () => {
-                    const active = item.classList.contains('active');
-                    items.forEach(i => i.classList.remove('active'));
-                    if (!active) item.classList.add('active');
-                });
-            });
-        });
+   <script>
+    // Meta CAPI - Medición granular de Scroll (Custom Events)
+    const scrollMilestones = {
+        10: false,
+        25: false,
+        50: false,
+        75: false,
+        100: false
+    };
 
-        // LÓGICA DE TRACKING DE SCROLL AL 75%
-        let scroll75Fired = false;
-        
-        window.addEventListener('scroll', function() {
-            // Si ya se disparó el evento, no hacer nada más
-            if (scroll75Fired) return;
+    window.addEventListener('scroll', function () {
+        // Calculamos qué porcentaje de la página ha bajado el usuario
+        const scrolled = window.scrollY + window.innerHeight;
+        const total = document.documentElement.scrollHeight;
+        const percent = Math.round((scrolled / total) * 100);
 
-            // Calcular el porcentaje de scroll
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            const scrollHeight = document.documentElement.scrollHeight;
-            const clientHeight = document.documentElement.clientHeight;
-
-            const scrollPercentage = (scrollTop + clientHeight) / scrollHeight;
-
-            // Si el porcentaje es mayor o igual a 75% (0.75)
-            if (scrollPercentage >= 0.75) {
-                // Asegurarnos de que el pixel esté cargado y enviar el evento
-                if (typeof fbq === 'function') {
-                    fbq('track', 'ViewContent', {
-                        content_name: 'Página de Ventas',
-                        scroll_depth: '75%'
-                    });
-                    console.log('Evento ViewContent enviado (75% Scroll)'); // Puedes borrar esta línea si quieres
-                }
+        // Recorremos nuestros porcentajes objetivo
+        Object.keys(scrollMilestones).forEach(milestone => {
+            const milestoneLimit = Number(milestone);
+            
+            // Si el usuario cruzó la línea y el evento aún no se ha disparado
+            if (percent >= milestoneLimit && !scrollMilestones[milestone]) {
+                scrollMilestones[milestone] = true; // Lo bloqueamos para que no se dispare 1000 veces
                 
-                // Marcar como disparado para no saturar de eventos
-                scroll75Fired = true; 
+                // Armamos el nombre del evento (Ej: "Scroll_25%")
+                // Ajusta este string si en tu imagen el nombre es diferente
+                const NombreDelEvento = `Scroll_${milestoneLimit}%`; 
+
+                // Disparamos el evento personalizado a Meta
+                fbq('trackCustom', NombreDelEvento, {
+                    content_name: 'Paquete 77 Planos PDF',
+                    content_category: 'SolidWorks',
+                    scroll_depth: milestoneLimit // Mandamos el dato extra por si lo ocupas en tus reglas
+                });
             }
         });
-    </script>
-
+    }, { passive: true });
+</script>
 </body>
 </html>
