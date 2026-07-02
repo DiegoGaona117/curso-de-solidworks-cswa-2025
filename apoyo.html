@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Necesito tu ayuda — Diego Gaona</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Roboto:wght@400;500;600;700&display=swap');
+
+  :root{
+    --paper:#F4F2EC;
+    --blueprint:#1B3A5C;
+    --blueprint-deep:#0F2439;
+    --graphite:#2A2A28;
+    --graphite-soft:#5C584E;
+    --callout:#B8462F;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+
+  body{
+    background:var(--paper);
+    color:var(--graphite);
+    font-family:'Roboto', sans-serif;
+    line-height:1.6;
+  }
+
+  .mono{font-family:'Roboto Mono', monospace;}
+  a{color:inherit;}
+
+  .wrap{max-width:640px;margin:0 auto;padding:0 24px;}
+
+  /* ---------- HERO ---------- */
+  .hero{padding:64px 0 40px;}
+
+  h1{
+    font-weight:700;
+    font-size:clamp(30px, 6vw, 42px);
+    line-height:1.15;
+    color:var(--blueprint-deep);
+  }
+
+  .hero-sub{
+    margin-top:18px;
+    font-size:18px;
+    color:var(--graphite-soft);
+  }
+
+  /* ---------- STORY ---------- */
+  .story{padding:0 0 48px;}
+  .story p{font-size:17px;margin-bottom:18px;}
+
+  .video-link{
+    display:inline-block;
+    font-family:'Roboto Mono', monospace;
+    font-size:13px;
+    color:var(--callout);
+    text-decoration:none;
+    border-bottom:1px solid currentColor;
+    margin-top:4px;
+  }
+
+  /* ---------- TIERS ---------- */
+  .section-title{
+    font-family:'Roboto Mono', monospace;
+    font-size:12px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--blueprint);
+    margin-bottom:16px;
+  }
+
+  .tiers{padding:0 0 56px;display:flex;flex-direction:column;gap:10px;}
+
+  .tier{
+    border:1.5px solid var(--blueprint);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+    padding:16px 20px;
+    background:#FBFAF6;
+  }
+  .tier.featured{border-color:var(--callout);background:#FCF6F3;}
+
+  .tier-left{display:flex;align-items:center;gap:16px;}
+  .tier-price{
+    font-family:'Roboto Mono', monospace;
+    font-weight:700;
+    font-size:22px;
+    color:var(--blueprint-deep);
+    min-width:78px;
+  }
+  .tier.featured .tier-price{color:var(--callout);}
+  .tier-desc{font-size:15px;color:var(--graphite);}
+  .tier-desc b{color:var(--blueprint-deep);}
+
+  .tier-cta{
+    font-family:'Roboto Mono', monospace;
+    font-size:12px;
+    text-transform:uppercase;
+    color:var(--blueprint);
+    border:1px solid var(--blueprint);
+    padding:8px 14px;
+    text-decoration:none;
+    white-space:nowrap;
+  }
+  .tier.featured .tier-cta{color:var(--callout);border-color:var(--callout);}
+
+  @media (max-width:520px){
+    .tier{flex-direction:column;align-items:flex-start;}
+  }
+
+  /* ---------- PAYMENT ---------- */
+  .payment{padding:0 0 64px;}
+  .payment-box{
+    border:1.5px solid var(--blueprint-deep);
+    padding:28px;
+  }
+
+  .payment-row{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+    padding:14px 0;
+    border-bottom:1px solid #E4E0D3;
+  }
+  .payment-row:first-child{padding-top:0;}
+
+  .payment-row .k{
+    font-family:'Roboto Mono', monospace;
+    font-size:11px;
+    color:var(--graphite-soft);
+    text-transform:uppercase;
+    letter-spacing:.06em;
+  }
+  .payment-row .v{
+    font-family:'Roboto Mono', monospace;
+    font-weight:600;
+    font-size:16px;
+    color:var(--blueprint-deep);
+    letter-spacing:.02em;
+  }
+
+  .copy-btn{
+    font-family:'Roboto Mono', monospace;
+    font-size:11px;
+    text-transform:uppercase;
+    color:var(--blueprint);
+    border:1px solid var(--blueprint);
+    background:none;
+    padding:5px 10px;
+    cursor:pointer;
+    flex-shrink:0;
+  }
+  .copy-btn:hover{background:var(--blueprint);color:var(--paper);}
+  .copy-btn.copied{background:var(--callout);border-color:var(--callout);color:var(--paper);}
+
+  .payment-note{font-size:14px;color:var(--graphite-soft);margin:20px 0 18px;}
+
+  .whatsapp-btn{
+    display:inline-block;
+    background:var(--callout);
+    color:var(--paper);
+    font-family:'Roboto Mono', monospace;
+    font-size:13px;
+    text-transform:uppercase;
+    text-decoration:none;
+    padding:12px 20px;
+  }
+
+  /* ---------- FOOTER ---------- */
+  .footer-note{
+    padding:24px 0 80px;
+    font-size:13px;
+    color:var(--graphite-soft);
+    border-top:1px solid #DAD5C6;
+    padding-top:20px;
+  }
+</style>
+</head>
+<body>
+
+  <div class="wrap">
+
+    <section class="hero">
+      <h1>Después de 9 años, necesito pedirte algo.</h1>
+      <p class="hero-sub">Llevo 15 años enseñándote SolidWorks. Hoy te cuento mi historia y te pido tu apoyo — a cambio del curso CSWA.</p>
+    </section>
+
+    <section class="story">
+      <p>[ Aquí va tu historia, en tus propias palabras. Corta, directa. ]</p>
+      <a href="#" target="_blank" class="video-link">▸ Ver historia completa en video</a>
+    </section>
+
+    <div class="section-title">Elige tu apoyo — todos incluyen el curso CSWA</div>
+    <section class="tiers">
+
+      <div class="tier">
+        <div class="tier-left">
+          <div class="tier-price">$100</div>
+          <div class="tier-desc">Acceso al curso</div>
+        </div>
+        <a href="#pago" class="tier-cta">Apoyar</a>
+      </div>
+
+      <div class="tier">
+        <div class="tier-left">
+          <div class="tier-price">$200</div>
+          <div class="tier-desc">Acceso al curso</div>
+        </div>
+        <a href="#pago" class="tier-cta">Apoyar</a>
+      </div>
+
+      <div class="tier">
+        <div class="tier-left">
+          <div class="tier-price">$300</div>
+          <div class="tier-desc">Acceso al curso</div>
+        </div>
+        <a href="#pago" class="tier-cta">Apoyar</a>
+      </div>
+
+      <div class="tier">
+        <div class="tier-left">
+          <div class="tier-price">$400</div>
+          <div class="tier-desc">Acceso al curso</div>
+        </div>
+        <a href="#pago" class="tier-cta">Apoyar</a>
+      </div>
+
+      <div class="tier featured">
+        <div class="tier-left">
+          <div class="tier-price">$1000</div>
+          <div class="tier-desc">Acceso al curso + <b>acompañamiento personalizado por WhatsApp</b> conmigo</div>
+        </div>
+        <a href="#pago" class="tier-cta">Apoyar</a>
+      </div>
+
+    </section>
+
+    <div class="section-title">Cómo pagar</div>
+    <section class="payment" id="pago">
+      <div class="payment-box">
+
+        <div class="payment-row">
+          <div><div class="k">Banco</div><div class="v">BBVA</div></div>
+        </div>
+
+        <div class="payment-row">
+          <div><div class="k">CLABE</div><div class="v" id="clabe-value">0122 1002 8972 9662 23</div></div>
+          <button class="copy-btn" onclick="copyClabe(this)">Copiar</button>
+        </div>
+
+        <div class="payment-row" style="border-bottom:none;">
+          <div><div class="k">Titular</div><div class="v">Diego Gaona</div></div>
+        </div>
+
+        <p class="payment-note">Transfiere el monto de tu nivel y envíame tu comprobante con tu nombre por WhatsApp. Te doy acceso el mismo día.</p>
+        <a href="https://wa.me/524621579719?text=Hola%20Diego%2C%20quiero%20apoyarte" class="whatsapp-btn" target="_blank">Enviar comprobante →</a>
+      </div>
+    </section>
+
+    <p class="footer-note">Esto es una compra directa del curso a precio especial de apoyo, no un donativo. Gracias por estar aquí.</p>
+
+  </div>
+
+  <script>
+    function copyClabe(btn){
+      navigator.clipboard.writeText('012210028972966223').then(function(){
+        var original = btn.textContent;
+        btn.textContent = 'Copiado';
+        btn.classList.add('copied');
+        setTimeout(function(){
+          btn.textContent = original;
+          btn.classList.remove('copied');
+        }, 1800);
+      });
+    }
+  </script>
+
+</body>
+</html>
