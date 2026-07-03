@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Necesito tu ayuda — Diego Gaona</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%231B3A5C'/%3E%3Ctext x='32' y='44' font-family='monospace' font-size='34' font-weight='700' fill='%23F4F2EC' text-anchor='middle'%3EDG%3C/text%3E%3C/svg%3E">
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Roboto:wght@400;500;600;700&display=swap');
 
@@ -23,6 +24,10 @@
     color:var(--graphite);
     font-family:'Roboto', sans-serif;
     line-height:1.6;
+    background-image:
+      linear-gradient(rgba(27,58,92,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(27,58,92,0.05) 1px, transparent 1px);
+    background-size:32px 32px;
   }
 
   .mono{font-family:'Roboto Mono', monospace;}
@@ -31,46 +36,116 @@
   .wrap{max-width:640px;margin:0 auto;padding:0 24px;}
 
   /* ---------- HERO ---------- */
-  .hero{padding:64px 0 40px;}
+  .hero{padding:80px 0 20px;}
+
+  .eyebrow{
+    font-family:'Roboto Mono', monospace;
+    font-size:11px;
+    letter-spacing:.15em;
+    text-transform:uppercase;
+    color:var(--callout);
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:22px;
+  }
+  .eyebrow::before{
+    content:'';
+    width:24px;
+    height:1px;
+    background:var(--callout);
+  }
 
   h1{
     font-weight:700;
-    font-size:clamp(30px, 6vw, 42px);
-    line-height:1.15;
+    font-size:clamp(32px, 6.5vw, 46px);
+    line-height:1.12;
     color:var(--blueprint-deep);
+    letter-spacing:-.01em;
+  }
+
+  .dim-line{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    margin:22px 0;
+    color:var(--blueprint);
+    opacity:.55;
+  }
+  .dim-line::before, .dim-line::after{
+    content:'';
+    flex:1;
+    height:1px;
+    background:var(--blueprint);
+  }
+  .dim-line span{
+    font-family:'Roboto Mono', monospace;
+    font-size:11px;
+    letter-spacing:.08em;
+    white-space:nowrap;
   }
 
   .hero-sub{
-    margin-top:18px;
     font-size:18px;
     color:var(--graphite-soft);
+    max-width:46ch;
   }
 
   /* ---------- STORY ---------- */
-  .story{padding:0 0 48px;}
-  .story p{font-size:17px;margin-bottom:18px;}
+  .story{padding:0 0 60px;}
+  .story p{font-size:17.5px;margin-bottom:20px;color:var(--graphite);}
+
+  .video-embed{
+    position:relative;
+    margin-top:8px;
+    margin-bottom:20px;
+    border:1.5px solid var(--blueprint-deep);
+    overflow:hidden;
+    aspect-ratio:16/9;
+  }
+  .video-embed iframe{
+    position:absolute;
+    top:0;left:0;
+    width:100%;
+    height:100%;
+    border:0;
+  }
+  .video-caption{
+    font-family:'Roboto Mono', monospace;
+    font-size:11px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--callout);
+    margin-bottom:20px;
+    display:block;
+  }
 
   .video-link{
-    display:inline-block;
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
     font-family:'Roboto Mono', monospace;
     font-size:13px;
     color:var(--callout);
     text-decoration:none;
     border-bottom:1px solid currentColor;
     margin-top:4px;
+    padding-bottom:2px;
   }
 
   /* ---------- TIERS ---------- */
   .section-title{
     font-family:'Roboto Mono', monospace;
-    font-size:12px;
-    letter-spacing:.1em;
+    font-size:11px;
+    letter-spacing:.14em;
     text-transform:uppercase;
     color:var(--blueprint);
-    margin-bottom:16px;
+    margin-bottom:18px;
+    padding-bottom:8px;
+    border-bottom:1px solid rgba(27,58,92,0.18);
   }
 
-  .tiers{padding:0 0 56px;display:flex;flex-direction:column;gap:10px;}
+  .tiers{padding:0 0 64px;display:flex;flex-direction:column;gap:12px;}
 
   .tier{
     border:1.5px solid var(--blueprint);
@@ -78,10 +153,32 @@
     align-items:center;
     justify-content:space-between;
     gap:16px;
-    padding:16px 20px;
+    padding:18px 22px;
     background:#FBFAF6;
+    transition:transform .15s ease, box-shadow .15s ease;
   }
-  .tier.featured{border-color:var(--callout);background:#FCF6F3;}
+  .tier:hover{
+    transform:translate(-2px,-2px);
+    box-shadow:3px 3px 0 var(--blueprint);
+  }
+  .tier.featured{
+    border-color:var(--callout);
+    background:#FCF6F3;
+    position:relative;
+  }
+  .tier.featured:hover{box-shadow:3px 3px 0 var(--callout);}
+  .tier.featured::before{
+    content:'MÁS APOYO';
+    position:absolute;
+    top:-9px;
+    left:20px;
+    background:var(--callout);
+    color:var(--paper);
+    font-family:'Roboto Mono', monospace;
+    font-size:9px;
+    letter-spacing:.1em;
+    padding:2px 8px;
+  }
 
   .tier-left{display:flex;align-items:center;gap:16px;}
   .tier-price{
@@ -109,6 +206,55 @@
 
   @media (max-width:520px){
     .tier{flex-direction:column;align-items:flex-start;}
+  }
+
+  /* ---------- PROGRESS ---------- */
+  .progress-section{padding:0 0 56px;}
+  .progress-header{
+    display:flex;
+    align-items:baseline;
+    gap:8px;
+    margin-bottom:12px;
+  }
+  .progress-amount{
+    font-family:'Roboto Mono', monospace;
+    font-weight:700;
+    font-size:28px;
+    color:var(--callout);
+  }
+  .progress-goal{
+    font-family:'Roboto Mono', monospace;
+    font-size:13px;
+    color:var(--graphite-soft);
+  }
+  .progress-track{
+    width:100%;
+    height:12px;
+    background:#E4E0D3;
+    border:1.5px solid var(--blueprint-deep);
+    overflow:hidden;
+    margin-bottom:20px;
+    position:relative;
+    background-image:repeating-linear-gradient(90deg, transparent, transparent 19px, rgba(15,36,57,0.15) 19px, rgba(15,36,57,0.15) 20px);
+  }
+  .progress-fill{
+    height:100%;
+    background:var(--callout);
+    width:0%;
+    transition:width .6s ease;
+  }
+  .supporters-list{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+  }
+  .supporter-chip{
+    font-family:'Roboto Mono', monospace;
+    font-size:12px;
+    color:var(--blueprint-deep);
+    background:#FBFAF6;
+    border:1px solid var(--blueprint);
+    padding:5px 10px;
   }
 
   /* ---------- PAYMENT ---------- */
@@ -185,7 +331,9 @@
   <div class="wrap">
 
     <section class="hero">
+      <div class="eyebrow">Diego Gaona · SolidWorks</div>
       <h1>Después de 9 años, necesito pedirte algo.</h1>
+      <div class="dim-line"><span>15 AÑOS ENSEÑANDO</span></div>
       <p class="hero-sub">Llevo 15 años enseñándote SolidWorks. Hoy te cuento mi historia y te pido tu apoyo — a cambio del curso CSWA.</p>
     </section>
 
@@ -193,7 +341,22 @@
       <p>El 7 de septiembre de 2017 me despedí de mi mamá para ir a la prepa. Ese mismo día le dio un derrame cerebral. Desde entonces han pasado 9 años, y durante todo ese tiempo he seguido al frente de este canal, enseñándote SolidWorks, mientras cuido de ella.</p>
       <p>A esto se suma que gran parte de mis cursos y planos se filtran y se venden sin autorización todo el tiempo. Sigo aquí, sigo enseñando, pero cada copia pirata es apoyo que no me llega.</p>
       <p>Por primera vez en 15 años te pido algo directamente: apóyame con el curso CSWA al nivel que puedas.</p>
-      <a href="https://www.youtube.com/watch?v=7eftPUSk480" target="_blank" class="video-link">▸ Ver historia completa en video</a>
+      <div class="video-embed">
+        <iframe src="https://www.youtube.com/embed/7eftPUSk480" title="Historia completa" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <span class="video-caption">▸ Historia completa arriba</span>
+    </section>
+
+    <div class="section-title">Lo que llevamos este mes</div>
+    <section class="progress-section">
+      <div class="progress-header">
+        <span class="progress-amount" id="progress-amount">$0</span>
+        <span class="progress-goal">de $<span id="progress-goal-num">20,000</span> MXN</span>
+      </div>
+      <div class="progress-track">
+        <div class="progress-fill" id="progress-fill"></div>
+      </div>
+      <div class="supporters-list" id="supporters-list"></div>
     </section>
 
     <div class="section-title">Elige tu apoyo — todos incluyen el curso CSWA</div>
@@ -268,6 +431,35 @@
   </div>
 
   <script>
+    // ── EDITA AQUÍ CADA VEZ QUE CONFIRMES UN PAGO ──
+    // meta del mes:
+    var META_MXN = 13920;
+
+    // agrega una línea por cada apoyo confirmado (nombre completo).
+    // no se muestra monto individual — solo el total global de arriba.
+    var apoyos = [
+       { nombre: "Juan D." },
+       { nombre: "Héctor C." },
+    ];
+
+    // total acumulado del mes (súmalo tú mismo con cada transferencia)
+    var TOTAL_MXN = 704;
+
+    document.getElementById('progress-amount').textContent =
+      '$' + TOTAL_MXN.toLocaleString('es-MX');
+    document.getElementById('progress-goal-num').textContent =
+      META_MXN.toLocaleString('es-MX');
+    document.getElementById('progress-fill').style.width =
+      Math.min(100, (TOTAL_MXN / META_MXN) * 100) + '%';
+
+    var listEl = document.getElementById('supporters-list');
+    apoyos.forEach(function(a){
+      var chip = document.createElement('span');
+      chip.className = 'supporter-chip';
+      chip.textContent = a.nombre;
+      listEl.appendChild(chip);
+    });
+
     function copyClabe(btn){
       navigator.clipboard.writeText('012210028972966223').then(function(){
         var original = btn.textContent;
