@@ -4,104 +4,81 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Necesito tu ayuda — Diego Gaona</title>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%231B3A5C'/%3E%3Ctext x='32' y='44' font-family='monospace' font-size='34' font-weight='700' fill='%23F4F2EC' text-anchor='middle'%3EDG%3C/text%3E%3C/svg%3E">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232563EB'/%3E%3Ctext x='32' y='44' font-family='sans-serif' font-size='30' font-weight='700' fill='white' text-anchor='middle'%3EDG%3C/text%3E%3C/svg%3E">
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Roboto:wght@400;500;600;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
   :root{
-    --paper:#F4F2EC;
-    --blueprint:#1B3A5C;
-    --blueprint-deep:#0F2439;
-    --graphite:#2A2A28;
-    --graphite-soft:#5C584E;
-    --callout:#B8462F;
+    --bg:#FFFFFF;
+    --surface:#F7F8FA;
+    --border:#E6E8EC;
+    --text:#111827;
+    --text-soft:#6B7280;
+    --accent:#2563EB;
+    --accent-soft:#EEF3FF;
+    --accent-dark:#1D4ED8;
   }
 
   *{margin:0;padding:0;box-sizing:border-box;}
 
   body{
-    background:var(--paper);
-    color:var(--graphite);
-    font-family:'Roboto', sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Inter', sans-serif;
     line-height:1.6;
+    -webkit-font-smoothing:antialiased;
     background-image:
-      linear-gradient(rgba(27,58,92,0.05) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(27,58,92,0.05) 1px, transparent 1px);
-    background-size:32px 32px;
+      linear-gradient(rgba(37,99,235,0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(37,99,235,0.06) 1px, transparent 1px);
+    background-size:28px 28px;
   }
 
-  .mono{font-family:'Roboto Mono', monospace;}
   a{color:inherit;}
-
   .wrap{max-width:640px;margin:0 auto;padding:0 24px;}
 
   /* ---------- HERO ---------- */
-  .hero{padding:80px 0 20px;}
+  .hero{padding:72px 0 32px;}
 
   .eyebrow{
-    font-family:'Roboto Mono', monospace;
-    font-size:11px;
-    letter-spacing:.15em;
-    text-transform:uppercase;
-    color:var(--callout);
-    display:flex;
+    display:inline-flex;
     align-items:center;
-    gap:10px;
-    margin-bottom:22px;
-  }
-  .eyebrow::before{
-    content:'';
-    width:24px;
-    height:1px;
-    background:var(--callout);
+    gap:8px;
+    font-size:13px;
+    font-weight:600;
+    color:var(--accent);
+    background:var(--accent-soft);
+    padding:6px 14px;
+    border-radius:100px;
+    margin-bottom:24px;
   }
 
   h1{
-    font-weight:700;
-    font-size:clamp(32px, 6.5vw, 46px);
-    line-height:1.12;
-    color:var(--blueprint-deep);
-    letter-spacing:-.01em;
-  }
-
-  .dim-line{
-    display:flex;
-    align-items:center;
-    gap:6px;
-    margin:22px 0;
-    color:var(--blueprint);
-    opacity:.55;
-  }
-  .dim-line::before, .dim-line::after{
-    content:'';
-    flex:1;
-    height:1px;
-    background:var(--blueprint);
-  }
-  .dim-line span{
-    font-family:'Roboto Mono', monospace;
-    font-size:11px;
-    letter-spacing:.08em;
-    white-space:nowrap;
+    font-weight:800;
+    font-size:clamp(32px, 6.5vw, 48px);
+    line-height:1.1;
+    color:var(--text);
+    letter-spacing:-.02em;
   }
 
   .hero-sub{
+    margin-top:18px;
     font-size:18px;
-    color:var(--graphite-soft);
+    color:var(--text-soft);
     max-width:46ch;
   }
 
   /* ---------- STORY ---------- */
-  .story{padding:0 0 60px;}
-  .story p{font-size:17.5px;margin-bottom:20px;color:var(--graphite);}
+  .story{padding:32px 0 56px;}
+  .story p{font-size:17px;margin-bottom:18px;color:var(--text);}
 
   .video-embed{
     position:relative;
-    margin-top:8px;
-    margin-bottom:20px;
-    border:1.5px solid var(--blueprint-deep);
+    margin-top:12px;
+    margin-bottom:16px;
+    border-radius:16px;
     overflow:hidden;
     aspect-ratio:16/9;
+    box-shadow:0 4px 24px rgba(17,24,39,0.08);
   }
   .video-embed iframe{
     position:absolute;
@@ -111,98 +88,85 @@
     border:0;
   }
   .video-caption{
-    font-family:'Roboto Mono', monospace;
-    font-size:11px;
-    letter-spacing:.08em;
-    text-transform:uppercase;
-    color:var(--callout);
-    margin-bottom:20px;
+    font-size:13px;
+    font-weight:500;
+    color:var(--text-soft);
     display:block;
   }
 
-  .video-link{
-    display:inline-flex;
-    align-items:center;
-    gap:6px;
-    font-family:'Roboto Mono', monospace;
+  /* ---------- SECTION TITLE ---------- */
+  .section-title{
     font-size:13px;
-    color:var(--callout);
-    text-decoration:none;
-    border-bottom:1px solid currentColor;
-    margin-top:4px;
-    padding-bottom:2px;
+    font-weight:700;
+    letter-spacing:.04em;
+    text-transform:uppercase;
+    color:var(--text-soft);
+    margin-bottom:16px;
   }
 
   /* ---------- TIERS ---------- */
-  .section-title{
-    font-family:'Roboto Mono', monospace;
-    font-size:11px;
-    letter-spacing:.14em;
-    text-transform:uppercase;
-    color:var(--blueprint);
-    margin-bottom:18px;
-    padding-bottom:8px;
-    border-bottom:1px solid rgba(27,58,92,0.18);
-  }
-
-  .tiers{padding:0 0 64px;display:flex;flex-direction:column;gap:12px;}
+  .tiers{padding:0 0 56px;display:flex;flex-direction:column;gap:10px;}
 
   .tier{
-    border:1.5px solid var(--blueprint);
+    border:1px solid var(--border);
+    border-radius:14px;
     display:flex;
     align-items:center;
     justify-content:space-between;
     gap:16px;
     padding:18px 22px;
-    background:#FBFAF6;
-    transition:transform .15s ease, box-shadow .15s ease;
+    background:var(--bg);
+    transition:border-color .15s ease, box-shadow .15s ease;
   }
   .tier:hover{
-    transform:translate(-2px,-2px);
-    box-shadow:3px 3px 0 var(--blueprint);
+    border-color:var(--accent);
+    box-shadow:0 2px 12px rgba(37,99,235,0.1);
   }
   .tier.featured{
-    border-color:var(--callout);
-    background:#FCF6F3;
+    border-color:var(--accent);
+    background:var(--accent-soft);
     position:relative;
   }
-  .tier.featured:hover{box-shadow:3px 3px 0 var(--callout);}
   .tier.featured::before{
     content:'MÁS APOYO';
     position:absolute;
-    top:-9px;
+    top:-10px;
     left:20px;
-    background:var(--callout);
-    color:var(--paper);
-    font-family:'Roboto Mono', monospace;
-    font-size:9px;
-    letter-spacing:.1em;
-    padding:2px 8px;
+    background:var(--accent);
+    color:#fff;
+    font-size:10px;
+    font-weight:700;
+    letter-spacing:.06em;
+    padding:3px 10px;
+    border-radius:100px;
   }
 
   .tier-left{display:flex;align-items:center;gap:16px;}
   .tier-price{
-    font-family:'Roboto Mono', monospace;
-    font-weight:700;
+    font-weight:800;
     font-size:22px;
-    color:var(--blueprint-deep);
-    min-width:78px;
+    color:var(--text);
+    min-width:70px;
   }
-  .tier.featured .tier-price{color:var(--callout);}
-  .tier-desc{font-size:15px;color:var(--graphite);}
-  .tier-desc b{color:var(--blueprint-deep);}
+  .tier.featured .tier-price{color:var(--accent-dark);}
+  .tier-desc{font-size:15px;color:var(--text-soft);}
+  .tier-desc b{color:var(--text);font-weight:600;}
 
   .tier-cta{
-    font-family:'Roboto Mono', monospace;
-    font-size:12px;
-    text-transform:uppercase;
-    color:var(--blueprint);
-    border:1px solid var(--blueprint);
-    padding:8px 14px;
+    font-size:13px;
+    font-weight:600;
+    color:#fff;
+    background:var(--accent);
+    border-radius:100px;
+    padding:9px 18px;
     text-decoration:none;
     white-space:nowrap;
   }
-  .tier.featured .tier-cta{color:var(--callout);border-color:var(--callout);}
+  .tier-cta:hover{background:var(--accent-dark);}
+  .tier:not(.featured) .tier-cta{
+    color:var(--accent);
+    background:var(--accent-soft);
+  }
 
   @media (max-width:520px){
     .tier{flex-direction:column;align-items:flex-start;}
@@ -214,54 +178,60 @@
     display:flex;
     align-items:baseline;
     gap:8px;
-    margin-bottom:12px;
+    margin-bottom:14px;
   }
   .progress-amount{
-    font-family:'Roboto Mono', monospace;
-    font-weight:700;
-    font-size:28px;
-    color:var(--callout);
+    font-weight:800;
+    font-size:30px;
+    color:var(--accent-dark);
   }
   .progress-goal{
-    font-family:'Roboto Mono', monospace;
-    font-size:13px;
-    color:var(--graphite-soft);
+    font-size:14px;
+    color:var(--text-soft);
   }
   .progress-track{
     width:100%;
-    height:12px;
-    background:#E4E0D3;
-    border:1.5px solid var(--blueprint-deep);
+    height:10px;
+    background:var(--surface);
+    border-radius:100px;
     overflow:hidden;
     margin-bottom:20px;
-    position:relative;
-    background-image:repeating-linear-gradient(90deg, transparent, transparent 19px, rgba(15,36,57,0.15) 19px, rgba(15,36,57,0.15) 20px);
   }
   .progress-fill{
     height:100%;
-    background:var(--callout);
+    background:var(--accent);
     width:0%;
+    border-radius:100px;
     transition:width .6s ease;
   }
+  .thanks-line{
+    font-size:14.5px;
+    color:var(--text-soft);
+    margin-bottom:12px;
+  }
+  .thanks-line b{color:var(--text);}
   .supporters-list{
     display:flex;
     flex-wrap:wrap;
     gap:8px;
   }
   .supporter-chip{
-    font-family:'Roboto Mono', monospace;
-    font-size:12px;
-    color:var(--blueprint-deep);
-    background:#FBFAF6;
-    border:1px solid var(--blueprint);
-    padding:5px 10px;
+    font-size:13px;
+    font-weight:500;
+    color:var(--text);
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:100px;
+    padding:6px 12px;
   }
 
   /* ---------- PAYMENT ---------- */
   .payment{padding:0 0 64px;}
   .payment-box{
-    border:1.5px solid var(--blueprint-deep);
+    border:1px solid var(--border);
+    border-radius:16px;
     padding:28px;
+    background:var(--surface);
   }
 
   .payment-row{
@@ -270,58 +240,57 @@
     justify-content:space-between;
     gap:16px;
     padding:14px 0;
-    border-bottom:1px solid #E4E0D3;
+    border-bottom:1px solid var(--border);
   }
   .payment-row:first-child{padding-top:0;}
 
   .payment-row .k{
-    font-family:'Roboto Mono', monospace;
-    font-size:11px;
-    color:var(--graphite-soft);
+    font-size:12px;
+    color:var(--text-soft);
     text-transform:uppercase;
-    letter-spacing:.06em;
+    letter-spacing:.04em;
+    font-weight:600;
   }
   .payment-row .v{
-    font-family:'Roboto Mono', monospace;
-    font-weight:600;
+    font-weight:700;
     font-size:16px;
-    color:var(--blueprint-deep);
-    letter-spacing:.02em;
+    color:var(--text);
   }
 
   .copy-btn{
-    font-family:'Roboto Mono', monospace;
-    font-size:11px;
-    text-transform:uppercase;
-    color:var(--blueprint);
-    border:1px solid var(--blueprint);
-    background:none;
-    padding:5px 10px;
+    font-size:12px;
+    font-weight:600;
+    color:var(--accent);
+    border:1px solid var(--border);
+    background:#fff;
+    border-radius:100px;
+    padding:6px 14px;
     cursor:pointer;
     flex-shrink:0;
   }
-  .copy-btn:hover{background:var(--blueprint);color:var(--paper);}
-  .copy-btn.copied{background:var(--callout);border-color:var(--callout);color:var(--paper);}
+  .copy-btn:hover{border-color:var(--accent);}
+  .copy-btn.copied{background:var(--accent);border-color:var(--accent);color:#fff;}
 
-  .payment-note{font-size:14px;color:var(--graphite-soft);margin:20px 0 18px;}
+  .payment-note{font-size:14px;color:var(--text-soft);margin:20px 0 18px;}
 
   .whatsapp-btn{
     display:inline-block;
-    background:var(--callout);
-    color:var(--paper);
-    font-family:'Roboto Mono', monospace;
-    font-size:13px;
-    text-transform:uppercase;
+    background:var(--accent);
+    color:#fff;
+    font-size:14px;
+    font-weight:600;
     text-decoration:none;
-    padding:12px 20px;
+    border-radius:100px;
+    padding:13px 22px;
   }
+  .whatsapp-btn:hover{background:var(--accent-dark);}
 
   /* ---------- FOOTER ---------- */
   .footer-note{
     padding:24px 0 80px;
     font-size:13px;
-    color:var(--graphite-soft);
-    border-top:1px solid #DAD5C6;
+    color:var(--text-soft);
+    border-top:1px solid var(--border);
     padding-top:20px;
   }
 </style>
@@ -333,7 +302,6 @@
     <section class="hero">
       <div class="eyebrow">Diego Gaona · SolidWorks</div>
       <h1>Después de 9 años, necesito pedirte algo.</h1>
-      <div class="dim-line"><span>15 AÑOS ENSEÑANDO</span></div>
       <p class="hero-sub">Llevo 15 años enseñándote SolidWorks. Hoy te cuento mi historia y te pido tu apoyo — a cambio del curso CSWA.</p>
     </section>
 
@@ -356,6 +324,7 @@
       <div class="progress-track">
         <div class="progress-fill" id="progress-fill"></div>
       </div>
+      <p class="thanks-line" id="thanks-line"></p>
       <div class="supporters-list" id="supporters-list"></div>
     </section>
 
@@ -432,32 +401,28 @@
 
   <script>
     // ── EDITA AQUÍ CADA VEZ QUE CONFIRMES UN PAGO ──
-    // meta del mes:
     var META_MXN = 13920;
 
-    // agrega una línea por cada apoyo confirmado (nombre completo).
-    // no se muestra monto individual — solo el total global de arriba.
     var apoyos = [
        { nombre: "Juan D." },
        { nombre: "Héctor C." },
-       { nombre: "Anónimo." },
+       { nombre: "Anónimo" },
        { nombre: "Karla C." },
-      { nombre: "Anónimo." },
-      { nombre: "Anónimo." },
-      { nombre: "Brenda ❤." },
-      { nombre: "Anónimo" },
-      { nombre: "Anónimo" },
-      { nombre: "Francisco C." },
-      { nombre: "Misael F." },
-      { nombre: "Anónimo." },
-      { nombre: "Anónimo." },
-      { nombre: "Anónimo." },
-      { nombre: "José L." },
-      { nombre: "Martín R." },
-      { nombre: "Miguel M." },
+       { nombre: "Anónimo" },
+       { nombre: "Anónimo" },
+       { nombre: "Brenda ❤" },
+       { nombre: "Anónimo" },
+       { nombre: "Anónimo" },
+       { nombre: "Francisco C." },
+       { nombre: "Misael F." },
+       { nombre: "Anónimo" },
+       { nombre: "Anónimo" },
+       { nombre: "Anónimo" },
+       { nombre: "José L." },
+       { nombre: "Martín R." },
+       { nombre: "Miguel M." },
     ];
 
-    // total acumulado del mes (súmalo tú mismo con cada transferencia)
     var TOTAL_MXN = 5954;
 
     document.getElementById('progress-amount').textContent =
@@ -466,6 +431,9 @@
       META_MXN.toLocaleString('es-MX');
     document.getElementById('progress-fill').style.width =
       Math.min(100, (TOTAL_MXN / META_MXN) * 100) + '%';
+
+    document.getElementById('thanks-line').innerHTML =
+      'Gracias a estas <b>' + apoyos.length + ' personas</b> que ya apoyaron este mes:';
 
     var listEl = document.getElementById('supporters-list');
     apoyos.forEach(function(a){
