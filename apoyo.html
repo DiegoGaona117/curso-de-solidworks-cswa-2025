@@ -400,46 +400,58 @@
   </div>
 
   <script>
-    // ── EDITA AQUÍ CADA VEZ QUE CONFIRMES UN PAGO ──
-    var META_MXN = 13920;
+  var WEBHOOK_APOYOS = 'https://script.google.com/macros/s/TU_ID_DE_DESPLIEGUE_AQUI/exec';
 
-    var apoyos = [
-    { nombre: "Anónimo" },   
-    
-    ];
+  async function cargarApoyos() {
+    try {
+      const res  = await fetch(WEBHOOK_APOYOS);
+      const data = await res.json();
 
-    var TOTAL_MXN = 200;
+      const totalMxn = data.total || 0;
+      const metaMxn  = data.meta  || 13920;
+      const apoyos   = data.apoyos || [];
 
-    document.getElementById('progress-amount').textContent =
-      '$' + TOTAL_MXN.toLocaleString('es-MX');
-    document.getElementById('progress-goal-num').textContent =
-      META_MXN.toLocaleString('es-MX');
-    document.getElementById('progress-fill').style.width =
-      Math.min(100, (TOTAL_MXN / META_MXN) * 100) + '%';
+      document.getElementById('progress-amount').textContent =
+        '$' + totalMxn.toLocaleString('es-MX');
+      document.getElementById('progress-goal-num').textContent =
+        metaMxn.toLocaleString('es-MX');
+      document.getElementById('progress-fill').style.width =
+        Math.min(100, (totalMxn / metaMxn) * 100) + '%';
 
-    document.getElementById('thanks-line').innerHTML =
-      'Gracias a estas <b>' + apoyos.length + ' personas</b> que ya apoyaron este mes:';
+      document.getElementById('thanks-line').innerHTML =
+        apoyos.length > 0
+          ? 'Gracias a estas <b>' + apoyos.length + ' personas</b> que ya apoyaron este mes:'
+          : 'Sé la primera persona en apoyar este mes 🙌';
 
-    var listEl = document.getElementById('supporters-list');
-    apoyos.forEach(function(a){
-      var chip = document.createElement('span');
-      chip.className = 'supporter-chip';
-      chip.textContent = a.nombre;
-      listEl.appendChild(chip);
-    });
-
-    function copyClabe(btn){
-      navigator.clipboard.writeText('012210028972966223').then(function(){
-        var original = btn.textContent;
-        btn.textContent = 'Copiado';
-        btn.classList.add('copied');
-        setTimeout(function(){
-          btn.textContent = original;
-          btn.classList.remove('copied');
-        }, 1800);
+      const listEl = document.getElementById('supporters-list');
+      listEl.innerHTML = '';
+      apoyos.forEach(function(a) {
+        var chip = document.createElement('span');
+        chip.className = 'supporter-chip';
+        chip.textContent = a.nombre;
+        listEl.appendChild(chip);
       });
+
+    } catch (err) {
+      console.error('No se pudo cargar el progreso de apoyos:', err);
+      // Deja los valores en $0 / sin apoyos si falla, en vez de romper la página
     }
-  </script>
+  }
+
+  function copyClabe(btn){
+    navigator.clipboard.writeText('012210028972966223').then(function(){
+      var original = btn.textContent;
+      btn.textContent = 'Copiado';
+      btn.classList.add('copied');
+      setTimeout(function(){
+        btn.textContent = original;
+        btn.classList.remove('copied');
+      }, 1800);
+    });
+  }
+
+  cargarApoyos();
+</script>
 
 </body>
 </html>
